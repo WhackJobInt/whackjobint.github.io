@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Whackjob Interactive">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/object/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Object - Postal3Script</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Object";
+    var mkdocs_page_input_path = "object.md";
+    var mkdocs_page_url = "/postal3script/object/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Postal3Script</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Postal3Script</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">What is Postal3Script?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Structure(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">States(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Patterns(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events(tbd)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Attribute Checking</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../spclattributes/">Engine Attributes (ea_* ..)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Object Categories</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../manner/">Manner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../faction/">Faction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">ItemType(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">String(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Timer(tbd)</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Object</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">DistTo(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AngleTo(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Visible(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">HasWeapon(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">RelationTo(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Relation(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Name(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Ammo(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Ignore(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Karma(tbd)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">VoicePrefix(tbd)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Functions (WIP)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Say</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">State, Pattern, ExecutePattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SetSquad, SetSquadRelation, RemoveSquadRelation, RallySquad, DesertSquad</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SetHintGroup, SetAreaGroup, SetLeanGroup, AvoidProhibitedArea</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">TargetEnemy, TargetPlayer, TargetCaller, TargetItem, TargetAnchor, TargetVehicle, TargetHostage, TargetCrosshair, TargetEntByName, ResetTarget, IgnoreTarget, SetTarget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">TargetToMem, TargetFromMem, CallerToMem, ClearMem, SendTarget2Caller</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SetActPack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">FreeMovement, FreeMovementParams, MoveToLean, MoveToTarget, MoveToTargetLKP, MoveToNode</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Wait, WaitForEnd, Repeat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Gesture, ResetGesture, ResetSequence</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Turn, TurnSpeed</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Aim, Senses, Snatch, Unsnatch, Crouch, Face, Lean, Follow, LookAt, HolsterWeapon, Anchor, Busy, Fear, Hate, CatDervish, PlayerFriendly, LookOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Headblob</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">StateMatrix</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">CallState, CallPattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">EmitSound</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Item, SpawnItem</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Weapon, Reload, ThrowGrenade</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Relationship</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">EnterVehicle</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Hit</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Arm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AssistTarget, AssistEnemy, ArrestTarget, BusyTarget, CheckTarget, CheckLOS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">NPC</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Push</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">StunOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">EnableGibs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">TravelByPathTrack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AddFluid</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Mission Functions (WIP)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AttributeProgressBar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">MissionLog, MissionSave, MissionBriefing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">ShowMessage, ShowHint</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">EndMission</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">PlayerKarma</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">PlayVideo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">OpenDialog (YesNo)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Postal3Script</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Object Categories &raquo;</li>
+        
+      
+    
+    <li>Object</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="object">Object</h1>
+<p>In Postal3Script you have access to certain pointers which helps you with targeting the correct actor.
+<pre><code class="language-js">
+st_ObjectTutorial
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                // In P3S you can check for the following objects:
+                // 'Object:Caller' ; 'Object:Target' ; 'Object:Player'
+                // 'Object:slot#0' ; 'Object:null' ; 'Object:self'
+                // 'Object:item' ; 'Object:anchor'
+
+                // You don't always have a pointer to the Caller, as it's
+                // heavily dependent on the Event which caused the NPC to enter this state
+                // Meaning, there's something or someone that forced the NPC to enter this state
+
+                // Check if our caller exists (null means zero)
+                IfAttr "Object:caller != Object:null Block Begin"
+                    // Was it the Player who forced us into this state?
+                    IfAttr "Object:caller == Object:player Block Begin"
+                        // Well then we are going to run to them, endlessly
+                        TargetPlayer 1 // or TargetCaller 1
+                        MoveToTarget run,1,0
+                    Block End
+                Block End
+
+                // Check if our target isn't the Player
+                IfAttr "Object:target != Object:null and Object:target != Object:Player Block Begin"
+                    // Bad day for our enemy, though, because they are going to die instantly
+                    ChangeAttr "target.ea_health -target.ea_health"
+                Block End
+
+                // Object:self and Object:item are barely used, the latter is used by Motorhead
+                // It's a pointer to the NPC's held item
+                // Check out ai_motorhead.p3s, ai_st1_common.p3s, ai_st2_states.p3s 
+                // and ai_st7_environment.p3s
+
+                // Object:anchor is used only in ai_mission_jwb.p3s (todo: what the hell it is?)
+
+                // Object:slot#0
+                // This can save any Object to memory, it was heavily used by Trashmasters when making missions
+                // Get entity named 'gameplay' and set it as target
+                TargetEntByName gameplay
+                // Save the target to memory
+                TargetToMem msGP
+                // Reset the target
+                ResetTarget 1
+
+                // Memory numbers
+                // 6 and 7 are unused, you can only use a maximum number of 10 slots
+                // Using a number higher than 9 and lower than 0 will cause it to go -1 
+                // which will be invalid
+
+                // (from ai_st_init.p3s)
+                // Const msTEMP,0
+                // Const msOWNER,1
+                // Const msTARGET,2
+                // Const msENEMY,3
+                // Const msSUSPECTED,4
+                // Const msLEADER,5
+                ////Const msDRIVEN,6
+                ////Const msINTEREST,7
+                // Const msKILLER,8
+                // Const msGP,9
+
+                // And if we needed the saved target from memory, just do
+                TargetFromMem msGP
+
+                // Example from ai_mission_mlg.p3s
+                IfAttr "Object:caller == Object:Player ChangeAttr slot#msGP.Totaldead +1"
+
+                // And again, if we don't need it anymore we reset the target
+                ResetTarget 1
+            }
+        }
+    }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../TBD/" class="btn btn-neutral float-right" title="DistTo(tbd)">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../TBD/" class="btn btn-neutral" title="Timer(tbd)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Written by Kizoky and Pseudonym_Tim <br>© Whackjob Interactive 2022<br>ㅤ</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
