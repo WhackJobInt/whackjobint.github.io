@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/distto/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/embedattributes/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>
@@ -31,7 +36,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/name/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/object/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/visible/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/voiceprefix/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
