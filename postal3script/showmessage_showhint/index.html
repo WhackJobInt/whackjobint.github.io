@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/say/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/showmessage_showhint/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Say - Postal3Script</title>
+  <title>ShowMessage, ShowHint - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Say";
-    var mkdocs_page_input_path = "say.md";
-    var mkdocs_page_url = "/postal3script/say/";
+    var mkdocs_page_name = "ShowMessage, ShowHint";
+    var mkdocs_page_input_path = "showmessage_showhint.md";
+    var mkdocs_page_url = "/postal3script/showmessage_showhint/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -106,12 +106,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Functions (WIP)</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Say</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
                     </li>
@@ -175,12 +173,14 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Functions</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../showmessage_showhint/">ShowMessage, ShowHint</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ShowMessage, ShowHint</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../endmission/">EndMission</a>
                     </li>
@@ -212,11 +212,11 @@
     
       
         
-          <li>Functions (WIP) &raquo;</li>
+          <li>Mission Functions &raquo;</li>
         
       
     
-    <li>Say</li>
+    <li>ShowMessage, ShowHint</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -228,25 +228,48 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="say">Say</h1>
-<p>Make an NPC say a specified "sentence" type voice line
-<p>Uses the name of the sentence in the related NPC's sentence script located in "Postal III\p3\scripts\Sentences". The voice prefix is not required, "GAY_ONFIRE" can lose the "GAY_" part and instead just be "ONFIRE" for example...
-<p>
-If you want the player to say something you must EntFireInput logic_playerproxy to do a generic say instead, like this: "EntFireInput proxy,Say:SENTENCENAME".
+                <h1 id="-showmessage">- ShowMessage</h1>
+<p>Prints out message to the screen
+<p>Supports strings from "Postal III/p3/resource/p3_english.txt" (or from any other file that contains valid strings)
+<p>Equivalent to Half-Life 2's UserMessageBegin
+<p>Uses data from "Postal III/p3/scripts/HudLayout.res" (Plus "channels_manifest.txt" and "HudAnimations.txt")
+<h1>Example</h1>
 <pre><code class="language-js">
-// Say a voice line...
-Say ZOMB_MOAN
+// This will print on the screen
+ShowMessage "#P3_CM_INSANE1"
 
-// Pick and say one of these voice lines randomly...
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
+// This will print on the P3Karma channel
+ShowMessage "[Ja-ja, natürlich!], $P3Karma"
 
-// Pick and say one of these voice lines randomly, and specify the optional sentence
-// priority parameter (TODO: Need to make sure that is actually what that parameter even is) - Tim 
-// SENTENCE PRIORITY PARAMETERS
-// SENTENCE_PRIORITY_NORMAL = 0,
-// SENTENCE_PRIORITY_MEDIUM = 1,
-// SENTENCE_PRIORITY_HIGH = 2,
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
+// This will print on the P3Mission channel
+ShowMessage "[Puff! Puff! Puff!], $P3Mission"
+
+// This will print on the P3Debug channel
+ShowMessage "[Meow!... I'm on Fear!!!], $P3Debug"
+
+// You have arrested 0-3 of 3 hobos
+ChangeAttr "HoboArrested 1"
+ShowMessage "[You have arrested {0:v} of 3 hobos], $P3Mission, HoboArrested"
+
+// Slightly more complex syntax
+IfAttr "caller.ea_Manner == Manner:PussyCat and mis_004 >= 0 Block begin,execute"
+    TargetEntByName mg_004
+    SetAttr "mis_004 cat_counter"
+    IfAttr "mis_004 >= target.condition SetAttr mis_004 target.condition"
+    ShowMessage "[ {0:v} of {1:v} deceased cats have been obtained], $P3Mission, mis_004, target.condition"
+Block end
+</code></pre>
+<br><h1>- ShowHint</h1>
+<p>Unused Postal3Script function
+<p>Karma hinting is done automatically, so this has been left completely unused
+<p>Uses data from "Postal III/p3/scripts/hints_manifest.txt"
+<h1>Example</h1>
+<pre><code class="language-js">
+// First found in 'ai_st1_common.p3s' Line 954
+ShowHint hintCat
+// First found in 'ai_st6_missions.p3s' Line 528
+ShowHint hintKarmaDown
+ShowHint hintKarmaUp
 </code></pre>
               
             </div>
@@ -255,10 +278,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TBD/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../endmission/" class="btn btn-neutral float-right" title="EndMission">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TBD/" class="btn btn-neutral" title="Effect (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../missionlog_save_briefing/" class="btn btn-neutral" title="MissionLog, MissionSave, MissionBriefing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -286,10 +309,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../missionlog_save_briefing/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../endmission/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

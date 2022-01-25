@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/say/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/playerkarma/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Say - Postal3Script</title>
+  <title>PlayerKarma - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Say";
-    var mkdocs_page_input_path = "say.md";
-    var mkdocs_page_url = "/postal3script/say/";
+    var mkdocs_page_name = "PlayerKarma";
+    var mkdocs_page_input_path = "playerkarma.md";
+    var mkdocs_page_url = "/postal3script/playerkarma/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -106,12 +106,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Functions (WIP)</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Say</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
                     </li>
@@ -175,7 +173,7 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Functions</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
@@ -184,7 +182,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../endmission/">EndMission</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../playerkarma/">PlayerKarma</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">PlayerKarma</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playvideo/">PlayVideo</a>
                     </li>
@@ -212,11 +212,11 @@
     
       
         
-          <li>Functions (WIP) &raquo;</li>
+          <li>Mission Functions &raquo;</li>
         
       
     
-    <li>Say</li>
+    <li>PlayerKarma</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -228,25 +228,38 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="say">Say</h1>
-<p>Make an NPC say a specified "sentence" type voice line
-<p>Uses the name of the sentence in the related NPC's sentence script located in "Postal III\p3\scripts\Sentences". The voice prefix is not required, "GAY_ONFIRE" can lose the "GAY_" part and instead just be "ONFIRE" for example...
-<p>
-If you want the player to say something you must EntFireInput logic_playerproxy to do a generic say instead, like this: "EntFireInput proxy,Say:SENTENCENAME".
+                <h1 id="playerkarma">PlayerKarma</h1>
+<p>Sets the Player's karma globally
+<h1>Syntax</h1>
 <pre><code class="language-js">
-// Say a voice line...
-Say ZOMB_MOAN
+(from ai_st_init.p3s)
 
-// Pick and say one of these voice lines randomly...
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
+// KARMA AMOUNTS
+Const KARMA_LOW,5
+Const KARMA_MED,10
+Const KARMA_HIGH,25
+Const KARMA_HALF,50
+Const KARMA_FULL,100
+</code></pre>
+<p><code class="language-js">PlayerKarma hide</code> -- Hides the karma icon
+<p><code class="language-js">PlayerKarma show</code> -- Shows the karma icon
+<p><code class="language-js">PlayerKarma good</code> -- Player is now on good path (unused)
+<p><code class="language-js">PlayerKarma evil</code> -- Player is now on evil path (unused)
+<p><code class="language-js">PlayerKarma +-*/=[value]</code> -- Modifies the karma's value
+<h1>Example</h1>
+<pre><code class="language-js">
+// from ai_mission_sbe.p3s
+xpt_OnPaparazziEscaped
+{
+    actions
+    {
+        SetAttr "PhotoTaken 1"
+        MissionLog fail,photos
 
-// Pick and say one of these voice lines randomly, and specify the optional sentence
-// priority parameter (TODO: Need to make sure that is actually what that parameter even is) - Tim 
-// SENTENCE PRIORITY PARAMETERS
-// SENTENCE_PRIORITY_NORMAL = 0,
-// SENTENCE_PRIORITY_MEDIUM = 1,
-// SENTENCE_PRIORITY_HIGH = 2,
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
+        // Player lost some good guy points
+        CheckAttr "PhotoTaken PlayerKarma -KARMA_HIGH"
+    }
+}
 </code></pre>
               
             </div>
@@ -255,10 +268,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TBD/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../playvideo/" class="btn btn-neutral float-right" title="PlayVideo">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TBD/" class="btn btn-neutral" title="Effect (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../endmission/" class="btn btn-neutral" title="EndMission"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -286,10 +299,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../endmission/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../playvideo/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

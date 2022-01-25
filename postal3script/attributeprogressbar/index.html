@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/say/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/attributeprogressbar/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Say - Postal3Script</title>
+  <title>AttributeProgressBar - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Say";
-    var mkdocs_page_input_path = "say.md";
-    var mkdocs_page_url = "/postal3script/say/";
+    var mkdocs_page_name = "AttributeProgressBar";
+    var mkdocs_page_input_path = "attributeprogressbar.md";
+    var mkdocs_page_url = "/postal3script/attributeprogressbar/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -106,12 +106,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Functions (WIP)</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Say</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
                     </li>
@@ -175,8 +173,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Functions</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">AttributeProgressBar</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
                     </li>
@@ -212,11 +212,11 @@
     
       
         
-          <li>Functions (WIP) &raquo;</li>
+          <li>Mission Functions &raquo;</li>
         
       
     
-    <li>Say</li>
+    <li>AttributeProgressBar</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -228,25 +228,29 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="say">Say</h1>
-<p>Make an NPC say a specified "sentence" type voice line
-<p>Uses the name of the sentence in the related NPC's sentence script located in "Postal III\p3\scripts\Sentences". The voice prefix is not required, "GAY_ONFIRE" can lose the "GAY_" part and instead just be "ONFIRE" for example...
-<p>
-If you want the player to say something you must EntFireInput logic_playerproxy to do a generic say instead, like this: "EntFireInput proxy,Say:SENTENCENAME".
+                <h1 id="attributeprogressbar">AttributeProgressBar</h1>
+<p>Adds a HUD on the screen with name, and value
+<p>Mainly used for displaying Health for Bosses, Allies from missions
+<p>Uses .res files from "Postal III/p3/resource/UI/Hud/" folder
+<h1>Syntax</h1>
+<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute]"</code> -- Shows or creates Progress Bar
+<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute], show_value"</code> -- Shows or creates Progress Bar with Attribute's value shown
+<p><code class="language-js">AttributeProgressBar "[panel], hide"</code> -- Hides Progress Bar
+<h1>Example</h1>
 <pre><code class="language-js">
-// Say a voice line...
-Say ZOMB_MOAN
+// from ai_cashmart_npc.p3s, Helicopter from Cashmart
+SetAttr "flag_zombie 1"
+TargetEntByName gameplay
+TargetToMem msGP
+SetAttr "ea_dmg_absorb 95"
+TargetPlayer 1
+FireInput self,StartHunt
 
-// Pick and say one of these voice lines randomly...
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
+// Show the Panel on spawn
+// "./Postal III/p3/resource/UI/Hud/HeliHealthPanel.res"
+AttributeProgressBar "HeliHealthPanel,show,ea_health"
 
-// Pick and say one of these voice lines randomly, and specify the optional sentence
-// priority parameter (TODO: Need to make sure that is actually what that parameter even is) - Tim 
-// SENTENCE PRIORITY PARAMETERS
-// SENTENCE_PRIORITY_NORMAL = 0,
-// SENTENCE_PRIORITY_MEDIUM = 1,
-// SENTENCE_PRIORITY_HIGH = 2,
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
+Timer tShout,5:2
 </code></pre>
               
             </div>
@@ -255,10 +259,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TBD/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../missionlog_save_briefing/" class="btn btn-neutral float-right" title="MissionLog, MissionSave, MissionBriefing">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TBD/" class="btn btn-neutral" title="Effect (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../TBD/" class="btn btn-neutral" title="AddFluid (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -289,7 +293,7 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
       <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../missionlog_save_briefing/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

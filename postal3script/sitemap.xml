@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/attributeprogressbar/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/attributes/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>
@@ -26,12 +31,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/endmission/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/faction/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/manner/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/missionlog_save_briefing/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -46,7 +61,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/opendialog/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/playerkarma/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/playvideo/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/say/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/showmessage_showhint/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

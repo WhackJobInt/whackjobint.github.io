@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/say/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/playvideo/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Say - Postal3Script</title>
+  <title>PlayVideo - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Say";
-    var mkdocs_page_input_path = "say.md";
-    var mkdocs_page_url = "/postal3script/say/";
+    var mkdocs_page_name = "PlayVideo";
+    var mkdocs_page_input_path = "playvideo.md";
+    var mkdocs_page_url = "/postal3script/playvideo/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -106,12 +106,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Functions (WIP)</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Say</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
                     </li>
@@ -175,7 +173,7 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Functions</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
@@ -186,7 +184,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playerkarma/">PlayerKarma</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../playvideo/">PlayVideo</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">PlayVideo</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../opendialog/">OpenDialog</a>
                     </li>
@@ -212,11 +212,11 @@
     
       
         
-          <li>Functions (WIP) &raquo;</li>
+          <li>Mission Functions &raquo;</li>
         
       
     
-    <li>Say</li>
+    <li>PlayVideo</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -228,26 +228,33 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="say">Say</h1>
-<p>Make an NPC say a specified "sentence" type voice line
-<p>Uses the name of the sentence in the related NPC's sentence script located in "Postal III\p3\scripts\Sentences". The voice prefix is not required, "GAY_ONFIRE" can lose the "GAY_" part and instead just be "ONFIRE" for example...
-<p>
-If you want the player to say something you must EntFireInput logic_playerproxy to do a generic say instead, like this: "EntFireInput proxy,Say:SENTENCENAME".
+                <h1 id="playvideo">PlayVideo</h1>
+<p>Plays a .bik movie from "Postal III/p3/media" folder
+<h1>Syntax</h1>
+<p><code class="language-js">PlayVideo 'filename', 'fade_in_time', 'fade_out_time', 'console_command(s) to execute after Video finished playing'</code>
+<h1>Technical Details</h1>
+<p>Will execute "p3_playvideo" or "p3_playvideo_exitcommand" console commands
+<p>Syntax for "p3_playvideo_exitcommand" is 'filename', 'exitcommand', 'fadein', 'fadeout'
+<p>Syntax for "p3_playvideo" is 'filename', 'fadein', 'fadeout'
+<h1>Example</h1>
 <pre><code class="language-js">
-// Say a voice line...
-Say ZOMB_MOAN
+// Fades in and fades out in 1.5 seconds
+PlayVideo placeholder, 1.5, 1.5
 
-// Pick and say one of these voice lines randomly...
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
+// Fades in and fades out in 1 second
+PlayVideo thebigrevenge, 1, 1
 
-// Pick and say one of these voice lines randomly, and specify the optional sentence
-// priority parameter (TODO: Need to make sure that is actually what that parameter even is) - Tim 
-// SENTENCE PRIORITY PARAMETERS
-// SENTENCE_PRIORITY_NORMAL = 0,
-// SENTENCE_PRIORITY_MEDIUM = 1,
-// SENTENCE_PRIORITY_HIGH = 2,
-Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
+// Alternative (requires pcc entity in the level)
+EntFireInput "pcc,Command:playvideo thebigrevenge"
+
+// Another alternative
+// Will play music, and text after video had ended
+EntFireInput "pcc,Command:playgamesound Music.IntroStinger"
+EntFireInput "pcc,Command:video_exitcmd notimportant gameui_show_p3_briefdlg #CR_MONDAY_BRIEFING"
 </code></pre>
+<h1>Issues</h1>
+<p>* Depending on which command will you use for video playing, it will become unskippable.
+<p>* Postal3Script is too slow to play an intro movie on the beginning of a map, causing it you to see the map for a brief second before eventually playing the movie.
               
             </div>
           </div>
@@ -255,10 +262,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TBD/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../opendialog/" class="btn btn-neutral float-right" title="OpenDialog">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TBD/" class="btn btn-neutral" title="Effect (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../playerkarma/" class="btn btn-neutral" title="PlayerKarma"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -286,10 +293,10 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../playerkarma/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../opendialog/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
