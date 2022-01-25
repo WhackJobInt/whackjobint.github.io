@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/say/</loc>
+         <lastmod>2022-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/visible/</loc>
          <lastmod>2022-01-25</lastmod>
          <changefreq>daily</changefreq>

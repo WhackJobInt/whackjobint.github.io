@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Whackjob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/faction/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/say/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Faction - Postal3Script</title>
+  <title>Say - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Faction";
-    var mkdocs_page_input_path = "faction.md";
-    var mkdocs_page_url = "/postal3script/faction/";
+    var mkdocs_page_name = "Say";
+    var mkdocs_page_input_path = "say.md";
+    var mkdocs_page_url = "/postal3script/say/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -69,12 +69,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Object Categories (WIP)</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../manner/">Manner</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Faction</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faction/">Faction</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">ItemType (TBD)</a>
                     </li>
@@ -108,10 +106,12 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Functions (WIP)</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Say</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
                     </li>
@@ -212,11 +212,11 @@
     
       
         
-          <li>Object Categories (WIP) &raquo;</li>
+          <li>Functions (WIP) &raquo;</li>
         
       
     
-    <li>Faction</li>
+    <li>Say</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -228,46 +228,25 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="faction">Faction</h1>
-<p>Factions/Squads in Postal III are Half-Life 2 squads
-<p>One Squad can hold 32 NPCs in one map, if it's higher than 32, problems might occur.
+                <h1 id="say">Say</h1>
+<p>Make an NPC say a specified "sentence" type voice line
+<p>Uses the name of the sentence in the related NPC's sentence script located in "Postal III\p3\scripts\Sentences". The voice prefix is not required to be used. GAY_ONFIRE can lose the "GAY_" part, and instead just be "ONFIRE" for example.
+<p>
+If you want the player to say something you must EntFireInput logic_playerproxy to do a generic say instead, like this: "EntFireInput proxy,Say:SENTENCENAME".
 <pre><code class="language-js">
-st_FactionTutorial
-{
-    Group Neutral
-    Patterns
-    {
-        pt_default
-        {
-            actions
-            {
-                // Here you can find all the Factions defined in Vanilla Postal III
-                IfAttr "ea_faction == Faction:Police Return 1"
-                IfAttr "ea_faction == Faction:Zealots Return 1"
-                IfAttr "ea_faction == Faction:Citizens Return 1"
-                IfAttr "ea_faction == Faction:Hobos Return 1"
-                IfAttr "ea_faction == Faction:Animals Return 1"
-                IfAttr "ea_faction == Faction:Player Return 1"
-                IfAttr "ea_faction == Faction:LaserDot Return 1"
-                IfAttr "ea_faction == Faction:Effects Return 1"
-                IfAttr "ea_faction == Faction:Items Return 1"
-                IfAttr "ea_faction == Faction:Taliban Return 1"
-                IfAttr "ea_faction == Faction:Venezuela Return 1"
-                IfAttr "ea_faction == Faction:ZombieBoss Return 1" // used by flag_zombie (Boss NPCs)
+// Say a single sentence voiceline...
+Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
 
-                // Factions are independent from Squads
+// Say a random voice line out of these...
+Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
 
-                // Setting a Squad in an NPC
-                SetSquad tutorial_squad
-                // Making another Squad an enemy
-                SetSquadRelation player_squad:enemy
-
-                // You can also do value after declaring enemy (todo: what does it do?)
-                SetSquadRelation player_squad:enemy:4
-            }
-        }
-    }
-}
+// Say a random voice line out of these, and specify an optional sentence
+// priority parameter (NOTE: Might need to factcheck this) - Tim 
+// SENTENCE PRIORITY PARAMETERS
+// SENTENCE_PRIORITY_NORMAL = 0,
+// SENTENCE_PRIORITY_MEDIUM = 1,
+// SENTENCE_PRIORITY_HIGH = 2,
+Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
 </code></pre>
               
             </div>
@@ -276,10 +255,10 @@ st_FactionTutorial
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TBD/" class="btn btn-neutral float-right" title="ItemType (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../TBD/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../manner/" class="btn btn-neutral" title="Manner"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../TBD/" class="btn btn-neutral" title="Effect (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -307,7 +286,7 @@ st_FactionTutorial
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../manner/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
