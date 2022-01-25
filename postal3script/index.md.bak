@@ -1,0 +1,138 @@
+# What is Postal3Script?
+
+<p>Postal3Script is a scripting language found in Postal III only.
+<p>It's capable of NPC AI, and mission scripting without the need of source code of the game.
+<p>P3S script files are located in './Postal III/p3/scripts' folder, and to load them into the game is done via 'ai_scripts.txt' found in the same folder.
+<p>When editing a p3s file, you don't need to fully restart the game to see the changes, it's enough to just reload the map.
+<h2>Example Postal3Script script:</h2>
+<pre><code class="language-js">
+Constants
+{
+	Const DONUTS_INCR,1
+	Const SOMEBODY_STOLE_MY_DONUTS,15
+	Const YES,1
+	Const NO,0
+}
+
+behavior
+{
+	name bh_evensuperioractor
+	inherited bh_mysuperioractor
+	
+	States
+	{
+		st_mycustomstate
+		{
+			Group Alert
+			Patterns
+			{
+				pt_default
+				{
+					// Only executes when on Alert
+				}
+			}
+		}
+		
+		st_nowyallgonnapay
+		{
+			Group Combat
+			Patterns
+			{
+				pt_default
+				{
+					// Only executes when in Combat
+					SetAttr	"veryverypissedoff YES"
+					Pattern pt_donuts
+				}
+				
+				pt_donuts
+				{
+					IfAttr "veryverypissedoff == YES Pattern st_nowyallgonnapay.pt_allgood"
+				}
+				
+				pt_allgood
+				{
+					SetAttr	"veryverypissedoff NO"
+				}
+			}
+		}
+		events
+		{
+			OnDeath "ExecutePattern st_OnDeath.pt_default"
+			OnTimer_tUnstun	"Pattern pt_end"
+			OnUnconscious "Pattern pt_unconscious"
+			OnHostaged "Pattern pt_hostaged"
+			OnSprayStunned "Timer tUnstun,SPRAY_UNSTUN_TIMER"
+			OnTimer_tScream "ExecutePattern .xpt_SayScream"
+			OnUnstunned "Pattern pt_end"
+			OnStandUpEnd "Pattern pt_end"
+		}
+		
+		// Sets on spawn
+		st_init
+		{
+			Group Neutral
+			Patterns
+			{
+				pt_default
+				{
+					actions
+					{
+						Senses false
+					}
+				}
+			}
+		}
+		
+		// Called continously
+		st_start
+		{
+			Group Neutral
+			Patterns
+			{
+				pt_default
+				{
+					actions
+					{
+						// tick
+					}
+				}
+			}
+		}
+	}
+}
+</code></pre>
+<h1> Limitations </h1>
+<p>Each state can hold events, which in turn can execute patterns. Patterns can be inherited from other P3S actors, as well as Attributes.
+<p>* In Postal3Script you can only have integer Attributes: Attributes can't have floats, doubles and strings.
+<p>* An Attribute must have a value set to it before checking it's value, meaning an attribute that doesn't exists will never return a valid value. (Checking if it's zero doesn't work)
+<p>* You can only have a limited number of IFs in a single state or pattern.
+
+<h1> Debugging code </h1>
+<p>Normally the game doesn't print out any errors, you need to have 'developer' and 'p3_fsm_spew' console command enabled.</p>
+<p>Scrolling up in the console should show you at which line(s) P3S is reporting errors.
+
+<h1> Unused Postal3Script files </h1>
+<p>TM has left p3s files in the scripts folder they were using during the development of Postal III.
+<p>Many of them contains unused, cut features, and test scripts.
+<pre><code class="language-js">
+'ai_badger_test.p3s' - Badger testing
+'ai_cashmart.p3s' - Earlier version of Cashmart (ai_cashmart_npc.p3s is not unused)
+'ai_gameplay.p3s' - Intended for Open World gameplay
+'ai_patrol1_citizen_fight.p3s' - Unknown
+'ai_st1_common.p3s' - Contains various old code
+'ai_st2_states.p3s' - Contains various old code
+'ai_st3_social.p3s' - Contains experimental old code
+'ai_st4_queuie.p3s' - Queue testing
+'ai_st5_temp.p3s' - Contains test code, scrapped features
+'ai_st6_missions.p3s' - Test code related to missions
+'ai_st7_environment.p3s' - Code related to cut environment behavior
+'ai_st8_items.p3s' - Code related to cut inventory items
+'ai_st9_animals.p3s' - Animals test
+'ai_st10_temp.p3s' - Test script, contains code related to Traffic lights
+'ai_st11_urza.p3s' - Contains scrapped features, old code
+'ai_st12_urza.p3s' - Contains scrapped features, old code
+'ai_st98_helicopter.p3s' - Code that's identical to today's Helicopter AI
+'ai_st_utilities.p3s' - Various code related to NPCs
+'ai_test_babuska.p3s' - Test script
+</code></pre>

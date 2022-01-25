@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Whackjob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/spclattributes/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/embedattributes/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Engine Attributes (ea_* ..) - Postal3Script</title>
+  <title>Embedded Attributes - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Engine Attributes (ea_* ..)";
-    var mkdocs_page_input_path = "spclattributes.md";
-    var mkdocs_page_url = "/postal3script/spclattributes/";
+    var mkdocs_page_name = "Embedded Attributes";
+    var mkdocs_page_input_path = "embedattributes.md";
+    var mkdocs_page_url = "/postal3script/embedattributes/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -65,7 +65,7 @@
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Engine Attributes (ea_* ..)</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Embedded Attributes</a>
     <ul class="current">
     </ul>
                     </li>
@@ -216,7 +216,7 @@
         
       
     
-    <li>Engine Attributes (ea_* ..)</li>
+    <li>Embedded Attributes</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -228,12 +228,15 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="engine-attributes">Engine Attributes</h1>
-<p>Some of the engine's internal variables are exposed to Postal3Script, e.g. Health.
-<p>These special Attributes are named as ea_*
-<p>These attributes are heavily tied to the engine, breaking or changing them in an unnatural way is not advised.
+                <h1 id="embedded-attributes">Embedded Attributes</h1>
+<p>Instead of unexposed C++ variables in the source code, there are attributes that are already "embedded" and read from a related Postal3Script for given entities.
+<p>For example, "ea_health" is the health of the entity that uses the assigned p3s behaviour, or the health of a set target, and can be read, changed, and set using the various "Attr" statements.
+<p>Embedded Attributes are have the "ea_" prefix.
+<p>There are a variety of attributes and they each serve their own purposes.
+
+<h2>Embedded Attribute Example</h2>
 <pre><code class="language-js">
-st_SpecialAttrTutorial
+st_EmbeddedAttrTutorial
 {
     Group Neutral
     Patterns
@@ -242,7 +245,7 @@ st_SpecialAttrTutorial
         {
             actions
             {
-                // Special damage absorptions
+                // Embedded damage absorptions
                 SetAttr "ea_dmg_absorb 70"
                 SetAttr "ea_bulletdmg_absorb 90"
                 SetAttr "ea_clubdmg_absorb 70"
