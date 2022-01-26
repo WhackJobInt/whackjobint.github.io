@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/missionlog_save_briefing/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/callstate_callpattern/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>MissionLog, MissionSave, MissionBriefing - Postal3Script</title>
+  <title>CallState, CallPattern - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "MissionLog, MissionSave, MissionBriefing";
-    var mkdocs_page_input_path = "missionlog_save_briefing.md";
-    var mkdocs_page_url = "/postal3script/missionlog_save_briefing/";
+    var mkdocs_page_name = "CallState, CallPattern";
+    var mkdocs_page_input_path = "callstate_callpattern.md";
+    var mkdocs_page_url = "/postal3script/callstate_callpattern/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -145,14 +145,14 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- State Functions --</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../statematrix/">StateMatrix</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../callstate_callpattern/">CallState, CallPattern</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">CallState, CallPattern</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                     </li>
@@ -182,12 +182,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Mission Functions --</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">MissionLog, MissionSave, MissionBriefing</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../showmessage_showhint/">ShowMessage, ShowHint</a>
                     </li>
@@ -226,11 +224,11 @@
     
       
         
-          <li>-- Mission Functions -- &raquo;</li>
+          <li>-- State Functions -- &raquo;</li>
         
       
     
-    <li>MissionLog, MissionSave, MissionBriefing</li>
+    <li>CallState, CallPattern</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -242,98 +240,18 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="-missionlog">- MissionLog</h1>
-<p>Adds missions/jobs/objectives on the Player's mission log
-<h1>Syntax</h1>
-<p><code class="language-js">MissionLog clear_all</code> -- Clears all objectives from the log
-<p><code class="language-js">MissionLog add_primary, [obj], [text/string]</code> -- Adds primary objective to the log
-<p><code class="language-js">MissionLog add_secondary, [obj], [text/string]</code> -- Adds secondary objective to the log
-<p><code class="language-js">MissionLog done, [obj1], [obj2], ..</code> -- Objective(s) marked as done
-<p><code class="language-js">MissionLog fail, [obj1], [obj2], ..</code> -- Objective(s) marked as failed
-<p><code class="language-js">MissionLog removed, [obj1], [obj2], ..</code> -- Objective(s) removed without a trace
-<p><code class="language-js">MissionLog disable</code> -- Mission log is disabled
-<p><code class="language-js">MissionLog enable</code> -- Mission log is enabled
-<h1>Example</h1>
-<pre><code class="language-js">
-// from ai_mission_jwb.p3s
-st_start
-{
-    group Neutral
-    patterns 
-    {
-        pt_default
-        {
-            actions
-            {
-                PlayerKarma hide
-
-                EntFireInput "lpp,GiveWeapon:p3_weapon_taser"
-                EntFireInput "pcc,Command:use p3_weapon_taser"
-
-                ExecutePattern .xpt_show_momleft
-                ExecutePattern st_util.xpt_ShowMissionDesc
-
-                // Adds the objective to the Player's log "Jen must survive"
-                MissionLog add_primary,JenSurvive,#P3_JWB_PRIMARY_JEN
-
-                ExecutePattern .xpt_secondary
-                ShowMessage #P3_JWB_START
-                ShowMessage #P3_JWB_HELPER01
-
-                Pattern pt_loop
-            }
-        }
-
-        // All Soccer Moms have left
-        pt_end
-        {
-            actions
-            {
-                // Objectives marked as done
-                MissionLog done,MomsLeft
-                MissionLog done,JenSurvive
-
-                SetAttr "NonLethalDone 1"
-                IfAttr "PoliceIsHere == 1 RemoveAttr NonLethalDone"
-
-                // Player didn't harm anyone
-                CheckAttr "NonLethalDone MissionLog done,NonLethal"
-
-                EntFireInput fade_in,fade
-                Wait 1
-                EntFireInput "pcc,Command:video_exitcmd jwb_3 p3_end_mission"
-            }
-        }
-    }
-}
-</code></pre>
-
-<br><h1>- MissionSave</h1>
+                <h1>Note: It's advised to not use these functions</h1>
+<h1>- CallState</h1>
 <p>Unused Postal3Script function
-<p>Not recommended to use
+<p>Superseded by State
 <h1>Syntax</h1>
-<p><code class="language-js">MissionSave [string]</code> -- Saves the game
-<h2>Technical Details</h2>
-<p>When "MissionSave" is called in p3s, it will do "save P3M_[string] mission [string]" in console, where [string] is replaced with the parameter.
-<p>It was to be used or related to 'MissionLog', but it looks like it's underdeveloped.
-<h1>Example</h1>
-<pre><code class="language-js">
-// This will create a p3m_b4_zombie_ambush.sav and .tga file in the SAVE folder
-MissionSave b4_zombie_ambush
-</code></pre>
+<p><code class="language-js">CallState [state name]</code> -- Exits out from current state, and enters new state
 
-<br><h1>- MissionBriefing</h1>
+<br><br><h1>- CallPattern </h1>
 <p>Unused Postal3Script function
-<p>Shows a message on the screen with black background, with a "Press ENTER to continue" prompt.
-<p>Equivalent to "gameui_show_p3_briefdlg [string]" console command, which was also used ONLY in the Paradise Bridge level.
-<h1>Example</h1>
-<pre><code class="language-js">
-// This will show the very first text screen of Paradise Bridge level
-MissionBriefing "#P3_PDB_T01_ONSCREEN"
-
-// This will do the same, but after the pdb_00.bik stopped playing after execution
-EntFireInput "pcc,Command:video_exitcmd pdb_00 gameui_show_p3_briefdlg #P3_PDB_T01_ONSCREEN"
-</code></pre>
+<p>Superseded by Pattern
+<h1>Syntax</h1>
+<p><code class="language-js">CallPattern [pattern name]</code> -- Exits out from current pattern, and enters a new pattern in current state
               
             </div>
           </div>
@@ -341,10 +259,10 @@ EntFireInput "pcc,Command:video_exitcmd pdb_00 gameui_show_p3_briefdlg #P3_PDB_T
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../showmessage_showhint/" class="btn btn-neutral float-right" title="ShowMessage, ShowHint">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../activitypattern_funcs/" class="btn btn-neutral float-right" title="StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../attributeprogressbar/" class="btn btn-neutral" title="AttributeProgressBar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../statematrix/" class="btn btn-neutral" title="StateMatrix"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -372,10 +290,10 @@ EntFireInput "pcc,Command:video_exitcmd pdb_00 gameui_show_p3_briefdlg #P3_PDB_T
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../attributeprogressbar/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../statematrix/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../showmessage_showhint/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../activitypattern_funcs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

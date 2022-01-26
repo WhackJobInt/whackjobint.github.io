@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/missionlog_save_briefing/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/addfluid/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>MissionLog, MissionSave, MissionBriefing - Postal3Script</title>
+  <title>AddFluid - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "MissionLog, MissionSave, MissionBriefing";
-    var mkdocs_page_input_path = "missionlog_save_briefing.md";
-    var mkdocs_page_url = "/postal3script/missionlog_save_briefing/";
+    var mkdocs_page_name = "AddFluid";
+    var mkdocs_page_input_path = "addfluid.md";
+    var mkdocs_page_url = "/postal3script/addfluid/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -106,7 +106,7 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Functions (WIP) --</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
@@ -141,7 +141,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../enablegibs/">EnableGibs</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../addfluid/">AddFluid</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">AddFluid</a>
+    <ul class="current">
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- State Functions --</span></p>
@@ -182,12 +184,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Mission Functions --</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">MissionLog, MissionSave, MissionBriefing</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../showmessage_showhint/">ShowMessage, ShowHint</a>
                     </li>
@@ -226,11 +226,11 @@
     
       
         
-          <li>-- Mission Functions -- &raquo;</li>
+          <li>-- Functions (WIP) -- &raquo;</li>
         
       
     
-    <li>MissionLog, MissionSave, MissionBriefing</li>
+    <li>AddFluid</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -242,97 +242,43 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="-missionlog">- MissionLog</h1>
-<p>Adds missions/jobs/objectives on the Player's mission log
+                <h1 id="addfluid">AddFluid</h1>
+<p>Spawns gasoline trails at a specified location
+<p>Only ever used in Paradise Bridge level.
 <h1>Syntax</h1>
-<p><code class="language-js">MissionLog clear_all</code> -- Clears all objectives from the log
-<p><code class="language-js">MissionLog add_primary, [obj], [text/string]</code> -- Adds primary objective to the log
-<p><code class="language-js">MissionLog add_secondary, [obj], [text/string]</code> -- Adds secondary objective to the log
-<p><code class="language-js">MissionLog done, [obj1], [obj2], ..</code> -- Objective(s) marked as done
-<p><code class="language-js">MissionLog fail, [obj1], [obj2], ..</code> -- Objective(s) marked as failed
-<p><code class="language-js">MissionLog removed, [obj1], [obj2], ..</code> -- Objective(s) removed without a trace
-<p><code class="language-js">MissionLog disable</code> -- Mission log is disabled
-<p><code class="language-js">MissionLog enable</code> -- Mission log is enabled
+<p><code class="language-js">AddFluid [xpos] [ypos] [zpos] [amount]</code> -- Spawns trails
+<p>Default Amount is 300 if no Amount was defined
 <h1>Example</h1>
 <pre><code class="language-js">
-// from ai_mission_jwb.p3s
-st_start
+// from ai_mission_pdb.p3s
+pt_default
 {
-    group Neutral
-    patterns 
+    actions
     {
-        pt_default
-        {
-            actions
-            {
-                PlayerKarma hide
+        Wait 0.9
+        EntFireInput tutor03_teleport,Teleport
+        EntFireInput "pcc,Command:use p3_weapon_emptyhands"
+        EntFireInput "lpp,RemoveWeapon:p3_weapon_grenade"
 
-                EntFireInput "lpp,GiveWeapon:p3_weapon_taser"
-                EntFireInput "pcc,Command:use p3_weapon_taser"
+        // Spawn Gasoline trails at this location
+        AddFluid "171,670,100,300000"
+        AddFluid "-318,931,80,300000"
+        AddFluid "150,925,100,100000"
+        AddFluid "-110,1030,80,200000"
 
-                ExecutePattern .xpt_show_momleft
-                ExecutePattern st_util.xpt_ShowMissionDesc
+        // This would also spawn Gasoline trails at this location
+        AddFluid "300,312,100"
 
-                // Adds the objective to the Player's log "Jen must survive"
-                MissionLog add_primary,JenSurvive,#P3_JWB_PRIMARY_JEN
-
-                ExecutePattern .xpt_secondary
-                ShowMessage #P3_JWB_START
-                ShowMessage #P3_JWB_HELPER01
-
-                Pattern pt_loop
-            }
-        }
-
-        // All Soccer Moms have left
-        pt_end
-        {
-            actions
-            {
-                // Objectives marked as done
-                MissionLog done,MomsLeft
-                MissionLog done,JenSurvive
-
-                SetAttr "NonLethalDone 1"
-                IfAttr "PoliceIsHere == 1 RemoveAttr NonLethalDone"
-
-                // Player didn't harm anyone
-                CheckAttr "NonLethalDone MissionLog done,NonLethal"
-
-                EntFireInput fade_in,fade
-                Wait 1
-                EntFireInput "pcc,Command:video_exitcmd jwb_3 p3_end_mission"
-            }
-        }
+        EntFireInput "pcc,Command:give p3_weapon_match"
+        Wait 0.5
+        MissionLog "add_primary,tutor04,#P3_PDB_T04_LOG"
+        ShowMessage #P3_PDB_T04_MSG01
+    }
+    events
+    {
+        OnTutor04ZombiesDead    "Pattern pt_end"
     }
 }
-</code></pre>
-
-<br><h1>- MissionSave</h1>
-<p>Unused Postal3Script function
-<p>Not recommended to use
-<h1>Syntax</h1>
-<p><code class="language-js">MissionSave [string]</code> -- Saves the game
-<h2>Technical Details</h2>
-<p>When "MissionSave" is called in p3s, it will do "save P3M_[string] mission [string]" in console, where [string] is replaced with the parameter.
-<p>It was to be used or related to 'MissionLog', but it looks like it's underdeveloped.
-<h1>Example</h1>
-<pre><code class="language-js">
-// This will create a p3m_b4_zombie_ambush.sav and .tga file in the SAVE folder
-MissionSave b4_zombie_ambush
-</code></pre>
-
-<br><h1>- MissionBriefing</h1>
-<p>Unused Postal3Script function
-<p>Shows a message on the screen with black background, with a "Press ENTER to continue" prompt.
-<p>Equivalent to "gameui_show_p3_briefdlg [string]" console command, which was also used ONLY in the Paradise Bridge level.
-<h1>Example</h1>
-<pre><code class="language-js">
-// This will show the very first text screen of Paradise Bridge level
-MissionBriefing "#P3_PDB_T01_ONSCREEN"
-
-// This will do the same, but after the pdb_00.bik stopped playing after execution
-EntFireInput "pcc,Command:video_exitcmd pdb_00 gameui_show_p3_briefdlg #P3_PDB_T01_ONSCREEN"
 </code></pre>
               
             </div>
@@ -341,10 +287,10 @@ EntFireInput "pcc,Command:video_exitcmd pdb_00 gameui_show_p3_briefdlg #P3_PDB_T
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../showmessage_showhint/" class="btn btn-neutral float-right" title="ShowMessage, ShowHint">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../func_state_pattern_executepattern/" class="btn btn-neutral float-right" title="State, Pattern, ExecutePattern">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../attributeprogressbar/" class="btn btn-neutral" title="AttributeProgressBar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../enablegibs/" class="btn btn-neutral" title="EnableGibs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -372,10 +318,10 @@ EntFireInput "pcc,Command:video_exitcmd pdb_00 gameui_show_p3_briefdlg #P3_PDB_T
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../attributeprogressbar/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../enablegibs/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../showmessage_showhint/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../func_state_pattern_executepattern/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
