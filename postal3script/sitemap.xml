@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/aim_face/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/arm/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
@@ -46,7 +51,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/busy_fear_hate/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/callstate_callpattern/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/catdervish/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/checktarget_checklos/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/crouch_lean/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/desertsquad/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -61,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/emitsound/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/enablegibs/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
@@ -71,7 +106,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/entervehicle/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/faction/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/follow_playerfriendly/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/freemovement/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -81,7 +131,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/headblob/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/hit/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/holsterweapon/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -131,12 +191,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/rallysquad/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/relationship/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/reset_ignore_settarget/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/say/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kizoky.github.io/postal3script/sendtarget2caller/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/senses_lookat_lookout/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/setactpack/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/sethint_area_leangroup_avoidarea/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/setsquad_relation/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kizoky.github.io/postal3script/showmessage_showhint/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/snatch_unsnatch/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -147,6 +252,21 @@
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/stunout/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/targetentbyname/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/targetfunctions/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/targetmemory/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

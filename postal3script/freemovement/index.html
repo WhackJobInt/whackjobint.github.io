@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="WhackJob Interactive">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/freemovement/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>FreeMovement, FreeMovementParams - Postal3Script</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "FreeMovement, FreeMovementParams";
+    var mkdocs_page_input_path = "freemovement.md";
+    var mkdocs_page_url = "/postal3script/freemovement/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Postal3Script</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">-- Postal3Script (WIP) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">What is Postal3Script?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Structure (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">States (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Patterns (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../embedattributes/">Embedded Attributes</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Object Categories --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../manner/">Manner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../faction/">Faction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">ItemType (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">String (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Timer (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object/">Object</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../distto/">DistTo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AngleTo (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../visible/">Visible</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">HasWeapon (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">RelationTo (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Relation (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../name/">Name</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Ammo (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Ignore (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Karma (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voiceprefix/">VoicePrefix</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- State Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../statematrix/">StateMatrix</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../callstate_callpattern/">CallState, CallPattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Misc Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Effect (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Item, SpawnItem (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../addfluid/">AddFluid</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Anchor, TargetAnchor (TBD)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- NPC Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../emitsound/">EmitSound</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Gesture, ResetGesture, ResetSequence (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../headblob/">Headblob</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../NPC/">NPC</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- NPC Behavior Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aim_face/">Aim, Face</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../snatch_unsnatch/">Snatch, Unsnatch</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../senses_lookat_lookout/">Senses, LookAt, LookOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../crouch_lean/">Crouch, Lean</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../busy_fear_hate/">Busy, Fear, Hate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../follow_playerfriendly/">Follow, PlayerFriendly</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../catdervish/">CatDervish</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../stunout/">StunOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../enablegibs/">EnableGibs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../entervehicle/">EnterVehicle</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Squad Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setsquad_relation/">SetSquad, SetSquadRelation, RemoveSquadRelation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../rallysquad/">RallySquad</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Targeting Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../targetentbyname/">TargetEntByName</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sendtarget2caller/">SendTarget2Caller</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../checktarget_checklos/">CheckTarget, CheckLOS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../reset_ignore_settarget/">ResetTarget, IgnoreTarget, SetTarget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../targetfunctions/">TargetEnemy, TargetPlayer, TargetCaller, TargetItem, TargetVehicle, TargetHostage, TargetCrosshair</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../targetmemory/">TargetToMem, TargetFromMem, CallerToMem, ClearMem</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../assisttarget_enemy/">AssistTarget, AssistEnemy, ArrestTarget, BusyTarget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../relationship/">Relationship</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Movement Functions --</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../movement_funcs/">Move, MoveToLean, MoveToTarget, MoveToTargetLKP</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">FreeMovement, FreeMovementParams</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../travelbypathtrack/">TravelByPathTrack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sethint_area_leangroup_avoidarea/">SetHintGroup, SetAreaGroup, SetLeanGroup, AvoidProhibitedArea</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../turn_turnspeed/">Turn, TurnSpeed</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setactpack/">SetActPack</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Attack Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hit/">Hit</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../push/">Push</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../showmessage_showhint/">ShowMessage, ShowHint</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../endmission/">EndMission</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../playerkarma/">PlayerKarma</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../playvideo/">PlayVideo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../opendialog/">OpenDialog</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Deleted Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../arm/">Arm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../holsterweapon/">HolsterWeapon</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Postal3Script</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>-- Movement Functions -- &raquo;</li>
+        
+      
+    
+    <li>FreeMovement, FreeMovementParams</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="-freemovement">- FreeMovement</h1>
+<p>Sets or resets NPC's freedom of movement
+<p>FreeMovementParams can be reset optionally
+<h1>Syntax</h1>
+<p><code class="language-js">FreeMovement [walk/run], [reset]</code> -- NPC will walk or run, [reset] is optional
+<p><code class="language-js">FreeMovement [true/false], [reset]</code> -- NPC can move or not, [reset] is optional
+<p><code class="language-js">FreeMovement random, [reset]</code> -- Chooses between walk or run, [reset] is optional
+<h1>Example</h1>
+<pre><code class="language-js">
+// (from ai_cashmart_npc.p3s)
+// This will reset the NPC's movement to be able to move everywhere
+xpt_invalidroute
+{
+    actions
+    {
+        Face false
+        Crouch false
+        Aim false
+        FreeMovementParams area_all,-1,-1,area_group,once
+        FreeMovement run,reset
+    }
+}
+</code></pre>
+
+<br><br><h1>- FreeMovementParams</h1>
+<p>Restricts NPC's movement with parameters
+<pre><code class="language-js">
+// (from ai_st_init.p3s)
+Const ED_VERY_CLOSE,32
+Const ED_CLOSE,160
+Const ED_MIDDLE,320
+Const ED_FAR,768
+Const ED_FURTHER,1280
+Const ED_VERY_FAR,2048
+
+// Flags
+current
+hint_all
+hint_hidden
+hint_visible
+area_all
+area_hidden
+area_visible
+cover
+backaway
+
+// Goal flags
+safe
+hint_group
+from_target
+hint_face
+use_node
+nearest
+move_from_target
+random
+once
+area_group
+</code></pre>
+<h1>Syntax</h1>
+<p><code class="language-js">FreeMovementParams [flag], [distance min], [distance max], [goalflag1], [goalflag2], [goalflag3], ..</code>
+<h1>Example</h1>
+<pre><code class="language-js">
+// This will allow the NPC to move everywhere in it's area group
+FreeMovementParams area_all,-1,-1,area_group
+
+// This will restrict the NPC to move inside hint groups only
+FreeMovementParams hint_all,-1,-1,hint_group
+
+// This will make the NPC move to a hint group or node, only once
+FreeMovementParams hint_all,ED_MIDDLE,ED_VERY_FAR,hint_group,hint_face,use_node,once
+
+// This will force the NPC to be really close to it's target
+FreeMovementParams area_all,0,ED_VERY_CLOSE,from_target
+
+// This however will make the NPC go away from it's target as far as possible
+FreeMovementParams area_all,ED_VERY_FAR,ED_VERY_FAR,move_from_target
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../travelbypathtrack/" class="btn btn-neutral float-right" title="TravelByPathTrack">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../movement_funcs/" class="btn btn-neutral" title="Move, MoveToLean, MoveToTarget, MoveToTargetLKP"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022<br>ㅤ</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../movement_funcs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../travelbypathtrack/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
