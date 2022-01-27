@@ -243,8 +243,9 @@
             <div class="section">
               
                 <h1 id="manner">Manner</h1>
-<p>Manner alters the behavior of NPCs heavily, for e.g. they are less likely to attack a Cop than the Player.
-<p>Manner bias towards other NPC must be researched to fully understand it
+<p>Each NPC and even some generic entities, have a specific Manner assigned to them. This is essentially the same thing as Faction but on a more individual level. 
+This is used for various things, such as setting and checking how a specific NPC belonging to a faction actually BEHAVES to then make another NPC act accordingly towards them. For example, preventing us from punching someone we dislike, and instead just shoving them because our manner is set as "GayGuy".
+<p>(TODO: Manner bias towards other NPC must be researched to fully understand it)
 <pre><code class="language-js">
 st_MannerTutorial
 {
@@ -255,7 +256,7 @@ st_MannerTutorial
         {
             actions
             {
-                // Here you can find all the Manners defined in Vanilla Postal III
+                // Here's a list of all Manners...
                 IfAttr "ea_Manner == Manner:Player Return 1"
                 IfAttr "ea_Manner == Manner:StreetBro Return 1"
                 IfAttr "ea_Manner == Manner:JusticeMan Return 1"
@@ -279,6 +280,12 @@ st_MannerTutorial
                 IfAttr "ea_Manner == Manner:GayGuy Return 1"
                 IfAttr "ea_Manner == Manner:NerdyNerd Return 1"
                 IfAttr "ea_Manner == Manner:Bystander Return 1"
+
+                // Don't continue if we're not a StreetBro...
+                IfAttr "ea_manner != Manner:StreetBro Return 1"
+
+                // If the target's manner is lame wanker, bully the poor guy!
+                IfAttr "target.ea_manner == Manner:LameWanker Pattern pt_Bully"
             }
         }
     }

@@ -243,10 +243,12 @@
             <div class="section">
               
                 <h1 id="name">Name</h1>
-<p>The name of a specified entity, set via Hammer
+<p>The name of a specified object, set via Hammer
 <p>It is case-insensitive
+<h1>Syntax</h1>
+<p><code class="language-js">Name:[object]</code> -- Returns the name of a specified object
 <pre><code class="language-js">
-// If the name of our targeted entity is "npc_jen"
+// If the name of our targeted object is "npc_jen"
 IfAttr "Name:target == String:npc_jen Block begin"
     // Set jen's health to zero
     SetAttr "target.ea_health 0"

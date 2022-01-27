@@ -245,9 +245,9 @@
                 <h1 id="attributes">Attributes</h1>
 <p>In Postal3Script you are able to set or check Attributes, and execute states according to the results.
 <p>All attributes in Postal3Script are integers only.
-<p>When checking against multiple attributes at once you can use 'and'
-<h1>IfAttr </h1>
-<p>Checks an Attribute or Object. The Attribute or Object MUST exist.
+<p>When checking against multiple attributes at once you can use the "and" keyword.
+<h1>IfAttr</h1>
+<p>Checks if an Attribute or Object has met a condition. The Attribute or Object MUST be set using the SetAttr statement first, or already exist.
 <pre><code class="language-js">
 st_IfAttrTutorial
 {
@@ -292,8 +292,8 @@ st_IfAttrTutorial
     }
 }
 </code></pre>
-<h1>SetAttr </h1>
-<p>Creates and sets a new attribute's value
+<h1>SetAttr</h1>
+<p>Creates and sets a new attribute value if it doesn't exist, or just sets it if it already exists.
 <pre><code class="language-js">
 Constants
 {
@@ -332,8 +332,8 @@ st_SetAttrTutorial
     }
 }
 </code></pre>
-<h1>CheckAttr </h1>
-<p>Checks if an Attribute is equal to or greater than 1
+<h1>CheckAttr</h1>
+<p>Checks if an Attribute is true (equal to 1).
 <pre><code class="language-js">
 st_CheckAttrTutorial
 {
@@ -354,9 +354,9 @@ st_CheckAttrTutorial
 }
 </code></pre>
 
-<h1>ChangeAttr </h1>
-<p>Changes an already existing Attribute's value, increasing, decreasing, multiplying, or by halving
-<p>Halving will clamp the value to integer (5 / 2 wouldn't be '2.5', but '3')
+<h1>ChangeAttr</h1>
+<p>Changes an already existing Attribute's value, increasing, decreasing, multiplying, or by halving.
+<p>Halving will clamp the value to integer (5 / 2 wouldn't be '2.5', but '3').
 <pre><code class="language-js">
 st_ChangeAttrTutorial
 {
@@ -384,8 +384,8 @@ st_ChangeAttrTutorial
 }
 </code></pre>
 
-<h1>RemoveAttr </h1>
-<p>Removes an already existing Attribute from existence
+<h1>RemoveAttr</h1>
+<p>Removes an already existing Attribute. Cannot be accessed and isn't set anymore.
 <pre><code class="language-js">
 st_RemoveAttrTutorial
 {

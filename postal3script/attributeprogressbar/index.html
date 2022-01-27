@@ -243,16 +243,16 @@
             <div class="section">
               
                 <h1 id="attributeprogressbar">AttributeProgressBar</h1>
-<p>Adds a HUD on the screen with name, and value
-<p>Mainly used for displaying Health for Bosses, Allies from missions
-<p>Uses .res files from "Postal III/p3/resource/UI/Hud/" folder
+<p>Add a panel with a progress bar on the HUD with an associated attribute for the "progress" value.
+<p>Used for displaying boss/ally health bars and portraits in missions.
+<p>Uses .res files located in "Postal III/p3/resource/UI/Hud/".
 <h1>Syntax</h1>
-<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute]"</code> -- Shows or creates Progress Bar
-<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute], show_value"</code> -- Shows or creates Progress Bar with Attribute's value shown
-<p><code class="language-js">AttributeProgressBar "[panel], hide"</code> -- Hides Progress Bar
+<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute]"</code> -- Show the progress bar panel with the attribute's value hidden
+<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute], show_value"</code> -- Show the progress bar panel with the attribute's value shown as well
+<p><code class="language-js">AttributeProgressBar "[panel], hide"</code> -- Hide the progress bar
 <h1>Example</h1>
 <pre><code class="language-js">
-// from ai_cashmart_npc.p3s, Helicopter from Cashmart
+// (From ai_cashmart_npc.p3s, Cashmart Helicopter boss)
 SetAttr "flag_zombie 1"
 TargetEntByName gameplay
 TargetToMem msGP
@@ -260,8 +260,8 @@ SetAttr "ea_dmg_absorb 95"
 TargetPlayer 1
 FireInput self,StartHunt
 
-// Show the Panel on spawn
-// "./Postal III/p3/resource/UI/Hud/HeliHealthPanel.res"
+// Show the Panel and assign our health attribute
+// ("Postal III/p3/resource/UI/Hud/HeliHealthPanel.res")
 AttributeProgressBar "HeliHealthPanel,show,ea_health"
 
 Timer tShout,5:2
