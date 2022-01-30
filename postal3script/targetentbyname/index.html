@@ -74,7 +74,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../faction/">Faction</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">ItemType (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../itemtype/">ItemType</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">String (TBD)</a>
                     </li>
@@ -84,15 +84,15 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../distto/">DistTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AngleTo (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../angleto/">AngleTo</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../visible/">Visible</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">HasWeapon (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">RelationTo (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../relationto/">RelationTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Relation (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../relation/">Relation</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../name/">Name</a>
                     </li>
@@ -180,7 +180,7 @@
     <ul class="current">
     </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sendtarget2caller/">SendTarget2Caller</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sendtarget2caller_sendcaller/">SendTarget2Caller, SendCaller</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../checktarget_checklos/">CheckTarget, CheckLOS</a>
                     </li>
@@ -238,6 +238,8 @@
                 </ul>
                 <p class="caption"><span class="caption-text">-- Deleted Functions --</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../actbusy/">ActBusy</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../arm/">Arm</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../holsterweapon/">HolsterWeapon</a>
@@ -283,12 +285,12 @@
             <div class="section">
               
                 <h1 id="targetentbyname">TargetEntByName</h1>
-<p>Searches through the map for a named entity, and sets it as target object if it was successful
+<p>Searches the map for an entity by name, and sets it as the target object if successful.
 <h2>Syntax</h2>
 <p><code class="language-js">TargetEntByName [string]</code>
 <h1>Example</h1>
 <pre><code class="language-js">
-// (from ai_mission_cw.p3s)
+// (From ai_mission_cw.p3s)
 IfAttr "cage_num == 4 Block begin"
     IfAttr "slot#msGP.Cage_04_opened == 0 Repeat 0"
     IfAttr "slot#msGP.Cage_04_opened == 1 Block begin"
@@ -301,7 +303,7 @@ IfAttr "cage_num == 4 Block begin"
     Block end
 Block end
 
-// (From Name page's Example)
+// (From "Name" page's Example)
 TargetEntByName npc_jen
 IfAttr "Name:target == String:npc_jen Block begin"
     // Set jen's health to zero
@@ -315,7 +317,7 @@ Block end
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sendtarget2caller/" class="btn btn-neutral float-right" title="SendTarget2Caller">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sendtarget2caller_sendcaller/" class="btn btn-neutral float-right" title="SendTarget2Caller, SendCaller">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../rallysquad/" class="btn btn-neutral" title="RallySquad"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -349,7 +351,7 @@ Block end
       <span><a href="../rallysquad/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../sendtarget2caller/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../sendtarget2caller_sendcaller/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

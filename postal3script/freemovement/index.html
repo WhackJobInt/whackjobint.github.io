@@ -74,7 +74,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../faction/">Faction</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">ItemType (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../itemtype/">ItemType</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">String (TBD)</a>
                     </li>
@@ -84,15 +84,15 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../distto/">DistTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AngleTo (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../angleto/">AngleTo</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../visible/">Visible</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">HasWeapon (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">RelationTo (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../relationto/">RelationTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Relation (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../relation/">Relation</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../name/">Name</a>
                     </li>
@@ -178,7 +178,7 @@
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../targetentbyname/">TargetEntByName</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sendtarget2caller/">SendTarget2Caller</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sendtarget2caller_sendcaller/">SendTarget2Caller, SendCaller</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../checktarget_checklos/">CheckTarget, CheckLOS</a>
                     </li>
@@ -238,6 +238,8 @@
                 </ul>
                 <p class="caption"><span class="caption-text">-- Deleted Functions --</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../actbusy/">ActBusy</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../arm/">Arm</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../holsterweapon/">HolsterWeapon</a>
@@ -283,15 +285,15 @@
             <div class="section">
               
                 <h1 id="-freemovement">- FreeMovement</h1>
-<p>Sets or resets NPC's freedom of movement
-<p>FreeMovementParams can be reset optionally
+<p>Sets or resets NPC's freedom of movement.
+<p>FreeMovementParams can be reset optionally.
 <h1>Syntax</h1>
 <p><code class="language-js">FreeMovement [walk/run], [reset]</code> -- NPC will walk or run, [reset] is optional
 <p><code class="language-js">FreeMovement [true/false], [reset]</code> -- NPC can move or not, [reset] is optional
 <p><code class="language-js">FreeMovement random, [reset]</code> -- Chooses between walk or run, [reset] is optional
 <h1>Example</h1>
 <pre><code class="language-js">
-// (from ai_cashmart_npc.p3s)
+// (From ai_cashmart_npc.p3s)
 // This will reset the NPC's movement to be able to move everywhere
 xpt_invalidroute
 {
@@ -309,7 +311,7 @@ xpt_invalidroute
 <br><br><h1>- FreeMovementParams</h1>
 <p>Restricts NPC's movement with parameters
 <pre><code class="language-js">
-// (from ai_st_init.p3s)
+// (From ai_st_init.p3s)
 Const ED_VERY_CLOSE,32
 Const ED_CLOSE,160
 Const ED_MIDDLE,320

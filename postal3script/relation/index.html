@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/snatch_unsnatch/">
+  <link rel="canonical" href="https://kizoky.github.io/postal3script/relation/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Snatch, Unsnatch - Postal3Script</title>
+  <title>Relation - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Snatch, Unsnatch";
-    var mkdocs_page_input_path = "snatch_unsnatch.md";
-    var mkdocs_page_url = "/postal3script/snatch_unsnatch/";
+    var mkdocs_page_name = "Relation";
+    var mkdocs_page_input_path = "relation.md";
+    var mkdocs_page_url = "/postal3script/relation/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -69,7 +69,7 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Object Categories --</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../manner/">Manner</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../faction/">Faction</a>
@@ -92,7 +92,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../relationto/">RelationTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../relation/">Relation</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Relation</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../name/">Name</a>
                     </li>
@@ -145,12 +147,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- NPC Behavior Functions --</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../aim_face/">Aim, Face</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Snatch, Unsnatch</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../snatch_unsnatch/">Snatch, Unsnatch</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../senses_lookat_lookout/">Senses, LookAt, LookOut</a>
                     </li>
@@ -268,11 +268,11 @@
     
       
         
-          <li>-- NPC Behavior Functions -- &raquo;</li>
+          <li>-- Object Categories -- &raquo;</li>
         
       
     
-    <li>Snatch, Unsnatch</li>
+    <li>Relation</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -284,41 +284,23 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="-snatch">- Snatch</h1>
-<p>Snatches onto an NPC
-<p>* Can be used only by Animals
-<p>* Must have a target object
-<h2>Syntax</h2>
-<p><code class="language-js">Snatch [true/false], [attachment]</code>
+                <h1 id="relation">Relation</h1>
+<p>The relation of an NPC.
+<h1>Syntax</h1>
+<p><code class="language-js">Relation:[relation type]</code> -- Returns the relation type specified
 <pre><code class="language-js">
-// Attachments  // Where to snatch
-fucking_monkey  = head
-snatch0         = left foot
-snatch1         = right foot
-snatch2         = left hand
-snatch3         = right hand
+// Here's a list of all relation types...
+Relation:neutral
+Relation:enemy
+Relation:fear
 </code></pre>
 <h1>Example</h1>
 <pre><code class="language-js">
-// from ai_mission_mli.p3s
-pt_attack
-{
-    actions
-    {
-        Snatch true,fucking_monkey
-        Wait 5:2
-        Snatch false
-        State st_start
-    }
-}
+// If the relation to our caller is of enemy, target them!
+IfAttr "RelationTo:caller == Relation:enemy Block begin"
+    TargetCaller 1
+Block end
 </code></pre>
-
-<br><br><h1>- Unsnatch</h1>
-<p>Unused Postal3Script function
-<p>Unsnatches from an NPC
-<p>* Must have a target object
-<h2>Syntax</h2>
-<p><code class="language-js">Unsnatch 1</code>
               
             </div>
           </div>
@@ -326,10 +308,10 @@ pt_attack
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../senses_lookat_lookout/" class="btn btn-neutral float-right" title="Senses, LookAt, LookOut">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../name/" class="btn btn-neutral float-right" title="Name">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../aim_face/" class="btn btn-neutral" title="Aim, Face"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../relationto/" class="btn btn-neutral" title="RelationTo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -357,10 +339,10 @@ pt_attack
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../aim_face/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../relationto/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../senses_lookat_lookout/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../name/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

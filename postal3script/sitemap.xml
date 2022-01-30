@@ -2,302 +2,327 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kizoky.github.io/postal3script/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/NPC/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/TBD/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/actbusy/</loc>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/activitypattern_funcs/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/addfluid/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/aim_face/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/angleto/</loc>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/arm/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/assisttarget_enemy/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/attributeprogressbar/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/attributes/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/busy_fear_hate/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/callstate_callpattern/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/catdervish/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/checktarget_checklos/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/crouch_lean/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/desertsquad/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/distto/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/embedattributes/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/emitsound/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/enablegibs/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/endmission/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/entervehicle/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/faction/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/follow_playerfriendly/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/freemovement/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/func_state_pattern_executepattern/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/headblob/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/hit/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/holsterweapon/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/itemtype/</loc>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/manner/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/missionlog_save_briefing/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/movement_funcs/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/name/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/object/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/opendialog/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/playerkarma/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/playvideo/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/push/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/rallysquad/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/relation/</loc>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/relationship/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kizoky.github.io/postal3script/relationto/</loc>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/reset_ignore_settarget/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/say/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kizoky.github.io/postal3script/sendtarget2caller/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <loc>https://kizoky.github.io/postal3script/sendtarget2caller_sendcaller/</loc>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/senses_lookat_lookout/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/setactpack/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/sethint_area_leangroup_avoidarea/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/setsquad_relation/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/showmessage_showhint/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/snatch_unsnatch/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/statematrix/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/stunout/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/targetentbyname/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/targetfunctions/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/targetmemory/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/travelbypathtrack/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/turn_turnspeed/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/visible/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/voiceprefix/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/wait_waitforend_repeat/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kizoky.github.io/postal3script/weapon_reload_throwgrenade/</loc>
-         <lastmod>2022-01-27</lastmod>
+         <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
