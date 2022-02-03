@@ -60,6 +60,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul>
@@ -247,6 +249,29 @@
                     <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -288,11 +313,11 @@
 <p>Sets NPC's friendliness towards objects
 <h1>Syntax</h1>
 <p>[priority] = Relative importance of this relationship (higher numbers mean more important)
-<p><code class="language-js">Relationship target, [neutral/enemy/fear], [priority]</code>
-<p><code class="language-js">Relationship caller, [neutral/enemy/fear], [priority]</code>
-<p><code class="language-js">Relationship all_enemy, [neutral/enemy/fear], [priority]</code>
-<p><code class="language-js">Relationship all_fear, [neutral/enemy/fear], [priority]</code>
-<p><code class="language-js">Relationship all_neutral, [neutral/enemy/fear], [priority]</code>
+<p><code class="language-js">Relationship target,[neutral/enemy/fear],[priority]</code>
+<p><code class="language-js">Relationship caller,[neutral/enemy/fear],[priority]</code>
+<p><code class="language-js">Relationship all_enemy,[neutral/enemy/fear],[priority]</code>
+<p><code class="language-js">Relationship all_fear,[neutral/enemy/fear],[priority]</code>
+<p><code class="language-js">Relationship all_neutral,[neutral/enemy/fear],[priority]</code>
 <h1>Example</h1>
 <pre><code class="language-js">
 // (from ai_mission_bdk.p3s)

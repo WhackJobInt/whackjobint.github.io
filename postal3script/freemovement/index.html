@@ -60,6 +60,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul>
@@ -247,6 +249,29 @@
                     <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -288,9 +313,9 @@
 <p>Sets or resets NPC's freedom of movement.
 <p>FreeMovementParams can be reset optionally.
 <h1>Syntax</h1>
-<p><code class="language-js">FreeMovement [walk/run], [reset]</code> -- NPC will walk or run, [reset] is optional
-<p><code class="language-js">FreeMovement [true/false], [reset]</code> -- NPC can move or not, [reset] is optional
-<p><code class="language-js">FreeMovement random, [reset]</code> -- Chooses between walk or run, [reset] is optional
+<p><code class="language-js">FreeMovement [walk/run],[reset]</code> -- NPC will walk or run, [reset] is optional
+<p><code class="language-js">FreeMovement [true/false],[reset]</code> -- NPC can move or not, [reset] is optional
+<p><code class="language-js">FreeMovement random,[reset]</code> -- Chooses between walk or run, [reset] is optional
 <h1>Example</h1>
 <pre><code class="language-js">
 // (From ai_cashmart_npc.p3s)
@@ -343,7 +368,7 @@ once
 area_group
 </code></pre>
 <h1>Syntax</h1>
-<p><code class="language-js">FreeMovementParams [flag], [distance min], [distance max], [goalflag1], [goalflag2], [goalflag3], ..</code>
+<p><code class="language-js">FreeMovementParams [flag],[distance min],[distance max],[goalflag1],[goalflag2],[goalflag3], ..</code>
 <h1>Example</h1>
 <pre><code class="language-js">
 // This will allow the NPC to move everywhere in it's area group

@@ -60,6 +60,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul>
@@ -247,6 +249,29 @@
                     <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -287,7 +312,7 @@
                 <h1 id="-sethintgroup">- SetHintGroup</h1>
 <p>Sets NPC's hint group
 <h1>Syntax</h1>
-<p><code class="language-js">SetHintGroup [hint group1], [hint group2], [hint group3], ..</code> -- Sets hint groups for NPC
+<p><code class="language-js">SetHintGroup [hint group1],[hint group2],[hint group3], ..</code> -- Sets hint groups for NPC
 <h1>Example</h1>
 <pre><code class="language-js">
 // from ai_mission_pw.p3s
@@ -309,14 +334,14 @@ xpt_SetHintGroup
 <br><br><h1>- SetAreaGroup</h1>
 <p>Sets NPC's area group(s)
 <h1>Syntax</h1>
-<p><code class="language-js">SetAreaGroup [Group1]:[walkable], [Group2]:[walkable], [Group3]:[walkable], ..</code> -- Sets area groups for NPC 
+<p><code class="language-js">SetAreaGroup [Group1]:[walkable],[Group2]:[walkable],[Group3]:[walkable], ..</code> -- Sets area groups for NPC 
 <p>:[walkable] is optional
 <p><code class="language-js">SetAreaGroup AG_DEFAULT</code> -- Resets NPC's area group
 
 <br><br><h1>- SetLeanGroup</h1>
 <p>Sets NPC's lean group(s)
 <h1>Syntax</h1>
-<p><code class="language-js">SetLeanGroup [Group1], [Group2], [Group3], ..</code> -- Sets lean groups for NPC
+<p><code class="language-js">SetLeanGroup [Group1],[Group2],[Group3], ..</code> -- Sets lean groups for NPC
 <p>(Decompile dcr.bsp for checking out how a lean group works)
 
 <br><br><h1>- AvoidProhibitedArea</h1>

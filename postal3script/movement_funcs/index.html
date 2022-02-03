@@ -60,6 +60,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul>
@@ -247,6 +249,29 @@
                     <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -291,7 +316,7 @@
 <p><code class="language-js">Move walk</code> -- NPC will now walk
 <p><code class="language-js">Move true</code> -- NPC is able to move
 <p><code class="language-js">Move false</code> -- NPC is no longer able to move
-<p><code class="language-js">Move [walk/run], [angle], [timing], [face_dir/update_dir]</code> -- todo
+<p><code class="language-js">Move [walk/run],[angle],[timing],[face_dir/update_dir]</code> -- todo
 
 <br><br><h1>- MoveToLean</h1>
 <p>Moves the NPC to a lean spot, used for combat
@@ -318,7 +343,7 @@ not_behind_target
 safe
 area_group
 </code></pre>
-<p><code class="language-js">MoveToLean run, [distance_min], [distance_max], [flag1], [flag2], [flag3], ..</code>
+<p><code class="language-js">MoveToLean run,[distance_min],[distance_max],[flag1],[flag2],[flag3], ..</code>
 <h1>Example</h1>
 <pre><code class="language-js">
 // from ai_cashmart.p3s
@@ -351,8 +376,8 @@ from_target
 target_dir
 </code></pre>
 <p>TODO: This is not really correct, It's not clear what each argument does just by looking at p3s scripts, it's a rough estimation
-<p><code class="language-js">MoveToTarget [run/walk/true], [distance_min], [distance_max], [flag]</code>
-<p><code class="language-js">MoveToTarget [run/walk/true], [distance], [flag]</code>
+<p><code class="language-js">MoveToTarget [run/walk/true],[distance_min],[distance_max],[flag]</code>
+<p><code class="language-js">MoveToTarget [run/walk/true],[distance],[flag]</code>
 <p><code class="language-js">MoveToTarget [false]</code>
 <pre><code class="language-js">
 // from ai_mission_sbe.p3s

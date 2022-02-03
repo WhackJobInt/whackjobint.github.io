@@ -60,6 +60,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul>
@@ -247,6 +249,29 @@
                     <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -289,9 +314,9 @@
 <p>Used for displaying boss/ally health bars and portraits in missions.
 <p>Uses .res files located in "Postal III/p3/resource/UI/Hud/".
 <h1>Syntax</h1>
-<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute]"</code> -- Show the progress bar panel with the attribute's value hidden
-<p><code class="language-js">AttributeProgressBar "[panel], show, [attribute], show_value"</code> -- Show the progress bar panel with the attribute's value shown as well
-<p><code class="language-js">AttributeProgressBar "[panel], hide"</code> -- Hide the progress bar
+<p><code class="language-js">AttributeProgressBar "[panel],show,[attribute]"</code> -- Show the progress bar panel with the attribute's value hidden
+<p><code class="language-js">AttributeProgressBar "[panel],show,[attribute],show_value"</code> -- Show the progress bar panel with the attribute's value shown as well
+<p><code class="language-js">AttributeProgressBar "[panel],hide"</code> -- Hide the progress bar
 <h1>Example</h1>
 <pre><code class="language-js">
 // (From ai_cashmart_npc.p3s, Cashmart Helicopter boss)

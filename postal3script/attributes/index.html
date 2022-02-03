@@ -60,6 +60,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul class="current">
@@ -247,6 +249,29 @@
                     <li class="toctree-l1"><a class="reference internal" href="../desertsquad/">DesertSquad</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">n/a</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -399,6 +424,8 @@ st_CheckAttrTutorial
 <h1>ChangeAttr</h1>
 <p>Changes an already existing Attribute's value, increasing, decreasing, multiplying, or by halving.
 <p>Halving will clamp the value to integer (5 / 2 wouldn't be '2.5', but '3').
+<p>Notes: It MUST have an operator, simply having a number inside the parameter without an operator will NOT touch the attribute!
+<p>Only capable of working with values up to 100 (This limiter has been removed from Catharsis Reborn)
 <pre><code class="language-js">
 st_ChangeAttrTutorial
 {
@@ -420,6 +447,9 @@ st_ChangeAttrTutorial
 
                 // Change Health on the fly
                 ChangeAttr "ea_health +25"
+
+                // Set this Attribute to absolute zero
+                ChangeAttr "MyAttribute -MyAttribute"
             }
         }
     }
@@ -456,7 +486,7 @@ st_RemoveAttrTutorial
         <a href="../embedattributes/" class="btn btn-neutral float-right" title="Embedded Attributes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TBD/" class="btn btn-neutral" title="Events (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../wipp3sfiles/" class="btn btn-neutral" title="Development/WIP Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -484,7 +514,7 @@ st_RemoveAttrTutorial
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../wipp3sfiles/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../embedattributes/" style="color: #fcfcfc">Next &raquo;</a></span>
