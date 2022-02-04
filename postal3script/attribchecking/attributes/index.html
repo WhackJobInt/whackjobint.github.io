@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="WhackJob Interactive">
+  <link rel="canonical" href="https://whackjobint.github.io/postal3script/attribchecking/attributes/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr - Postal3Script</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr";
+    var mkdocs_page_input_path = "attribchecking\\attributes.md";
+    var mkdocs_page_url = "/postal3script/attribchecking/attributes/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Postal3Script</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">-- Postal3Script (WIP) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Index</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../whatispostal3script/">What is Postal3Script?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Structure (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">States (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Patterns (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Blocks (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Events (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../wipp3sfiles/">Development/WIP Files</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ifattr">IfAttr</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setattr">SetAttr</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checkattr">CheckAttr</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changeattr">ChangeAttr</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#removeattr">RemoveAttr</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../embedattributes/">Embedded Attributes</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Object Categories --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/manner/">Manner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/faction/">Faction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/itemtype/">ItemType</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">String (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Timer (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/object/">Object</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/distto/">DistTo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/angleto/">AngleTo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/visible/">Visible</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">HasWeapon (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/relationto/">RelationTo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/relation/">Relation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/name/">Name</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Ammo (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Ignore (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Karma (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../objects/voiceprefix/">VoicePrefix</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- State Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Misc Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Effect (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Item, SpawnItem (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- NPC Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/say/">Say</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Gesture, ResetGesture, ResetSequence (TBD)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/NPC/">NPC</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- NPC Behavior Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/aim_face/">Aim, Face</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/snatch_unsnatch/">Snatch, Unsnatch</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/senses_lookat_lookout/">Senses, LookAt, LookOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/crouch_lean/">Crouch, Lean</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/busy_hate/">Busy, Hate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/follow_playerfriendly/">Follow, PlayerFriendly</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/catdervish/">CatDervish</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/stunout/">StunOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/enablegibs/">EnableGibs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/entervehicle/">EnterVehicle</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Squad Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../squadfuncs/setsquad_relation/">SetSquad, SetSquadRelation, RemoveSquadRelation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../squadfuncs/rallysquad/">RallySquad</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Targeting Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/targetentbyname/">TargetEntByName</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/sendtarget2caller_sendcaller/">SendTarget2Caller, SendCaller</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/checktarget_checklos/">CheckTarget, CheckLOS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/reset_ignore_settarget/">ResetTarget, IgnoreTarget, SetTarget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/targetfunctions/">TargetEnemy, TargetPlayer, TargetCaller, TargetItem, TargetVehicle, TargetHostage, TargetCrosshair</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/targetmemory/">TargetToMem, TargetFromMem, CallerToMem, ClearMem</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/assisttarget_enemy/">AssistTarget, AssistEnemy, ArrestTarget, BusyTarget</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../targetingfuncs/relationship/">Relationship</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Movement Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../movementfuncs/movement_funcs/">Move, MoveToLean, MoveToTarget, MoveToTargetLKP</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../movementfuncs/freemovement/">FreeMovement, FreeMovementParams</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../movementfuncs/travelbypathtrack/">TravelByPathTrack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../movementfuncs/sethint_area_leangroup_avoidarea/">SetHintGroup, SetAreaGroup, SetLeanGroup, AvoidProhibitedArea</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../movementfuncs/turn_turnspeed/">Turn, TurnSpeed</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../movementfuncs/setactpack/">SetActPack</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Attack Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/hit/">Hit</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/push/">Push</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/attributeprogressbar/">AttributeProgressBar</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/showmessage_showhint/">ShowMessage, ShowHint</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/endmission/">EndMission</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/playerkarma/">PlayerKarma</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/playvideo/">PlayVideo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/opendialog/">OpenDialog</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Deleted Functions --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../deletedfuncs/actbusy/">ActBusy</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../deletedfuncs/arm/">Arm</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../deletedfuncs/holsterweapon/">HolsterWeapon</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../deletedfuncs/desertsquad/">DesertSquad</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../deletedfuncs/fear/">Fear</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missions/pdb/">PDB (Paradise Bridge)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missions/pw/">PW (Porn World)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missions/dcr/">DCR (Diseased Cat Roundup)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missions/jwb/">JWB (Jen Walcotts Bodyguard)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missions/cm/">CM (Cash Mart Robbery)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Good Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">n/a</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">-- Mission Script Files (Evil Path) --</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">n/a</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Postal3Script</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>-- Attribute Checking -- &raquo;</li>
+        
+      
+    
+    <li>IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link"></a></h1>
+<p>In Postal3Script you are able to set or check Attributes, and execute states according to the results.</p>
+<p>All attributes in Postal3Script are integers only.</p>
+<p>When checking against multiple attributes at once you can use the "and" keyword.</p>
+<h2 id="ifattr">IfAttr<a class="headerlink" href="#ifattr" title="Permanent link"></a></h2>
+<p>Checks if an Attribute or Object has met a condition. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Attribute or Object MUST be set using the <code>SetAttr</code> function first, or already exist.</p>
+</div>
+
+<pre><code class="language-js">
+st_IfAttrTutorial
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                // Check for my faction, if it's Zealots then I love animals
+                IfAttr "ea_faction == Faction:Zealots SetAttr LoveAnimals 1"
+
+                // My target is the player, so I will hate them
+                IfAttr "Object:target == Object:player SetAttr HatesPlayer 1"
+
+                // I have no ranged weapon, but I do have a melee weapon, then I'll bring up my weapon
+                IfAttr "HasWeapon:Ranged == 0 and HasWeapon:melee > 0 Block begin"
+                    IfAttr "HasWeapon:melee != 2 SetAttr WeaponChanged 1"
+                    Weapon select,melee
+                    SetAttr "ea_status sPUNISHER"
+                Block end
+
+                // Player is forgiven according to the timer
+                IfAttr "Timer:tForgivePlayer <= 0 Pattern pt_end"
+
+                // State didn't execute from the Player, returning from this point
+                IfAttr "Object:caller != Object:player Return 1"
+
+                // My target loves animals?? No way!
+                IfAttr "target.LoveAnimals == 1 Return 1"
+
+                // My enemy of my enemy... is my enemy now!
+                IfAttr "target.Object:target != Object:null Block begin"
+                    AssistTarget 1
+                Block end
+
+                // My target is the Player, and they have their python out
+                IfAttr "Object:target == Object:player and target.ea_games == 1 State so_seepiss"
+            }
+        }
+    }
+}
+</code></pre>
+
+<h2 id="setattr">SetAttr<a class="headerlink" href="#setattr" title="Permanent link"></a></h2>
+<p>Creates and sets a new attribute value if it doesn't exist, or just sets it if it already exists.</p>
+<pre><code class="language-js">
+Constants
+{
+    Const YES,1
+    Const NO,0
+}
+
+st_SetAttrTutorial
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                SetAttr "IamTheDevil 666"
+
+                // Supports constants
+                SetAttr "y_Yes YES"
+                SetAttr "n_No NO"
+                SetAttr "ea_status sNEUTRAL"
+                SetAttr "reaction RE_NONE"
+
+                // Randomize non-existent attributes
+                // Maximum possible is 100
+                // Second value should always be zero
+                SetAttr "rnd 0,0,100"
+                SetAttr "rndtwo 25,0,75"
+
+                // Sets other object's attribute
+                SetAttr "target.cr_demo YES"
+                SetAttr "caller.cr_demo NO"
+            }
+        }
+    }
+}
+</code></pre>
+
+<h2 id="checkattr">CheckAttr<a class="headerlink" href="#checkattr" title="Permanent link"></a></h2>
+<p>Checks if an Attribute is true (equal to 1).</p>
+<pre><code class="language-js">
+st_CheckAttrTutorial
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                CheckAttr "flag_static Return 1"
+                CheckAttr "greet_sleazy Say SLEEZ"
+                CheckAttr "AnimalNotCat Say LIKESANIMAL"
+                CheckAttr "AnimalCat Say LIKESANIMAL,LIKESCAT"
+            }
+        }
+    }
+}
+</code></pre>
+
+<h2 id="changeattr">ChangeAttr<a class="headerlink" href="#changeattr" title="Permanent link"></a></h2>
+<p>Changes an already existing Attribute's value, increasing, decreasing, multiplying, or by halving.</p>
+<ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+ChangeAttr has some several flaws that are good to keep in mind:</p>
+<li>It MUST have an operator, simply having a number inside the parameter without an operator will NOT touch the attribute!</li>
+<p>
+<li>Only capable of working with values up to 100.</li>
+<p>
+<li>If value will exceed 100, it will reset back to 0.</li>
+<p>
+<li>Halving will round the value upwards ('5 / 2' would be '3').</li>
+</div>
+</ul>
+
+<pre><code class="language-js">
+st_ChangeAttrTutorial
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                // Randomization
+                ChangeAttr "poo_rnd 0:100"
+                ChangeAttr "combat_rnd 0:1"
+
+                ChangeAttr "DonutsIHave +1"
+                ChangeAttr "PooIGive -1"
+                ChangeAttr "Multiply *5"
+                ChangeAttr "Halve /5"
+
+                // Change Health on the fly
+                ChangeAttr "ea_health +25"
+
+                // Set this Attribute to absolute zero
+                ChangeAttr "MyAttribute -MyAttribute"
+            }
+        }
+    }
+}
+</code></pre>
+
+<h2 id="removeattr">RemoveAttr<a class="headerlink" href="#removeattr" title="Permanent link"></a></h2>
+<p>Removes an already existing Attribute. Cannot be accessed and isn't set anymore.</p>
+<pre><code class="language-js">
+st_RemoveAttrTutorial
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                RemoveAttr "flag_PlayerFriendly"
+                RemoveAttr "poo_rnd"
+                RemoveAttr "IamTheDevil"
+            }
+        }
+    }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../embedattributes/" class="btn btn-neutral float-right" title="Embedded Attributes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../wipp3sfiles/" class="btn btn-neutral" title="Development/WIP Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022<br>ㅤ</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../wipp3sfiles/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../embedattributes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

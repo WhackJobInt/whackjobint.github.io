@@ -7,18 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://kizoky.github.io/postal3script/">
+  <link rel="canonical" href="https://whackjobint.github.io/postal3script/">
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>What is Postal3Script? - Postal3Script</title>
+  <title>Index - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
   <link rel="stylesheet" href="css/theme_extra.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="css/extra.css" rel="stylesheet" />
   
   <script>
     // Current page data
-    var mkdocs_page_name = "What is Postal3Script?";
+    var mkdocs_page_name = "Index";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = "/postal3script/";
   </script>
@@ -48,9 +49,43 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <p class="caption"><span class="caption-text">-- Postal3Script (WIP) --</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">What is Postal3Script?</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Index</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#postal3script">Postal3Script</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#attribute-checking">Attribute Checking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#object-categories">Object Categories</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#state-functions">State Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#misc-functions">Misc Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#npc-functions">NPC Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#npc-behavior-functions">NPC Behavior Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#squad-functions">Squad Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#targeting-functions">Targeting Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#movement-functions">Movement Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#attack-functions">Attack Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mission-functions">Mission Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deleted-functions">Deleted Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mission-script-files-pre-path">Mission Script Files (Pre-Path)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mission-script-files-good-path">Mission Script Files (Good Path)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mission-script-files-evil-path">Mission Script Files (Evil Path)</a>
+    </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="whatispostal3script/">What is Postal3Script?</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Structure (TBD)</a>
                     </li>
@@ -67,38 +102,38 @@
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attribute Checking --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
+                    <li class="toctree-l1"><a class="reference internal" href="attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="embedattributes/">Embedded Attributes</a>
+                    <li class="toctree-l1"><a class="reference internal" href="attribchecking/embedattributes/">Embedded Attributes</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Object Categories --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="manner/">Manner</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/manner/">Manner</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="faction/">Faction</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/faction/">Faction</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="itemtype/">ItemType</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/itemtype/">ItemType</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">String (TBD)</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Timer (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="object/">Object</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/object/">Object</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="distto/">DistTo</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/distto/">DistTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="angleto/">AngleTo</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/angleto/">AngleTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="visible/">Visible</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/visible/">Visible</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">HasWeapon (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="relationto/">RelationTo</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/relationto/">RelationTo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="relation/">Relation</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/relation/">Relation</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="name/">Name</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/name/">Name</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Ammo (TBD)</a>
                     </li>
@@ -106,20 +141,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Karma (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="voiceprefix/">VoicePrefix</a>
+                    <li class="toctree-l1"><a class="reference internal" href="objects/voiceprefix/">VoicePrefix</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- State Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
+                    <li class="toctree-l1"><a class="reference internal" href="statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                    <li class="toctree-l1"><a class="reference internal" href="statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="statematrix/">StateMatrix</a>
+                    <li class="toctree-l1"><a class="reference internal" href="statefuncs/statematrix/">StateMatrix</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="callstate_callpattern/">CallState, CallPattern</a>
+                    <li class="toctree-l1"><a class="reference internal" href="statefuncs/callstate_callpattern/">CallState, CallPattern</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
+                    <li class="toctree-l1"><a class="reference internal" href="statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Misc Functions --</span></p>
@@ -130,123 +165,125 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Item, SpawnItem (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="addfluid/">AddFluid</a>
+                    <li class="toctree-l1"><a class="reference internal" href="miscfuncs/addfluid/">AddFluid</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Anchor, TargetAnchor (TBD)</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- NPC Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="say/">Say</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcfuncs/say/">Say</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="emitsound/">EmitSound</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcfuncs/emitsound/">EmitSound</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="TBD/">Gesture, ResetGesture, ResetSequence (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="headblob/">Headblob</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcfuncs/headblob/">Headblob</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="NPC/">NPC</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcfuncs/NPC/">NPC</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- NPC Behavior Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="aim_face/">Aim, Face</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/aim_face/">Aim, Face</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="snatch_unsnatch/">Snatch, Unsnatch</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/snatch_unsnatch/">Snatch, Unsnatch</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="senses_lookat_lookout/">Senses, LookAt, LookOut</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/senses_lookat_lookout/">Senses, LookAt, LookOut</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="crouch_lean/">Crouch, Lean</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/crouch_lean/">Crouch, Lean</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="busy_fear_hate/">Busy, Fear, Hate</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/busy_hate/">Busy, Hate</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="follow_playerfriendly/">Follow, PlayerFriendly</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/follow_playerfriendly/">Follow, PlayerFriendly</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="catdervish/">CatDervish</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/catdervish/">CatDervish</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="stunout/">StunOut</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/stunout/">StunOut</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="enablegibs/">EnableGibs</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/enablegibs/">EnableGibs</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="entervehicle/">EnterVehicle</a>
+                    <li class="toctree-l1"><a class="reference internal" href="npcbehaviorfuncs/entervehicle/">EnterVehicle</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Squad Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="setsquad_relation/">SetSquad, SetSquadRelation, RemoveSquadRelation</a>
+                    <li class="toctree-l1"><a class="reference internal" href="squadfuncs/setsquad_relation/">SetSquad, SetSquadRelation, RemoveSquadRelation</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="rallysquad/">RallySquad</a>
+                    <li class="toctree-l1"><a class="reference internal" href="squadfuncs/rallysquad/">RallySquad</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Targeting Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="targetentbyname/">TargetEntByName</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/targetentbyname/">TargetEntByName</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="sendtarget2caller_sendcaller/">SendTarget2Caller, SendCaller</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/sendtarget2caller_sendcaller/">SendTarget2Caller, SendCaller</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="checktarget_checklos/">CheckTarget, CheckLOS</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/checktarget_checklos/">CheckTarget, CheckLOS</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="reset_ignore_settarget/">ResetTarget, IgnoreTarget, SetTarget</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/reset_ignore_settarget/">ResetTarget, IgnoreTarget, SetTarget</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="targetfunctions/">TargetEnemy, TargetPlayer, TargetCaller, TargetItem, TargetVehicle, TargetHostage, TargetCrosshair</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/targetfunctions/">TargetEnemy, TargetPlayer, TargetCaller, TargetItem, TargetVehicle, TargetHostage, TargetCrosshair</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="targetmemory/">TargetToMem, TargetFromMem, CallerToMem, ClearMem</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/targetmemory/">TargetToMem, TargetFromMem, CallerToMem, ClearMem</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="assisttarget_enemy/">AssistTarget, AssistEnemy, ArrestTarget, BusyTarget</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/assisttarget_enemy/">AssistTarget, AssistEnemy, ArrestTarget, BusyTarget</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="relationship/">Relationship</a>
+                    <li class="toctree-l1"><a class="reference internal" href="targetingfuncs/relationship/">Relationship</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Movement Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="movement_funcs/">Move, MoveToLean, MoveToTarget, MoveToTargetLKP</a>
+                    <li class="toctree-l1"><a class="reference internal" href="movementfuncs/movement_funcs/">Move, MoveToLean, MoveToTarget, MoveToTargetLKP</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="freemovement/">FreeMovement, FreeMovementParams</a>
+                    <li class="toctree-l1"><a class="reference internal" href="movementfuncs/freemovement/">FreeMovement, FreeMovementParams</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="travelbypathtrack/">TravelByPathTrack</a>
+                    <li class="toctree-l1"><a class="reference internal" href="movementfuncs/travelbypathtrack/">TravelByPathTrack</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="sethint_area_leangroup_avoidarea/">SetHintGroup, SetAreaGroup, SetLeanGroup, AvoidProhibitedArea</a>
+                    <li class="toctree-l1"><a class="reference internal" href="movementfuncs/sethint_area_leangroup_avoidarea/">SetHintGroup, SetAreaGroup, SetLeanGroup, AvoidProhibitedArea</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="turn_turnspeed/">Turn, TurnSpeed</a>
+                    <li class="toctree-l1"><a class="reference internal" href="movementfuncs/turn_turnspeed/">Turn, TurnSpeed</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="setactpack/">SetActPack</a>
+                    <li class="toctree-l1"><a class="reference internal" href="movementfuncs/setactpack/">SetActPack</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Attack Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="hit/">Hit</a>
+                    <li class="toctree-l1"><a class="reference internal" href="attackfuncs/hit/">Hit</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="push/">Push</a>
+                    <li class="toctree-l1"><a class="reference internal" href="attackfuncs/push/">Push</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
+                    <li class="toctree-l1"><a class="reference internal" href="attackfuncs/weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Mission Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="attributeprogressbar/">AttributeProgressBar</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/attributeprogressbar/">AttributeProgressBar</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="showmessage_showhint/">ShowMessage, ShowHint</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/showmessage_showhint/">ShowMessage, ShowHint</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="endmission/">EndMission</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/endmission/">EndMission</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="playerkarma/">PlayerKarma</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/playerkarma/">PlayerKarma</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="playvideo/">PlayVideo</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/playvideo/">PlayVideo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="opendialog/">OpenDialog</a>
+                    <li class="toctree-l1"><a class="reference internal" href="missionfuncs/opendialog/">OpenDialog</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Deleted Functions --</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="actbusy/">ActBusy</a>
+                    <li class="toctree-l1"><a class="reference internal" href="deletedfuncs/actbusy/">ActBusy</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="arm/">Arm</a>
+                    <li class="toctree-l1"><a class="reference internal" href="deletedfuncs/arm/">Arm</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="holsterweapon/">HolsterWeapon</a>
+                    <li class="toctree-l1"><a class="reference internal" href="deletedfuncs/holsterweapon/">HolsterWeapon</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="desertsquad/">DesertSquad</a>
+                    <li class="toctree-l1"><a class="reference internal" href="deletedfuncs/desertsquad/">DesertSquad</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="deletedfuncs/fear/">Fear</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">-- Mission Script Files (Pre-Path) --</span></p>
@@ -297,7 +334,7 @@
         
       
     
-    <li>What is Postal3Script?</li>
+    <li>Index</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -309,124 +346,162 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="what-is-postal3script">What is Postal3Script?</h1>
-<p>Postal3Script, or P3S, is a scripting language developed for Postal 3, designed to handle most of the NPC AI and mission scripting.
-It allows for a much easier and faster time doing missions and AI rather than messing around in C++ and doing logic entirely through map entities in Hammer.
-<p>With Postal3Script, you can easily do many things that you normally would not be able to do without the source code of the game due to the many useful functions and attributes that are interfaced.
-<p>P3S script files are located in "/Postal III/p3/scripts" and use the ".p3s" file extension. To load and be able to use a p3s script, you must add it to a manifest, in "ai_scripts.txt", found in the previously mentioned folder.
-<p>Changes to p3s scripts will automatically hotload when the map restarts, so you can just use the "restart" console command without ever having to exit and reload the game.
-<p>It is highly recommended to snoop around the game files and find examples of what you're trying to accomplish to get a better idea of the language.
+                <h1 id="index">Index<a class="headerlink" href="#index" title="Permanent link"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This site is a Work in Progress! Many functions are still not covered yet, or those that are already covered, their documentation are subject to change!</p>
+</div>
 
-<h2>Postal3Script Example</h2>
-<pre><code class="language-js">
-Constants
-{
-    Const DONUTS_INCR,1
-    Const SOMEBODY_STOLE_MY_DONUTS,15
-    Const YES,1
-    Const NO,0
-}
+<h2 id="postal3script">Postal3Script<a class="headerlink" href="#postal3script" title="Permanent link"></a></h2>
+<ul>
+<li><a href="whatispostal3script">What is Postal3Script?</a></li>
+<li>Structure</li>
+<li>States</li>
+<li>Patterns</li>
+<li>Blocks</li>
+<li>Events</li>
+<li><a href="wipp3sfiles">Development/WIP Files</a></li>
+</ul>
 
-behavior
-{
-    name bh_evensuperioractor
-    inherited bh_mysuperioractor
+<h2 id="attribute-checking">Attribute Checking<a class="headerlink" href="#attribute-checking" title="Permanent link"></a></h2>
+<ul>
+<li><a href="attribchecking/attributes">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a></li>
+<li><a href="attribchecking/embedattributes">Embedded Attributes</a></li>
+</ul>
 
-    States
-    {
-        st_mycustomstate
-        {
-            Group Alert
-            Patterns
-            {
-                pt_default
-                {
-                    // Only executes when on Alert
-                }
-            }
-        }
+<h2 id="object-categories">Object Categories<a class="headerlink" href="#object-categories" title="Permanent link"></a></h2>
+<ul>
+<li><a href="objects/manner">Manner</a></li>
+<li><a href="objects/faction">Faction</a></li>
+<li><a href="objects/itemtype">ItemType</a></li>
+<li>String</li>
+<li>Timer</li>
+<li><a href="objects/object">Object</a></li>
+<li><a href="objects/distto">DistTo</a></li>
+<li><a href="objects/angleto">AngleTo</a></li>
+<li><a href="objects/visible">Visible</a></li>
+<li>HasWeapon</li>
+<li><a href="objects/relationto">RelationTo</a></li>
+<li><a href="objects/relation">Relation</a></li>
+<li><a href="objects/name">Name</a></li>
+<li>Ammo</li>
+<li>Ignore</li>
+<li>Karma</li>
+<li><a href="objects/voiceprefix">VoicePrefix</a></li>
+</ul>
 
-        st_nowyallgonnapay
-        {
-            Group Combat
-            Patterns
-            {
-                pt_default
-                {
-                    // Only executes when in Combat
-                    SetAttr "veryverypissedoff YES"
-                    Pattern pt_donuts
-                }
+<h2 id="state-functions">State Functions<a class="headerlink" href="#state-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="statefuncs/func_state_pattern_executepattern">State, Pattern, ExecutePattern</a></li>
+<li><a href="statefuncs/wait_waitforend_repeat">Wait, WaitForEnd, Repeat</a></li>
+<li><a href="statefuncs/statematrix">StateMatrix</a></li>
+<li><a href="statefuncs/callstate_callpattern">CallState, CallPattern</a></li>
+<li><a href="statefuncs/activitypattern_funcs">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a></li>
+</ul>
 
-                pt_donuts
-                {
-                    IfAttr "veryverypissedoff == YES Pattern st_nowyallgonnapay.pt_allgood"
-                }
+<h2 id="misc-functions">Misc Functions<a class="headerlink" href="#misc-functions" title="Permanent link"></a></h2>
+<ul>
+<li>Effect</li>
+<li>FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput</li>
+<li>Item, SpawnItem</li>
+<li><a href="miscfuncs/addfluid">AddFluid</li></a>
+<li>Anchor, TargetAnchor</li>
+</ul>
 
-                pt_allgood
-                {
-                    SetAttr "veryverypissedoff NO"
-                }
-            }
-        }
-        events
-        {
-            OnDeath "ExecutePattern st_OnDeath.pt_default"
-            OnTimer_tUnstun "Pattern pt_end"
-            OnUnconscious "Pattern pt_unconscious"
-            OnHostaged "Pattern pt_hostaged"
-            OnSprayStunned "Timer tUnstun,SPRAY_UNSTUN_TIMER"
-            OnTimer_tScream "ExecutePattern .xpt_SayScream"
-            OnUnstunned "Pattern pt_end"
-            OnStandUpEnd "Pattern pt_end"
-        }
+<h2 id="npc-functions">NPC Functions<a class="headerlink" href="#npc-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="npcfuncs/say">Say</li></a>
+<li><a href="npcfuncs/emitsound">EmitSound</li></a>
+<li>Gesture, ResetGesture, ResetSequence</li>
+<li><a href="npcfuncs/headblob">Headblob</li></a>
+<li><a href="npcfuncs/NPC">NPC</li></a>
+</ul>
 
-        // Sets on spawn
-        st_init
-        {
-            Group Neutral
-            Patterns
-            {
-                pt_default
-                {
-                    actions
-                    {
-                        Senses false
-                    }
-                }
-            }
-        }
+<h2 id="npc-behavior-functions">NPC Behavior Functions<a class="headerlink" href="#npc-behavior-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="npcbehaviorfuncs/aim_face">Aim, Face</li></a>
+<li><a href="npcbehaviorfuncs/snatch_unsnatch">Snatch, Unsnatch</li></a>
+<li><a href="npcbehaviorfuncs/senses_lookat_lookout">Senses, LookAt, LookOut</li></a>
+<li><a href="npcbehaviorfuncs/crouch_lean">Crouch, Lean</li></a>
+<li><a href="npcbehaviorfuncs/busy_hate">Busy, Hate</li></a>
+<li><a href="npcbehaviorfuncs/follow_playerfriendly">Follow, PlayerFriendly</li></a>
+<li><a href="npcbehaviorfuncs/catdervish">CatDervish</li></a>
+<li><a href="npcbehaviorfuncs/stunout">StunOut</li></a>
+<li><a href="npcbehaviorfuncs/enablegibs">EnableGibs</li></a>
+<li><a href="npcbehaviorfuncs/entervehicle">EnterVehicle</li></a>
+</ul>
 
-        // Called continously
-        st_start
-        {
-            Group Neutral
-            Patterns
-            {
-                pt_default
-                {
-                    actions
-                    {
-                        // tick
-                    }
-                }
-            }
-        }
-    }
-}
-</code></pre>
-<h1> Limitations </h1>
-<p>Each state can hold events, which in turn can execute patterns. Patterns can be inherited from other P3S actors, as well as Attributes.
-<p>* In Postal3Script, Attributes can only be whole numbers/integers, attributes can't be floats, doubles and strings.
-<p>* An Attribute must have a value initialized before checking it's value using CheckAttr, meaning an attribute that doesn't exist will never return a valid value. (Checking if it's zero/null doesn't work).
-<p>* You can only have a limited number of if statements in a single state or pattern.
-<p>* An Attribute can only have a maximum of '100' value
-<p>* Sensitive to spaces when using functions
+<h2 id="squad-functions">Squad Functions<a class="headerlink" href="#squad-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="squadfuncs/setsquad_relation">SetSquad, SetSquadRelation, RemoveSquadRelation</li></a>
+<li><a href="squadfuncs/rallysquad">RallySquad</li></a>
+</ul>
 
-<h1> Debugging code </h1>
-<p>Normally the game doesn't print out any errors, you need to have the "developer" and "p3_fsm_spew" console commands enabled.</p>
-<p>Scrolling around in the console should show you which script and what lines have errors if there are any.
-<p>If you want to print out your own debug messages, You'll have to settle for doing EntFireInput on the point_clientcommand in the map via "EntFireInput pcc,Command: echo yourmessagehere". Debug channel specific ShowMessages are broken it seems.
+<h2 id="targeting-functions">Targeting Functions<a class="headerlink" href="#targeting-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="targetingfuncs/targetentbyname">TargetEntByName</li></a>
+<li><a href="targetingfuncs/sendtarget2caller_sendcaller">SendTarget2Caller, SendCaller</li></a>
+<li><a href="targetingfuncs/checktarget_checklos">CheckTarget, CheckLOS</li></a>
+<li><a href="targetingfuncs/reset_ignore_settarget">ResetTarget, IgnoreTarget, SetTarget</li></a>
+<li><a href="targetingfuncs/targetfunctions">TargetEnemy, TargetPlayer, TargetCaller, TargetItem, TargetVehicle, TargetHostage, TargetCrosshair</li></a>
+<li><a href="targetingfuncs/targetmemory">TargetToMem, TargetFromMem, CallerToMem, ClearMem</li></a>
+<li><a href="targetingfuncs/assisttarget_enemy">AssistTarget, AssistEnemy, ArrestTarget, BusyTarget</li></a>
+<li><a href="targetingfuncs/relationship">Relationship</li></a>
+</ul>
+
+<h2 id="movement-functions">Movement Functions<a class="headerlink" href="#movement-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="movementfuncs/movement_funcs">Move, MoveToLean, MoveToTarget, MoveToTargetLKP</li></a>
+<li><a href="movementfuncs/freemovement">FreeMovement, FreeMovementParams</li></a>
+<li><a href="movementfuncs/travelbypathtrack">TravelByPathTrack</li></a>
+<li><a href="movementfuncs/SetHintGroup, SetAreaGroup, SetLeanGroup, AvoidProhibitedArea</li></a>
+<li><a href="movementfuncs/turn_turnspeed">Turn, TurnSpeed</li></a>
+<li><a href="movementfuncs/setactpack">SetActPack</li></a>
+</ul>
+
+<h2 id="attack-functions">Attack Functions<a class="headerlink" href="#attack-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="attackfuncs/hit">Hit</li></a>
+<li><a href="attackfuncs/push">Push</li></a>
+<li><a href="attackfuncs/weapon_reload_throwgrenade">Weapon, Reload, ThrowGrenade</li></a>
+</ul>
+
+<h2 id="mission-functions">Mission Functions<a class="headerlink" href="#mission-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="missionfuncs/attributeprogressbar">AttributeProgressBar</li></a>
+<li><a href="missionfuncs/missionlog_save_briefing">MissionLog, MissionSave, MissionBriefing</li></a>
+<li><a href="missionfuncs/showmessage_showhint">ShowMessage, ShowHint</li></a>
+<li><a href="missionfuncs/endmission">EndMission</li></a>
+<li><a href="missionfuncs/playerkarma">PlayerKarma</li></a>
+<li><a href="missionfuncs/playvideo">PlayVideo</li></a>
+<li><a href="missionfuncs/opendialog">OpenDialog</li></a>
+</ul>
+
+<h2 id="deleted-functions">Deleted Functions<a class="headerlink" href="#deleted-functions" title="Permanent link"></a></h2>
+<ul>
+<li><a href="deletedfuncs/actbusy">ActBusy</li></a>
+<li><a href="deletedfuncs/arm">Arm</li></a>
+<li><a href="deletedfuncs/holsterweapon">HolsterWeapon</li></a>
+<li><a href="deletedfuncs/desertsquad">DesertSquad</li></a>
+</ul>
+
+<h2 id="mission-script-files-pre-path">Mission Script Files (Pre-Path)<a class="headerlink" href="#mission-script-files-pre-path" title="Permanent link"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Work in Progress, please scroll down on left side for the time being!</p>
+</div>
+
+<h2 id="mission-script-files-good-path">Mission Script Files (Good Path)<a class="headerlink" href="#mission-script-files-good-path" title="Permanent link"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Work in Progress, please scroll down on left side for the time being!</p>
+</div>
+
+<h2 id="mission-script-files-evil-path">Mission Script Files (Evil Path)<a class="headerlink" href="#mission-script-files-evil-path" title="Permanent link"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Work in Progress, please scroll down on left side for the time being!</p>
+</div>
               
             </div>
           </div>
@@ -434,7 +509,7 @@ behavior
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TBD/" class="btn btn-neutral float-right" title="Structure (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="whatispostal3script/" class="btn btn-neutral float-right" title="What is Postal3Script?">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -464,7 +539,7 @@ behavior
     
     
     
-      <span><a href="TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="whatispostal3script/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
