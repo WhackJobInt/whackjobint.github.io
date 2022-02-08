@@ -1,0 +1,36 @@
+a.icon {
+	color: red
+}
+
+.wy-side-nav-search {
+    background-color: black;
+    color: black;
+}
+
+.wy-side-nav-search input[type=text] {
+    width: 100%;
+    border-radius: 1px;
+    padding: 5px 10px;
+    border-color: red;
+}
+
+.wy-menu-vertical li.current {
+    background: white;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+	color: red;
+	background: black;
+}
+
+.wy-menu-vertical {
+	background: black;
+}
+
+.wy-menu-vertical li span.toctree-expand:before {
+	color: red;
+}
+
+.wy-side-scroll {
+    background: black;
+}

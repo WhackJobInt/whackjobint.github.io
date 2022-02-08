@@ -91,7 +91,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">String (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Timer (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../objects/timer/">Timer</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../objects/object/">Object</a>
                     </li>
@@ -436,7 +436,7 @@ behavior
 <p id="limitations">Postal3Script comes with limitations. Ignoring these limitations will make your script behave oddly, and unexpectedly.</p>
 <ul>
 <li>In Postal3Script, Attributes can only be whole numbers/integers, attributes can't be floats, doubles and strings. <code>Wait</code> and <code>Repeat</code> is the only exception in this case, where you can freely use floats.</li>
-<li>An Attribute must have a value initialized before checking it's value using CheckAttr, meaning an attribute that doesn't exist will never return a valid value. (Checking if it's zero/null doesn't work).</li>
+<li>An Attribute must have a value initialized before checking it's value using <code>CheckAttr</code>, meaning an attribute that doesn't exist will never return a valid value. (Checking if it's zero/null doesn't work).</li>
 <li>You can only have a limited number of if statements in a single state or pattern. It's not entirely clear why it breaks.</li>
 <li>An Attribute can only have a maximum of '100' value.</li>
 <li>Sensitive to spaces when using parameters for functions.</li>
@@ -444,9 +444,9 @@ behavior
 </div>
 
 <h2 id="debugging-code">Debugging code<a class="headerlink" href="#debugging-code" title="Permanent link"></a></h2>
-<p>Normally the game doesn't print out any errors, you need to have the "developer" and "p3_fsm_spew" console commands enabled.</p>
+<p>Normally the game doesn't print out any errors, you need to have the <code>developer</code> and <code>p3_fsm_spew</code> console commands enabled.</p>
 <p>Scrolling around in the console should show you which script and what lines have errors if there are any.
-<p>If you want to print out your own debug messages, You'll have to settle for doing EntFireInput on the point_clientcommand in the map via "EntFireInput pcc,Command: echo yourmessagehere". Debug channel specific ShowMessages are broken it seems.
+<p>If you want to print out your own debug messages, You'll have to settle for doing <code>EntFireInput</code> on the <code>point_clientcommand</code> in the map via <code>"EntFireInput pcc,Command: echo yourmessagehere"</code> in p3s. Debug channel-specific ShowMessages are broken.
               
             </div>
           </div>
