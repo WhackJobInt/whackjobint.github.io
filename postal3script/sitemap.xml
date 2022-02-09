@@ -2,372 +2,407 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://whackjobint.github.io/postal3script/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/TBD/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/whatispostal3script/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/wipp3sfiles/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/attackfuncs/hit/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/attackfuncs/push/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/attackfuncs/weapon_reload_throwgrenade/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/attribchecking/attributes/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/attribchecking/embedattributes/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/deletedfuncs/actbusy/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/deletedfuncs/arm/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/deletedfuncs/desertsquad/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/deletedfuncs/fear/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/deletedfuncs/holsterweapon/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/miscfuncs/addfluid/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/miscfuncs/effect/</loc>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/miscfuncs/item_spawnitem/</loc>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/attributeprogressbar/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/endmission/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/missionlog_save_briefing/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/opendialog/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/playerkarma/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/playvideo/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missionfuncs/showmessage_showhint/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missions/cm/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missions/dcr/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missions/jwb/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missions/pdb/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/missions/pw/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/movementfuncs/freemovement/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/movementfuncs/movement_funcs/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/movementfuncs/setactpack/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/movementfuncs/sethint_area_leangroup_avoidarea/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/movementfuncs/travelbypathtrack/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/movementfuncs/turn_turnspeed/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/aim_face/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/busy_hate/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/catdervish/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/crouch_lean/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/enablegibs/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/entervehicle/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/follow_playerfriendly/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/senses_lookat_lookout/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/snatch_unsnatch/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcbehaviorfuncs/stunout/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcfuncs/NPC/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcfuncs/emitsound/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcfuncs/headblob/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/npcfuncs/say/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/objects/ammo/</loc>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/angleto/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/distto/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/faction/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/objects/hasweapon/</loc>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/objects/ignore/</loc>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/itemtype/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/objects/karma/</loc>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/manner/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/name/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/object/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/relation/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/relationto/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whackjobint.github.io/postal3script/objects/string/</loc>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/timer/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/visible/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/objects/voiceprefix/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/squadfuncs/rallysquad/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/squadfuncs/setsquad_relation/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/statefuncs/activitypattern_funcs/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/statefuncs/callstate_callpattern/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/statefuncs/func_state_pattern_executepattern/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/statefuncs/statematrix/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/statefuncs/wait_waitforend_repeat/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/assisttarget_enemy/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/checktarget_checklos/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/relationship/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/reset_ignore_settarget/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/sendtarget2caller_sendcaller/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/targetentbyname/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/targetfunctions/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://whackjobint.github.io/postal3script/targetingfuncs/targetmemory/</loc>
-         <lastmod>2022-02-08</lastmod>
+         <lastmod>2022-02-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
