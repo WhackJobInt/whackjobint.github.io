@@ -63,6 +63,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Events (TBD)</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Hammer Functions (TBD)</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../wipp3sfiles/">Development/WIP Files</a>
                     </li>
                 </ul>
@@ -129,7 +131,7 @@
     <ul class="current">
     </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, AreaEvent, EntFireUser, EntFireInput (WIP)</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../item_spawnitem/">Item, SpawnItem</a>
                     </li>
@@ -320,8 +322,8 @@
 <h1>Syntax</h1>
 <p><code class="language-js">Effect [slotnum],[effectname],[attachmentpoint],[xpos],[ypos],[zpos],[lifetime],[hitchup]</code> -- Spawns and sets up a particle effect utilizing
 all parameters</p>
-<p><code class="language-js">Effect [slotnum],[reset],</code> -- Reset an existing particle effect</p>
-<p><code class="language-js">Effect [slotnum],[kill],</code> -- Kill an existing particle effect</p>
+<p><code class="language-js">Effect [slotnum],[reset]</code> -- Reset an existing particle effect</p>
+<p><code class="language-js">Effect [slotnum],[kill]</code> -- Kill an existing particle effect</p>
 
 <p></p>
 <div class="admonition note">
@@ -332,6 +334,9 @@ all parameters</p>
 <p>The names of existing particle effects correspond to their names in their related <code>.pcf</code> file, located in <code>Postal III\p3\particles</code>.
 In order to load these particle effects and to view each of the effect names, you will need to load the in-game particle editor in Half-Life 2.
 Launch Half-Life 2 with the <code>-tools -nop4</code> launch arguments, and navigate to the particle editor and load one.</p>
+<p>Doing <code>reset</code> on a particle effect is basically the same thing as killing it</p>
+
+<p>If you managed to make Hammer++ work somehow, you can view all the particle effects in it's Particle browser.</p>
 </div>
 
 <h1>Example</h1>
@@ -345,9 +350,11 @@ pt_default
         Effect 4,Tazer_Hit_Smoke_Fx,pelvis,0,0,-12,-1,true
 
         // Reset the slot 4 particle effect...
+        // (This will make the effect disappear immediately)
         Effect 4,reset
 
         // Kill the slot 4 particle effect...
+        // (This too)
         Effect 4,false
     }
 }
@@ -359,7 +366,7 @@ pt_default
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../TBD/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, FireInput, AreaEvent, EntFireUser, EntFireInput (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../fire_event_and_user_funcs/" class="btn btn-neutral float-right" title="FireEvent, FireEventEX, FireUser, OnUser, FireInput, AreaEvent, EntFireUser, EntFireInput (WIP)">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../statefuncs/activitypattern_funcs/" class="btn btn-neutral" title="StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -393,7 +400,7 @@ pt_default
       <span><a href="../../statefuncs/activitypattern_funcs/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../fire_event_and_user_funcs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
