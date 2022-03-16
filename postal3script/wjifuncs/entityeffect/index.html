@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://whackjobint.github.io/postal3script/missionfuncs/showmessage_showhint/">
+  <link rel="canonical" href="https://whackjobint.github.io/postal3script/wjifuncs/entityeffect/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>ShowMessage, ShowHint - Postal3Script</title>
+  <title>EntityEffect - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -19,9 +19,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "ShowMessage, ShowHint";
-    var mkdocs_page_input_path = "missionfuncs\\showmessage_showhint.md";
-    var mkdocs_page_url = "/postal3script/missionfuncs/showmessage_showhint/";
+    var mkdocs_page_name = "EntityEffect";
+    var mkdocs_page_input_path = "wjifuncs\\entityeffect.md";
+    var mkdocs_page_url = "/postal3script/wjifuncs/entityeffect/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -113,16 +113,18 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Catharsis Reborn-only Functions</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../wjifuncs/setangle_setorigin/">SetAngle, SetOrigin</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../setangle_setorigin/">SetAngle, SetOrigin</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../wjifuncs/entityeffect/">EntityEffect</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">EntityEffect</a>
+    <ul class="current">
+    </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../wjifuncs/screenshake/">ScreenShake</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../screenshake/">ScreenShake</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../wjifuncs/printattr/">PrintAttr</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../printattr/">PrintAttr</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../wjifuncs/ifcansee/">IfCanSee</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../ifcansee/">IfCanSee</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">State Functions</span></p>
@@ -240,26 +242,20 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Functions</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../attributeprogressbar/">AttributeProgressBar</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/attributeprogressbar/">AttributeProgressBar</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/missionlog_save_briefing/">MissionLog, MissionSave, MissionBriefing</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ShowMessage, ShowHint</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#showmessage">ShowMessage</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#showhint">ShowHint</a>
-    </li>
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/showmessage_showhint/">ShowMessage, ShowHint</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../endmission/">EndMission</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/endmission/">EndMission</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../playerkarma/">PlayerKarma</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/playerkarma/">PlayerKarma</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../playvideo/">PlayVideo</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/playvideo/">PlayVideo</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../opendialog/">OpenDialog</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../missionfuncs/opendialog/">OpenDialog</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Deleted Functions</span></p>
@@ -319,11 +315,11 @@
     
       
         
-          <li>Mission Functions &raquo;</li>
+          <li>Catharsis Reborn-only Functions &raquo;</li>
         
       
     
-    <li>ShowMessage, ShowHint</li>
+    <li>EntityEffect</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -335,65 +331,37 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="show-functions">Show Functions<a class="headerlink" href="#show-functions" title="Permanent link"></a></h1>
-<h2 id="showmessage">ShowMessage<a class="headerlink" href="#showmessage" title="Permanent link"></a></h2>
-<p>Prints out message to the screen.</p>
-<p>Supports strings from <code>'./p3/resource/p3_english.txt'</code></p>
+                <h2 id="entityeffect">EntityEffect<a class="headerlink" href="#entityeffect" title="Permanent link"></a></h2>
+<p>Sets, adds, or removes an entity's entity effect.</p>
 
-<ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<li>Equivalent to Half-Life 2's UserMessageBegin.</li>
-<li>Uses extra data from <code>HudLayout.res</code>, <code>channels_manifest.txt</code>, and <code>HudAnimations.txt</code></li>
+<div class="admonition warning">
+<p class="admonition-title">Catharsis Reborn Feature</p>
+<p>The following function will only work in <b>Catharsis Reborn</b>.</p>
 </div>
-</ul>
 
-<h1>Example</h1>
 <pre><code class="language-js">
-// This will print on the screen
-ShowMessage "#P3_CM_INSANE1"
-
-// This will print on the P3Karma channel
-ShowMessage "[Ja-ja, natürlich!], $P3Karma"
-
-// This will print on the P3Mission channel
-ShowMessage "[Puff! Puff! Puff!], $P3Mission"
-
-// This will print on the P3Debug channel
-ShowMessage "[Meow!... I'm on Fear!!!], $P3Debug"
-
-// You have arrested 0-3 of 3 hobos
-ChangeAttr "HoboArrested 1"
-ShowMessage "[You have arrested {0:v} of 3 hobos], $P3Mission, HoboArrested"
-
-// Slightly more complex syntax
-IfAttr "caller.ea_Manner == Manner:PussyCat and mis_004 >= 0 Block begin,execute"
-    TargetEntByName mg_004
-    SetAttr "mis_004 cat_counter"
-    IfAttr "mis_004 >= target.condition SetAttr mis_004 target.condition"
-    ShowMessage "[ {0:v} of {1:v} deceased cats have been obtained], $P3Mission, mis_004, target.condition"
-Block end
+// from CR's ai_st_init.p3s
+Const EF_NOSHADOW,0
+Const EF_NODRAW,1
+Const EF_NORECEIVESHADOW,2
+Const EF_ITEM_BLINK,3
 </code></pre>
 
-<p><br></p>
-<h2 id="showhint">ShowHint<a class="headerlink" href="#showhint" title="Permanent link"></a></h2>
-<p>Unused Postal3Script function.</p>
-<p>Karma hinting is done automatically, so this has been left completely unused.</p>
-<ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Uses data from <code>'./p3/scripts/hints_manifest.txt'</code></p>
-</div>
-</ul>
+<h1>Syntax</h1>
+<p><code>EntityEffect [0 to 3],add</code> -- Adds the effect to this entity.</p>
+<p><code>EntityEffect [0 to 3],remove</code> -- Removes the effect to this entity.</p>
+<p><code>EntityEffect 0,clear</code> -- Clears all effects from this entity.</p>
 
 <h1>Example</h1>
 <pre><code class="language-js">
-// First found in 'ai_st1_common.p3s' Line 954
-ShowHint hintCat
-
-// First found in 'ai_st6_missions.p3s' Line 528
-ShowHint hintKarmaDown
-ShowHint hintKarmaUp
+// This will make the NPC visible again
+pt_default
+{
+    actions
+    {
+        EntityEffect EF_NODRAW,remove
+    }
+}
 </code></pre>
               
             </div>
@@ -402,10 +370,10 @@ ShowHint hintKarmaUp
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../endmission/" class="btn btn-neutral float-right" title="EndMission">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../screenshake/" class="btn btn-neutral float-right" title="ScreenShake">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../missionlog_save_briefing/" class="btn btn-neutral" title="MissionLog, MissionSave, MissionBriefing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setangle_setorigin/" class="btn btn-neutral" title="SetAngle, SetOrigin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -433,10 +401,10 @@ ShowHint hintKarmaUp
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../missionlog_save_briefing/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../setangle_setorigin/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../endmission/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../screenshake/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
