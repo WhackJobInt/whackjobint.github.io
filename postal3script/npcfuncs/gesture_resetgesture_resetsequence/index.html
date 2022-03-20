@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://whackjobint.github.io/postal3script/npcbehaviorfuncs/aim_face/">
+  <link rel="canonical" href="https://whackjobint.github.io/postal3script/npcfuncs/gesture_resetgesture_resetsequence/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Aim, Face - Postal3Script</title>
+  <title>Gesture, ResetGesture, ResetSequence - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -19,9 +19,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Aim, Face";
-    var mkdocs_page_input_path = "npcbehaviorfuncs\\aim_face.md";
-    var mkdocs_page_url = "/postal3script/npcbehaviorfuncs/aim_face/";
+    var mkdocs_page_name = "Gesture, ResetGesture, ResetSequence";
+    var mkdocs_page_input_path = "npcfuncs\\gesture_resetgesture_resetsequence.md";
+    var mkdocs_page_url = "/postal3script/npcfuncs/gesture_resetgesture_resetsequence/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -141,45 +141,47 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">NPC Functions</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/say/">Say</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/NPC/">NPC</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">NPC Behavior Functions</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Aim, Face</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../say/">Say</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../emitsound/">EmitSound</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Gesture, ResetGesture, ResetSequence</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#aim">Aim</a>
+    <li class="toctree-l2"><a class="reference internal" href="#gesture">Gesture</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#face">Face</a>
+    <li class="toctree-l2"><a class="reference internal" href="#resetgesture">ResetGesture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resetsequence">ResetSequence</a>
     </li>
     </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../snatch_unsnatch/">Snatch, Unsnatch</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../headblob/">Headblob</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../senses_lookat_lookout/">Senses, LookAt, LookOut</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../NPC/">NPC</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../crouch_lean/">Crouch, Lean</a>
+                </ul>
+                <p class="caption"><span class="caption-text">NPC Behavior Functions</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/aim_face/">Aim, Face</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../busy_hate/">Busy, Hate</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/snatch_unsnatch/">Snatch, Unsnatch</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../follow_playerfriendly/">Follow, PlayerFriendly</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/senses_lookat_lookout/">Senses, LookAt, LookOut</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../catdervish/">CatDervish</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/crouch_lean/">Crouch, Lean</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../stunout/">StunOut</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/busy_hate/">Busy, Hate</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../enablegibs/">EnableGibs</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/follow_playerfriendly/">Follow, PlayerFriendly</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../entervehicle/">EnterVehicle</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/catdervish/">CatDervish</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/stunout/">StunOut</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/enablegibs/">EnableGibs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcbehaviorfuncs/entervehicle/">EnterVehicle</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Squad Functions</span></p>
@@ -350,11 +352,11 @@
     
       
         
-          <li>NPC Behavior Functions &raquo;</li>
+          <li>NPC Functions &raquo;</li>
         
       
     
-    <li>Aim, Face</li>
+    <li>Gesture, ResetGesture, ResetSequence</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -366,17 +368,63 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="facing-functions">Facing Functions<a class="headerlink" href="#facing-functions" title="Permanent link"></a></h1>
-<h2 id="aim">Aim<a class="headerlink" href="#aim" title="Permanent link"></a></h2>
-<p>Forces NPC to aim at target object</p>
+                <h1 id="gesturesequence-functions">Gesture/Sequence Functions<a class="headerlink" href="#gesturesequence-functions" title="Permanent link"></a></h1>
+<h2 id="gesture">Gesture<a class="headerlink" href="#gesture" title="Permanent link"></a></h2>
+<p>Make an NPC perform a gesture</p>
 <h2>Syntax</h2>
-<p><code class="language-js">Aim [true/false]</code></p>
+<p><code class="language-js">Gesture [gesture_name]</code> -- Play gesture by name</p>
+<p><code class="language-js">Gesture [gesture_name,duration]</code> -- Play gesture with duration</p>
+<p><code class="language-js">Gesture [gesture_name,duration:bias]</code> -- Play gesture with optional duration and bias</p>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>bias</code> is the max amount of time that is randomly generated and tacked onto the gesture duration!
+</p>
+</div>
+
+<h2>Example</h2>
+<pre><code class="language-js">
+Gesture g_onfire // Do on fire gesture forever, until reset
+Gesture g_emote_afraid,2:2 // Do afraid gesture with duration of 2 seconds and a bias of 2
+Gesture g_onfire,3 // Do on fire gesture for 3 seconds
+</code></pre>
 
 <p><br></p>
-<h2 id="face">Face<a class="headerlink" href="#face" title="Permanent link"></a></h2>
-<p>Forces NPC to face it's target object</p>
+<h2 id="resetgesture">ResetGesture<a class="headerlink" href="#resetgesture" title="Permanent link"></a></h2>
+<p>Reset an NPC's gesture(s)</p>
+<div class="admonition warning">
+<p class="admonition-title">TODO</p>
+<p>Make sure that <code>ResetGesture 1</code> actually does reset the current gesture!
+</p>
+</div>
+
 <h2>Syntax</h2>
-<p><code class="language-js">Face [true/false],[mobility(float)]</code>
+<p><code class="language-js">ResetGesture [gesture_name]</code> -- Reset specific gesture by name</p>
+<p><code class="language-js">ResetGesture 1</code> -- Reset current gesture</p>
+<p><code class="language-js">ResetGesture all</code> -- Reset ALL gestures</p>
+<p><code class="language-js">ResetGesture *</code> -- Reset ALL gestures</p>
+
+<pre><code class="language-js">
+ResetGesture g_onfire // Reset specific gesture by name
+ResetGesture 1 // Reset current gesture
+ResetGesture all // Reset ALL gestures
+ResetGesture * // Reset ALL gestures
+</code></pre>
+
+<p><br></p>
+<h2 id="resetsequence">ResetSequence<a class="headerlink" href="#resetsequence" title="Permanent link"></a></h2>
+<p>Reset an NPC's sequence</p>
+<div class="admonition warning">
+<p class="admonition-title">TODO</p>
+<p>Make sure that <code>ResetGesture 1</code> actually does reset the current sequence!
+</p>
+</div>
+
+<h2>Syntax</h2>
+<p><code class="language-js">ResetGesture 1</code> -- Reset current sequence
+<pre><code class="language-js">
+ResetGesture 1 // Reset current sequence
+</code></pre>
               
             </div>
           </div>
@@ -384,10 +432,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../snatch_unsnatch/" class="btn btn-neutral float-right" title="Snatch, Unsnatch">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../headblob/" class="btn btn-neutral float-right" title="Headblob">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../npcfuncs/NPC/" class="btn btn-neutral" title="NPC"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../emitsound/" class="btn btn-neutral" title="EmitSound"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -415,10 +463,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../npcfuncs/NPC/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../emitsound/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../snatch_unsnatch/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../headblob/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

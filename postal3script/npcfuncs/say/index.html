@@ -148,7 +148,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../emitsound/">EmitSound</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Gesture, ResetGesture, ResetSequence (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../headblob/">Headblob</a>
                     </li>
@@ -273,12 +273,56 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Script Files (Good Path)</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">n/a</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PA (Police Academy) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PM1 (Patrol Mission 1) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SUB (Save Uwe Bolls Career) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">AS (Arcade Shootout) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">HI (Homeland Insecurity) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MLG (Police Monkey Test Lab Assault) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PM2 (Patrol Mission 2) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">ZHQA (Eco Zealot HQ Assault) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">GRG (Police Gay Rodeo) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MC (The Motorcade) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">DLG (Police Daveland) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">AA (Apocalypse Again) TBD</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Mission Script Files (Evil Path)</span></p>
+                <p class="caption"><span class="caption-text">Mission Script Files (Insane Path)</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">n/a</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MTZ (Meet the Zealots) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">CW (The Champ Whisperer) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SRM (Segway Repo Man) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SBE (Slave Boy Escort) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MLI (Monkey Test Lab Assault) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">KMTD (Krotchy Meal Toy Delivery) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MVC (Mexican Viagra Courier) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PWAC (Prisoner Without A Clue) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">BDK (Battle Damage Krotchy) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">GRI (Gay Rodeo) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">CRM (Champ Rescue) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">DLI (Daveland) TBD</a>
                     </li>
                 </ul>
       </div>
@@ -323,27 +367,32 @@
 <p>Uses the name of the sentence in the related NPC's sentence script located in </p>
 <p><code>'.\Postal III\p3\scripts\Sentences'</code></p>
 
+<h2>Syntax</h2>
+<p><code class="language-js">Say [sentence_name]</code>
+<p><code class="language-js">Say [sentence_name, sentence_name, sentence_name]</code> -- Say a random sentence out of these (You can specify as many sentence parameters as you want)
+<p><code class="language-js">Say [sentence_name, priority, wait]</code> -- Say sentence with priority, and wait until the end
+
 <div class="admonition warning">
 <p class="admonition-title">TODO</p>
-<p>Need to make sure that the fourth parameter is actually even the sentence priority!</p>
+<p>Need to make sure that the fourth parameter is even actually the sentence priority!
+<p>Need to make sure what the wait parameter actually does specifically!
+</p>
 </div>
 
 <p></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Here's a list of all the sentence priority parameters: <code>0, 1, 2</code>
-(0 = normal, 1 = medium, 2 = high)
-</p>
-
+<p>You can specify as many sentences parameters as you want!
 <p>The voice prefix is not required, <code>GAY_ONFIRE</code> can lose the <code>GAY_</code> part and instead just be <code>ONFIRE</code> for example...</p>
 </div>
 
 <p></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you want the player to say something you must <code>EntFireInput logic_playerproxy</code> to do a generic say instead, like so: <code>EntFireInput proxy,Say:SENTENCENAME</code>
+<p>If you want the PLAYER to say something you must <code>EntFireInput logic_playerproxy</code> to do a generic say instead, like so: <code>EntFireInput proxy,Say:SENTENCENAME</code>
 </div>
 
+<h1>Example</h1>
 <pre><code class="language-js">
 // Say a voice line...
 Say ZOMB_MOAN
@@ -354,6 +403,11 @@ Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT
 // Pick and say one of these voice lines randomly, 
 // and specify the optional sentence priority parameter
 Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0
+
+// Pick and say one of these voice lines randomly, 
+// specify the optional sentence priority parameter,
+// and wait for the end of the sentence
+Say ZOMB_MOAN,ZOMB_CURSE,ZOMB_HIT,0,wait
 </code></pre>
               
             </div>

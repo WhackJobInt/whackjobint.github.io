@@ -148,7 +148,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Gesture, ResetGesture, ResetSequence (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
                     </li>
@@ -273,12 +273,56 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Script Files (Good Path)</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">n/a</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PA (Police Academy) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PM1 (Patrol Mission 1) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SUB (Save Uwe Bolls Career) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">AS (Arcade Shootout) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">HI (Homeland Insecurity) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MLG (Police Monkey Test Lab Assault) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PM2 (Patrol Mission 2) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">ZHQA (Eco Zealot HQ Assault) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">GRG (Police Gay Rodeo) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MC (The Motorcade) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">DLG (Police Daveland) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">AA (Apocalypse Again) TBD</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Mission Script Files (Evil Path)</span></p>
+                <p class="caption"><span class="caption-text">Mission Script Files (Insane Path)</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">n/a</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MTZ (Meet the Zealots) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">CW (The Champ Whisperer) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SRM (Segway Repo Man) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SBE (Slave Boy Escort) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MLI (Monkey Test Lab Assault) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">KMTD (Krotchy Meal Toy Delivery) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">MVC (Mexican Viagra Courier) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">PWAC (Prisoner Without A Clue) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">BDK (Battle Damage Krotchy) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">GRI (Gay Rodeo) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">CRM (Champ Rescue) TBD</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../TBD/">DLI (Daveland) TBD</a>
                     </li>
                 </ul>
       </div>
@@ -319,20 +363,20 @@
             <div class="section">
               
                 <h1 id="visible">Visible<a class="headerlink" href="#visible" title="Permanent link"></a></h1>
-<p>Check if a specified object is visible.
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If <code>Senses</code> is turned off, the NPC will NEVER be able to "see" the target.</p> 
+<p>Check if a specified object is visible, and if the entity is currently facing it
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function does not rely on <code>Senses</code> function.</p> 
 </div>
 
 <h1>Syntax</h1>
-<p><code class="language-js">Visible:[object]</code> -- Returns if the specified object is visible or not
+<p><code class="language-js">Visible:[object]</code> -- Returns if the specified object is visible and currently facing towards it, or not
 <pre><code class="language-js">
 // Make sure we are able to see
 Senses true
 
 // If we can fire our weapon and we can see the targeted object...
-IfAttr "Timer:tCanFire == 0 and Visible:target == true Block begin"
+IfAttr "Timer:tCanFire == 0 and Visible:target == 1 Block begin"
     // Try to shoot at the target, say we're shooting, and reset our fire timer
     ExecutePattern st_combat_logic.xpt_TryShoot
     ExecutePattern .xpt_SayShoot
