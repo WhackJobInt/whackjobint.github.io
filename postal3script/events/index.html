@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://whackjobint.github.io/postal3script/wipp3sfiles/">
+  <link rel="canonical" href="https://whackjobint.github.io/postal3script/events/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Development/WIP Files - Postal3Script</title>
+  <title>Events - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -19,9 +19,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Development/WIP Files";
-    var mkdocs_page_input_path = "wipp3sfiles.md";
-    var mkdocs_page_url = "/postal3script/wipp3sfiles/";
+    var mkdocs_page_name = "Events";
+    var mkdocs_page_input_path = "events.md";
+    var mkdocs_page_url = "/postal3script/events/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -61,13 +61,19 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Events</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-are-postal3script-events">What are Postal3Script events?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automatically-created-events">Automatically Created Events</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#embedded-events">Embedded Events</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../TBD/">Hammer Functions (TBD)</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Development/WIP Files</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Attribute Checking</span></p>
@@ -350,7 +356,7 @@
         
       
     
-    <li>Development/WIP Files</li>
+    <li>Events</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -362,39 +368,299 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="unused-postal3script-files">Unused Postal3Script files<a class="headerlink" href="#unused-postal3script-files" title="Permanent link"></a></h1>
-<p>These files can be found in <code>(location of P3)/p3/scripts/</code></p>
-<p>Many of them contain cut and planned features for the open world gameplay, ultimately they were never ported over properly.</p>
-<p>It's a good idea to search through these files for hunting for Beta content that never made it out alive.</p>
-<p>They were used by the scripters to test and develop scripts before eventually moving them over to mission scripts.</p>
-<p>They were also used to test many P3S functions to ensure they are working properly.</p>
-<pre><code class="language-js">
-'ai_badger_test.p3s' - Badger testing
-'ai_cashmart.p3s' - Earlier version of Cashmart (ai_cashmart_npc.p3s is not unused)
-'ai_gameplay.p3s' - Intended for Open World gameplay
-'ai_patrol1_citizen_fight.p3s' - Unknown
-'ai_st1_common.p3s' - Contains various old code
-'ai_st2_states.p3s' - Contains various old code
-'ai_st3_social.p3s' - Contains experimental old code
-'ai_st4_queuie.p3s' - Queue testing
-'ai_st5_temp.p3s' - Contains test code, scrapped features
-'ai_st6_missions.p3s' - Test code related to missions
-'ai_st7_environment.p3s' - Code related to cut environment behavior
-'ai_st8_items.p3s' - Code related to cut inventory items
-'ai_st9_animals.p3s' - Animals test
-'ai_st10_temp.p3s' - Test script, contains code related to Traffic lights
-'ai_st11_urza.p3s' - Contains scrapped features, old code
-'ai_st12_urza.p3s' - Contains scrapped features, old code
-'ai_st98_helicopter.p3s' - Code that is identical to the Helicopter AI that IS used
-'ai_st_utilities.p3s' - Various code related to NPCs
-'ai_test_babuska.p3s' - Test script
-'lean_test.p3s' - Test script
-</code></pre>
+                <h1 id="events">Events<a class="headerlink" href="#events" title="Permanent link"></a></h1>
+<h2 id="what-are-postal3script-events">What are Postal3Script events?<a class="headerlink" href="#what-are-postal3script-events" title="Permanent link"></a></h2>
+<p>Events are essentially "events", triggered by some source while the entity is in a state or pattern which makes you have some kind of "async" checking.</p>
+<p>Some examples being of an event is, the entity is in a state called sitting, and suddenly they've got hurt, the "OnHit" event is being called because of that, which makes the Entity's state, pattern change, or even execute a pattern externally depending on what will the "OnHit" event do as it's defined in it's Postal3Script file.</p>
 
+<div class="admonition note">
+<p class="admonition-title">Types of Events</p>
+<p>Events can be Global, State, or Pattern only.</p>
+</div>
+
+<h1>Global Events Example</h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Don't try loading them as is, they have a very outdated Postal3Script layout, and several deleted functions! Use <code>p3_fsm_spew 1</code> console command to check which one of them loads properly!
+<p>Must be placed <b>before</b> or <b>after</b> the States bracket!</p>
 </div>
+
+<pre><code class="language-js">
+behavior
+{
+    name bh_Postal3ScriptDocs
+    inherited bh_npc
+
+    // Placing the events bracket here will make them global!
+    events
+    {
+        OnHit           "ExecutePattern st_util.xpt_ThatHurtYouKnow"
+        OnISmellFood    "State st_food"
+    }
+    States
+    {
+        st_init
+        {
+            Group Neutral
+            Patterns
+            {
+                pt_default
+                {
+                    actions
+                    {
+                        ExecutePattern bh_base:st_init.pt_default
+                    }
+                }
+            }
+        }
+    }
+    // It works here too!
+    events
+    {
+        OnTimer_tPoop "State st_poop"
+    }
+}
+</code></pre>
+
+<h1>State Events Example</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Must be placed <b>after</b> the State's 'Patterns' bracket!</p>
+</div>
+<pre><code class="language-js">
+behavior
+{
+    name bh_Postal3ScriptDocs
+    inherited bh_npc
+
+    States
+    {
+        st_idle
+        {
+            Group Neutral
+            Patterns
+            {
+                pt_default
+                {
+                    actions
+                    {
+                        Timer tResting,60
+                        Pattern pt_rest
+                    }
+                }
+
+                pt_rest
+                {
+                    actions
+                    {
+                        // Note: this animation doesn't exists in Postal 3
+                        Sequence seq.IDLE_SLEEP,999
+                    }
+                }
+
+                pt_wakeup
+                {
+                    actions
+                    {
+                        // Note: this animation doesn't exists in Postal 3
+                        Sequence seq.IDLE_WAKEUP
+                        WaitForEnd 1
+                        Wait 2
+                        State st_start
+                    }
+                }
+            }
+            // Events will execute in any of the patterns above!
+            events
+            {
+                // After 60 seconds this executes
+                OnTimer_tResting    "Pattern pt_wakeup"
+                // I was hit by someone...
+                OnHit               "Pattern pt_wakeup"
+                // I'm now pissed, literally
+                OnNasty             "Pattern pt_wakeup"
+            }
+        }
+    }
+}
+</code></pre>
+
+<h1>Pattern Events Example</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Must be placed <b>after</b> the Pattern's 'actions' bracket!</p>
+</div>
+<pre><code class="language-js">
+behavior
+{
+    name bh_Postal3ScriptDocs
+    inherited bh_npc
+
+    States
+    {
+        st_idle
+        {
+            Group Neutral
+            Patterns
+            {
+                pt_default
+                {
+                    actions
+                    {
+                        Timer tResting,60
+                        Pattern pt_rest
+                    }
+                }
+
+                pt_rest
+                {
+                    actions
+                    {
+                        // Note: this animation doesn't exists in Postal 3
+                        Sequence seq.IDLE_SLEEP,999
+                    }
+                    // These events will now only execute in pt_rest
+                    events
+                    {
+                        // After 60 seconds this executes
+                        OnTimer_tResting    "Pattern pt_wakeup"
+                        // I'm now pissed, literally
+                        OnNasty             "Pattern pt_wakeup"
+                        // I was hit by someone...
+                        OnHit               "Pattern pt_wakeup"
+                    }
+                }
+
+                pt_wakeup
+                {
+                    actions
+                    {
+                        // Note: this animation doesn't exists in Postal 3
+                        Sequence seq.IDLE_WAKEUP
+                        WaitForEnd 1
+                        Wait 2
+                        State st_start
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+
+<p><br></p>
+<h2 id="automatically-created-events">Automatically Created Events<a class="headerlink" href="#automatically-created-events" title="Permanent link"></a></h2>
+<p>There are several Postal3Script functions that automatically create Events, here you can find all of them below, and the correspending functions:</p>
+<p><code class="language-js">OnAE_[name]</code>     -- AreaEvent</p>
+<p><code class="language-js">OnTimer_[name]</code>  -- Timer</p>
+<p><code class="language-js">OnAnim[animevent]</code> -- Sequence (Note: Model animations need to have an anim event embedded)</p>
+<p><code class="language-js">OnAttrMin_[attribute]</code> -- ChangeAttr</p>
+<p><code class="language-js">OnAttrMax_[attribute]</code> -- ChangeAttr</p>
+<p><code class="language-js">OnAttrChange_[attribute]</code> -- ChangeAttr</p>
+<p><code class="language-js">OnAttrRemove_[attribute]</code> -- RemoveAttr</p>
+<p><code class="language-js">OnFire_[name]</code> -- Fire Functions</p>
+
+<p><br></p>
+<h2 id="embedded-events">Embedded Events<a class="headerlink" href="#embedded-events" title="Permanent link"></a></h2>
+<p>These are all Events that are highly embedded into the engine (Todo: categorize them)</p>
+<pre><code class="language-js">
+OnStartBusyNode
+OnFinishBusyNode
+OnNoActiveNode
+FearHide
+OnInvalidRoute
+OnTargetReset
+OnEnd
+OnUser1
+OnUser2
+OnUser3
+OnUser4
+OnPathTrackUnresolved
+OnPathTrackFailed
+OnUse
+OnDrop
+OnTake
+OnDialogNo
+OnDialogYes
+OnIgnite
+OnAcid
+OnFinaleWin
+OnLeanFailed
+OnKrotchyDamage
+OnDamaged
+OnHit
+OnExtinguish
+OnSuperNasty
+OnNasty
+OnPaint
+OnInFlame
+OnSeeFlame
+OnPlayerPush
+OnEnemiesDead
+OnNewEnemy
+OnNewFear
+OnSawEnemyEnt
+OnSawFearEnt
+OnSawNeutralEnt
+OnLostEnemyEnt
+OnLostFearEnt
+OnLostNeutralEnt
+OnTased
+OnTargetReach
+OnStandUpBegin
+OnStandUpEnd
+OnLost
+OnTargetClose
+OnVisible
+OnLOS
+OnHear
+OnHearCombat
+OnHearDanger
+OnDeath
+OnTargetKilled
+OnUnconscious
+OnTargetUnconscious
+OnKicked
+OnFallToGround
+OnRecover
+OnThreatOfVehicleHit
+OnSprayStunned
+OnTasingStart
+OnBatonShocked
+OnUnstunned
+OnBump
+OnUseCommand
+OnLand
+OnDervishBegin
+OnDervishEnd
+OnGrenadeAttached
+OnSnatch
+OnUnsnatch
+OnStun
+OnHostaged
+OnResque
+OnArrested
+OnTargetArrested
+OnThrowGrenadeFailed
+OnStunnedOut
+OnEnemySpoted
+OnTargetResistArrest
+OnFailedToEnterVehicle
+OnEnteredVehicle
+OnLeaveVehicle
+OnCannonShoot
+OnCannonDestroyed
+OnGatlingShoot
+OnGatlingDestroyed
+OnLauncherShoot
+OnLauncherLeftDestroyed
+OnLauncherRightDestroyed
+OnPrimaryAttack
+OnSecondaryAttack
+OnBeeSting
+OnBlind
+OnSucked
+OnTasingFinish
+</code></pre>
               
             </div>
           </div>
@@ -402,10 +668,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../attribchecking/attributes/" class="btn btn-neutral float-right" title="IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../TBD/" class="btn btn-neutral float-right" title="Hammer Functions (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TBD/" class="btn btn-neutral" title="Hammer Functions (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../TBD/" class="btn btn-neutral" title="Blocks (TBD)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -436,7 +702,7 @@
       <span><a href="../TBD/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../attribchecking/attributes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
