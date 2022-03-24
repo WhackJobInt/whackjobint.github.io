@@ -1,7 +1,7 @@
 @font-face
 {
-    font-family: Soup;
-    src: url(fnt/Soup.ttf);
+    font-family: HackNam;
+    src: url(fnt/Hack-NamSan.ttf);
 }
 
 body
@@ -10,8 +10,8 @@ body
     color: #e0e0e0;
     margin: 0;
 
-    font-family: Soup;
-    font-size: 125%;
+    font-family: HackNam;
+    font-size: 115%;
 }
 
 .gallery 
@@ -135,6 +135,12 @@ a
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
     text-align: center;
+}
+
+u
+{
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
 }
 
 #social > p
