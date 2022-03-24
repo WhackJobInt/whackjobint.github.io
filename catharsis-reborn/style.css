@@ -1,0 +1,173 @@
+@font-face
+{
+    font-family: Soup;
+    src: url(fnt/Soup.ttf);
+}
+
+body
+{
+    background-color: #161413;
+    color: #e0e0e0;
+    margin: 0;
+
+    font-family: Soup;
+    font-size: 125%;
+}
+
+.gallery 
+{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.gallery img 
+{
+    width: 100%;
+    border: 5px solid #e0e0e0;
+}
+
+.center 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+hr
+{
+    border: 4px dashed #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    font-size: 325%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h3
+{
+    font-size: 100%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h2
+{
+    font-size: 100%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h4
+{
+    font-size: 500%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h6
+{
+    font-size: 150%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+    
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+h5
+{
+    font-size: 125%;
+
+    text-align: center;
+    color: #e0e0e0;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#list > ul
+{
+    padding: 10px;
+    list-style-type: disc;
+
+    width: 25%;
+
+    margin: 0 auto;
+}
+
+#list li:not(:last-child) 
+{
+    margin-bottom: 10px;
+}
+
+#list > li
+{
+    
+    text-align: center;
+}
+
+* { box-sizing: border-box }
+
+a
+{
+    color:rgb(255, 251, 0);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    text-align: center;
+}
+
+#social > p
+{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    text-align: center;
+}
+
+div.middle-content
+{
+    margin: auto;
+    width: 100%;
+    height: 2000px;
+    background-color: rgb(32, 32, 32);
+    text-shadow: 0 0.25em 0.15em #000000;
+    
+    display: table;
+}
+
+div #content
+{
+    padding: 2em;
+}
+
+div.bottom-footer
+{
+    text-align: center;
+    font-size: 0.8em;
+
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 1em;
+}
