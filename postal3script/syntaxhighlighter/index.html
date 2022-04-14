@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="WhackJob Interactive">
-  <link rel="canonical" href="https://whackjobint.github.io/postal3script/TBD/">
+  <link rel="canonical" href="https://whackjobint.github.io/postal3script/syntaxhighlighter/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>DLI (Daveland) TBD - Postal3Script</title>
+  <title>Syntax Highlighter - Postal3Script</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -19,9 +19,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "DLI (Daveland) TBD";
-    var mkdocs_page_input_path = "TBD.md";
-    var mkdocs_page_url = "/postal3script/TBD/";
+    var mkdocs_page_name = "Syntax Highlighter";
+    var mkdocs_page_input_path = "syntaxhighlighter.md";
+    var mkdocs_page_url = "/postal3script/syntaxhighlighter/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -48,26 +48,42 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <p class="caption"><span class="caption-text">Postal3Script (WIP)</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../whatispostal3script/">What is Postal3Script?</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">Structure (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Structure (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">States (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">States (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">Patterns (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Patterns (TBD)</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">Blocks (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks (TBD)</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">Hammer Functions (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Hammer Functions (TBD)</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlighter/">Syntax Highlighter</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Syntax Highlighter</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#notepad">Notepad++</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installation_1">Installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#alternative-installation">Alternative Installation</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Attribute Checking</span></p>
@@ -126,7 +142,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">SendState, SendPattern (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SendState, SendPattern (TBD)</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc Functions</span></p>
@@ -139,7 +155,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/addfluid/">AddFluid</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">Anchor, TargetAnchor (TBD)</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">Anchor, TargetAnchor (TBD)</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -273,58 +289,56 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Script Files (Good Path)</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="./">PA (Police Academy) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">PA (Police Academy) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">PM1 (Patrol Mission 1) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">PM1 (Patrol Mission 1) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">SUB (Save Uwe Bolls Career) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SUB (Save Uwe Bolls Career) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">AS (Arcade Shootout) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AS (Arcade Shootout) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">HI (Homeland Insecurity) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">HI (Homeland Insecurity) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">MLG (Police Monkey Test Lab Assault) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">MLG (Police Monkey Test Lab Assault) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">PM2 (Patrol Mission 2) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">PM2 (Patrol Mission 2) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">ZHQA (Eco Zealot HQ Assault) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">ZHQA (Eco Zealot HQ Assault) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">GRG (Police Gay Rodeo) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">GRG (Police Gay Rodeo) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">MC (The Motorcade) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">MC (The Motorcade) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">DLG (Police Daveland) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">DLG (Police Daveland) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">AA (Apocalypse Again) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">AA (Apocalypse Again) TBD</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Mission Script Files (Insane Path)</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="./">MTZ (Meet the Zealots) TBD</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">MTZ (Meet the Zealots) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">CW (The Champ Whisperer) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">CW (The Champ Whisperer) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">SRM (Segway Repo Man) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SRM (Segway Repo Man) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">SBE (Slave Boy Escort) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">SBE (Slave Boy Escort) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">MLI (Monkey Test Lab Assault) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">MLI (Monkey Test Lab Assault) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">KMTD (Krotchy Meal Toy Delivery) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">KMTD (Krotchy Meal Toy Delivery) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">MVC (Mexican Viagra Courier) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">MVC (Mexican Viagra Courier) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">PWAC (Prisoner Without A Clue) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">PWAC (Prisoner Without A Clue) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">BDK (Battle Damage Krotchy) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">BDK (Battle Damage Krotchy) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">GRI (Gay Rodeo) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">GRI (Gay Rodeo) TBD</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="./">CRM (Champ Rescue) TBD</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">CRM (Champ Rescue) TBD</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">DLI (Daveland) TBD</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../TBD/">DLI (Daveland) TBD</a>
                     </li>
                 </ul>
       </div>
@@ -348,11 +362,11 @@
     
       
         
-          <li>Mission Script Files (Insane Path) &raquo;</li>
+          <li>Postal3Script (WIP) &raquo;</li>
         
       
     
-    <li>DLI (Daveland) TBD</li>
+    <li>Syntax Highlighter</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -364,8 +378,26 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="unfinished">Unfinished!<a class="headerlink" href="#unfinished" title="Permanent link"></a></h1>
-<p>This page of Postal3Script has not worked on yet! Sorry! We're working on it!
+                <h1 id="syntax-highlighters">Syntax Highlighters<a class="headerlink" href="#syntax-highlighters" title="Permanent link"></a></h1>
+<p>We created these syntax highlighters so it's easier to look at p3s code.</p>
+
+<h2 id="notepad">Notepad++<a class="headerlink" href="#notepad" title="Permanent link"></a></h2>
+<p><img alt="Notepad++ Syntax Highlight" src="../images/notepadpp.png" /></p>
+<p><b>Note:</b> Bracket collapsing isn't properly working, if you wish to use collapsing we recommend to use the syntax highlighter below instead</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h3>
+<p>Navigate to <b>'Language->User Defined Language->Open User Defined Language folder...'</b> then drop Postal3Script.xml there, restart Notepad++</p>
+<p><b><a href="https://github.com/Kizoky/postal3script_npp/releases/latest">DOWNLOAD HERE</a></b> (<i>Download as source code</i>)</p>
+<p><br></p>
+<h2 id="visual-studio-code">Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permanent link"></a></h2>
+<p><img alt="Visual Studio Code Syntax Highlight" src="../images/vscode.png" /></p>
+<h3 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link"></a></h3>
+<p>Unpack the zip and create a new folder for it in <b>'C:/Users/[yourusername]/.vscode/extensions'</b></p>
+<p>Ideally it should look like this: <b>'C:/Users/[yourusername]/.vscode/extensions/postal3script.vscode'</b></p>
+<p>Restart vscode when it's done, and it should automatically detect .p3s files</p>
+<p><b><a href="https://github.com/Kizoky/postal3script_vscode/releases/latest">DOWNLOAD HERE</a></b> (<i>Download as source code</i>)</p>
+<h3 id="alternative-installation">Alternative Installation<a class="headerlink" href="#alternative-installation" title="Permanent link"></a></h3>
+<p>This syntax highlighter can be found in vscode's marketplace if you search for 'Postal3Script'</p>
+<p><br></p>
               
             </div>
           </div>
@@ -373,8 +405,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../attribchecking/attributes/" class="btn btn-neutral float-right" title="IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="./" class="btn btn-neutral" title="CRM (Champ Rescue) TBD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../wipp3sfiles/" class="btn btn-neutral" title="Development/WIP Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -402,8 +436,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="./" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../wipp3sfiles/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../attribchecking/attributes/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
