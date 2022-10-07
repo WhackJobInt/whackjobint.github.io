@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/statefuncs/callstate_callpattern/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>CallState, CallPattern, Call (WIP) - Postal3Script</title>
+    <title>CallState, CallPattern, Call - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "CallState, CallPattern, Call (WIP)";
+        var mkdocs_page_name = "CallState, CallPattern, Call";
         var mkdocs_page_input_path = "statefuncs\\callstate_callpattern.md";
         var mkdocs_page_url = "/postal3script/statefuncs/callstate_callpattern/";
       </script>
@@ -118,24 +118,28 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../statematrix/">StateMatrix</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CallState, CallPattern, Call (WIP)</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CallState, CallPattern, Call</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#callstate">CallState</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#callpattern">CallPattern</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#call">Call</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SendState, SendPattern (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../sendstate_sendpattern/">SendState, SendPattern</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/areaevent/">AreaEvent</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, AreaEvent, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
                   </li>
@@ -342,7 +346,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>State Functions &raquo;</li>
-      <li>CallState, CallPattern, Call (WIP)</li>
+      <li>CallState, CallPattern, Call</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -380,6 +384,17 @@
 
 <h1>Syntax</h1>
 <p><code class="language-js">CallPattern [pattern name]</code> -- Exits out from current pattern, and enters a new pattern in current state</p>
+<p><br></p>
+<h2 id="call">Call<a class="headerlink" href="#call" title="Permanent link"></a></h2>
+<p>Unused Postal3Script function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Superseded by <a href="../../statefuncs/func_state_pattern_executepattern/#executepattern">ExecutePattern</a>
+</ul>
+</div>
+
+<h1>Syntax</h1>
+<p><code class="language-js">Call [state name].[pattern name]</code> -- Externally executes a pattern from a state</p>
 <p><br></p>
               
             </div>

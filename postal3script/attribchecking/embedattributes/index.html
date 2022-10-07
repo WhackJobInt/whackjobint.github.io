@@ -72,6 +72,8 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Embedded Attributes</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#all-embedded-attributes">All Embedded Attributes</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#embedded-attribute-example">Embedded Attribute Example</a>
     </li>
     </ul>
@@ -122,18 +124,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern, Call (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern, Call</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SendState, SendPattern (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/sendstate_sendpattern/">SendState, SendPattern</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/areaevent/">AreaEvent</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, AreaEvent, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
                   </li>
@@ -359,6 +363,51 @@
 </ul>
 </div>
 
+<h2 id="all-embedded-attributes">All Embedded Attributes<a class="headerlink" href="#all-embedded-attributes" title="Permanent link"></a></h2>
+<pre><code>
+ea_lean                 -- Whether NPC or Player is currently covering
+ea_consciousness        -- Gets or sets the consciousness of an NPC, setting it to zero does nothing
+ea_health               -- Health
+ea_status               -- Status (Killer, Victim, Corpse, etc..)
+ea_armed                -- Stored/Active Weapon ID
+ea_hostage              -- Whether the Player currently has a hostage
+ea_NumEnemy             -- Number of enemies
+ea_NumFear              -- Number of fear enemies
+ea_NumVisibleEnemy      -- Number of visible enemies
+ea_NumVisibleFear       -- Number of visible fear enemies
+ea_ammo                 -- Gets the Ammo of NPC's weapon (broken)
+ea_Faction              -- Faction
+ea_Manner               -- Manner
+ea_ActiveWeapon         -- Gets the weapon type
+-1  = FLESH
+ 0  = NONE
+ 1  = ANIMAL
+ 2  = GADGET
+ 3  = NONLETHAL_MELEE
+ 4  = NONLETHAL_RANGED
+ 5  = MELEE
+ 6  = RANGED
+ 7  = BIGGUN
+
+ea_games                -- Whether the Player is currently peeing (0 if they aren't)
+ea_takeable             -- Player can interact with Cat/Human by pressing USE on them
+ea_distance             -- UNUSED, won't do anything
+ea_name                 -- Given name by the mapper to the entity
+ea_crit_disabled        -- Taken crit damage (is this a leftover from TF2?)
+ea_no_gibs              -- NPC's limbs can no longer be deattached if died
+ea_dmg_absorb           -- ALL Damage type absorption
+ea_flamedmg_absorb      -- Flame DMG absorption (DMG_BURN)
+ea_bulletdmg_absorb     -- Bullet DMG absorption (DMG_BULLET)
+ea_clubdmg_absorb       -- Club DMG absorption (DMG_CLUB)
+ea_physdmg_absorb       -- Physics DMG absorption (DMG_CRUSH)
+ea_fakedmg_absorb       -- UNUSED (DMG_PHYSGUN), this attribute still works and functions
+ea_blastdmg_absorb      -- Blast Explosion DMG absorption (DMG_BLAST)
+ea_krotchydmg_absorb    -- Krotchy DMG absorption (DMG_BUCKSHOT), parallel to Blast DMG
+ea_blast_immune         -- Blast from Explosion immunity, boltons won't fall off from the NPC
+ea_tased                -- Whether the NPC is currently tased
+ea_autokill             -- NPC will disappear if it's too far from the Player (1920 Hammer units)
+</code></pre>
+<p><br></p>
 <h2 id="embedded-attribute-example">Embedded Attribute Example<a class="headerlink" href="#embedded-attribute-example" title="Permanent link"></a></h2>
 <pre><code class="language-js">
 st_EmbeddedAttrTutorial
@@ -370,59 +419,52 @@ st_EmbeddedAttrTutorial
         {
             actions
             {
-                // Embedded damage absorptions
-                SetAttr "ea_dmg_absorb 70"
-                SetAttr "ea_bulletdmg_absorb 90"
-                SetAttr "ea_clubdmg_absorb 70"
-                SetAttr "ea_flamedmg_absorb 20"
-                SetAttr "ea_blastdmg_absorb 30"
-                SetAttr "ea_krotchydmg_absorb 100"
-                SetAttr "ea_flamedmg_absorb 100"
-                SetAttr "ea_physdmg_absorb 90"
-                SetAttr "ea_blast_immune 1"
+                SetAttr "covering 0"
+                IfAttr "ea_lean == 1 SetAttr covering 1"
 
-                // NPC cannot do crit damage (kinda like in TF2)
-                SetAttr "ea_crit_disabled 1"
+                SetAttr "ea_consciousness 120"
+                SetAttr "ea_health 100"
 
-                // NPC Faction check, please look at Factions
-                IfAttr "ea_faction == Faction:Police SetAttr tutorial_imacop 1"
+                IfAttr "target.ea_status == sCORPSE Pattern pt_eeek"
 
-                // Health, if set to 0 NPC or Player will die
-                IfAttr "ea_health < 55 SetAttr tutorial_imwounded 1"
+                IfAttr "ea_armed != WPN_NONE Pattern pt_gungun"
+                IfAttr "ea_hostage == 1 Pattern pt_victim"
 
-                // NPC cannot be picked up (mainly used by Cats)
+                IfAttr "ea_NumEnemy > 0 Pattern pt_seek"
+                IfAttr "ea_NumFear > 0 Pattern pt_fear"
+                IfAttr "ea_NumVisibleEnemy > 0 Pattern pt_destroy"
+                IfAttr "ea_NumVisibleFear > 0 Pattern pt_hide"
+
+                // Note: ea_ammo is broken
+                IfAttr "ea_ammo == 0 Pattern pt_reload"
+
+                IfAttr "ea_Faction == Faction:Player Pattern pt_player"
+                IfAttr "ea_Manner == Manner:Police Pattern pt_police"
+
+                IfAttr "Object:target == Object:Player AND ea_ActiveWeapon < 6 Pattern pt_meleeOnly"
+
+                IfAttr "Object:target == Object:Player AND target.ea_games == 1 Pattern pt_yuck"
+
                 SetAttr "ea_takeable 0"
 
-                // NPC is no longer tased
-                SetAttr "ea_tased 0"
+                IfAttr "ea_name == String:pizza_vendor State st_vendor"
 
-                // NPC Manner, please look at Manners
-                IfAttr "ea_Manner == Manner:JusticeMan State bh_human:st_attack_melee"
-
-                // NPC Status, mainly used to determine if they are holding dangerous weapons
-                SetAttr "ea_status sNEUTRAL"
-                IfAttr "ea_armed == WPN_M16 SetAttr NumAmmo AMMO_M16_MAX"
-                IfAttr "ea_ActiveWeapon == Weapon:Ranged Aim true,false"
-                IfAttr "ea_NumEnemies == 0 and ea_NumFear == 0 SetAttr tutorial_calm 1"
-                IfAttr "ea_NumVisibleEnemy == 0 SetAttr TaskCombat TC_SEARCH"
-
-                // NPC will disappear if Player is too far away
-                SetAttr "ea_autokill 0"
-
-                // No gibbing
+                SetAttr "ea_crit_disabled 1"
                 SetAttr "ea_no_gibs 1"
 
-                // Used for Segways
-                IfAttr "ea_lean != 1 Pattern pt_lean_in"
+                SetAttr "ea_dmg_absorb 50"
+                SetAttr "ea_flamedmg_absorb 50"
+                SetAttr "ea_clubdmg_absorb 50"
+                SetAttr "ea_physdmg_absorb 50"
+                SetAttr "ea_fakedmg_absorb 50"
+                SetAttr "ea_blastdmg_absorb 50"
+                SetAttr "ea_krotchydmg_absorb 50"
 
-                // NPC's Hammer name
-                IfAttr "ea_name == String:npc_pizza_vendor SetAttr cr_vendor 1"
+                SetAttr "ea_blast_immune 1"
 
-                // Ammo
-                IfAttr "ea_HaveAmmo == 0 Pattern pt_reload"
+                CheckAttr "ea_tased RemoveAttr ea_tased"
 
-                // Gibs
-                CheckAttr "ea_gibs"
+                SetAttr "ea_autokill 1"
             }
         }
     }

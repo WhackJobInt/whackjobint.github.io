@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/attackfuncs/push/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/miscfuncs/areaevent/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Push - Postal3Script</title>
+    <title>AreaEvent - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Push";
-        var mkdocs_page_input_path = "attackfuncs\\push.md";
-        var mkdocs_page_url = "/postal3script/attackfuncs/push/";
+        var mkdocs_page_name = "AreaEvent";
+        var mkdocs_page_input_path = "miscfuncs\\areaevent.md";
+        var mkdocs_page_url = "/postal3script/miscfuncs/areaevent/";
       </script>
     
     <script src="../../js/jquery-3.6.0.min.js" defer></script>
@@ -126,16 +126,18 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/areaevent/">AreaEvent</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">AreaEvent</a>
+    <ul class="current">
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../item_spawnitem/">Item, SpawnItem</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../addfluid/">AddFluid</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
                   </li>
@@ -218,14 +220,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Attack Functions</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../hit/">Hit</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/hit/">Hit</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Push</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/push/">Push</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mission Functions</span></p>
@@ -339,8 +339,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Attack Functions &raquo;</li>
-      <li>Push</li>
+          <li>Misc Functions &raquo;</li>
+      <li>AreaEvent</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -349,53 +349,76 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="push">Push<a class="headerlink" href="#push" title="Permanent link"></a></h1>
-<p>Makes an NPC perform a shove/push melee attack.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Victim and attacker cannot be the same.</p>
-</div>
+                <h1 id="areaevent">AreaEvent<a class="headerlink" href="#areaevent" title="Permanent link"></a></h1>
+<p>Fires event on nearby P3S entities, with filtering.</p>
 
 <h1>Syntax</h1>
-<p><code class="language-js">Push self,target,easy</code> -- Plays flinching animations, but no damage</p>
-<p><code class="language-js">Push self,target,medium</code> -- Deals slight damage to target</p>
-<p><code class="language-js">Push self,target,hard</code> -- Deals heavy damage to target</p>
+<p><code class="language-js">AreaEvent [eventname],[radius],[filter1],[filter2],[filter3],...</code> -- Fires area event</p>
+
+<p></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filtering can be <code>Manner</code>, <code>Faction</code>, and <code>State</code> name.</p>
+<p><code>[radius]</code> is always multiplied by 32.</p>
+<p>Events will be called OnAE_<code>[eventname]</code>.</p>
+</div>
 
 <h1>Example</h1>
 <pre><code class="language-js">
-// From ai_citizen.p3s
-// Plays animation and deals damage at the same time
-pt_bump
+// This state is called when an NPC dies, let's do something else with it...
+st_corpse
 {
-    actions
+    Group Alert
+    Patterns
     {
-        TargetCaller 1
-        TargetToMem msTARGET
-        IfAttr "ea_Manner == Manner:RedNeck and slot#msTARGET.ea_Manner == StreetBro Block begin"
-            Face true
-            Sequence seq.melee_push
-            Push self,target,medium
-        Block end
-        IfAttr "ea_Manner == Manner:StreetBro and slot#msTARGET.ea_Manner == StreetBro Block begin"
-            Face true
-            Sequence seq.melee_push
-            Push self,target,medium
-        Block end
-        IfAttr "ea_Manner == Manner:CuteGirl and slot#msTARGET.ea_Manner == StreetBro Block begin"
-            Face true
-            Sequence seq.melee_push
-            Push self,target,medium
-        Block end
-        State st_start
+        pt_default:ignore_ext_events
+        {
+            actions
+            {
+                // This will only execute for the Player,
+                // since it's Manner and Faction is always "Player"
+                AreaEvent "YouDie,2,Player"
+
+                // This however will only execute if an NPC's state is currently st_idle
+                AreaEvent "ScaryCorpse,3,st_idle"
+
+                // If you want to limit it to cops instead...
+                // The event will only be fired if they are in st_idle state, and their Faction
+                // is called Police
+                AreaEvent "CopScaryCorpse,3,st_idle,Police"
+
+                // Let's repeat it.. so events will get fired over and over again
+                Wait 3
+                Repeat 0
+            }
+        }
     }
+}
+
+// We assume this is an NPC behavior's st_idle state, pay attention to the events!
+// Note: don't copy this as is, as it won't work, but it's an example how it should work
+st_idle
+{
+    Group Neutral
+    Patterns
+    {
+        ...
+    }
+}
+events
+{
+    // Note: these events can be Global if you want, since AreaEvent will only get fired if
+    // they are in st_idle state anyway!
+    OnAE_ScaryCorpse    "State st_fear"
+    OnAE_CopScaryCorpse "State st_investigate"
 }
 </code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../hit/" class="btn btn-neutral float-left" title="Hit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../weapon_reload_throwgrenade/" class="btn btn-neutral float-right" title="Weapon, Reload, ThrowGrenade">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../statefuncs/sendstate_sendpattern/" class="btn btn-neutral float-left" title="SendState, SendPattern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../effect/" class="btn btn-neutral float-right" title="Effect">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -419,10 +442,10 @@ pt_bump
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../hit/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../statefuncs/sendstate_sendpattern/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../weapon_reload_throwgrenade/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../effect/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/whatispostal3script/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/changelog/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>What is Postal3Script? - Postal3Script</title>
+    <title>Changelog for Postal3Script Docs - Postal3Script</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "What is Postal3Script?";
-        var mkdocs_page_input_path = "whatispostal3script.md";
-        var mkdocs_page_url = "/postal3script/whatispostal3script/";
+        var mkdocs_page_name = "Changelog for Postal3Script Docs";
+        var mkdocs_page_input_path = "changelog.md";
+        var mkdocs_page_url = "/postal3script/changelog/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -42,16 +42,10 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Postal3Script (WIP)</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">What is Postal3Script?</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#postal3script-example">Postal3Script Example</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../whatispostal3script/">What is Postal3Script?</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../debugging/">Debugging Postal3Script</a>
                   </li>
@@ -343,8 +337,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Postal3Script (WIP) &raquo;</li>
-      <li>What is Postal3Script?</li>
+      <li>Changelog for Postal3Script Docs</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -353,140 +346,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="what-is-postal3script">What is Postal3Script?<a class="headerlink" href="#what-is-postal3script" title="Permanent link"></a></h1>
-<p>Postal3Script, or P3S, is a scripting language developed for Postal 3, designed to handle most of the NPC AI and mission scripting.</p>
-<p>It allows for a much easier and faster time doing missions and AI rather than messing around in C++ and doing logic entirely through map entities in Hammer.</p>
-<p>With Postal3Script, you can easily do many things that you normally would not be able to do without the source code of the game due to the many useful functions and attributes that are interfaced.</p>
-<p>P3S script files are located in <code>Postal III/p3/scripts</code> and use the <code>.p3s</code> file extension. To load and be able to use a p3s script, you must add it to a manifest, in "ai_scripts.txt", found in the previously mentioned folder.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Changes to p3s scripts will automatically hotload when the map restarts, so you can just use the "restart" console command without ever having to exit and reload the game.</p>
-<p>It is highly recommended to snoop around the game files and find examples of what you're trying to accomplish to get a better idea of the language.</p>
-</div>
-
-<h2 id="postal3script-example">Postal3Script Example<a class="headerlink" href="#postal3script-example" title="Permanent link"></a></h2>
-<pre><code class="language-js">
-Constants
-{
-    Const DONUTS_INCR,1
-    Const SOMEBODY_STOLE_MY_DONUTS,15
-    Const YES,1
-    Const NO,0
-}
-
-behavior
-{
-    name bh_evensuperioractor
-    inherited bh_mysuperioractor
-
-    States
-    {
-        st_mycustomstate
-        {
-            Group Alert
-            Patterns
-            {
-                pt_default
-                {
-                    // Only executes when on Alert
-                }
-            }
-        }
-
-        st_nowyallgonnapay
-        {
-            Group Combat
-            Patterns
-            {
-                pt_default
-                {
-                    // Only executes when in Combat
-                    SetAttr "veryverypissedoff YES"
-                    Pattern pt_donuts
-                }
-
-                pt_donuts
-                {
-                    IfAttr "veryverypissedoff == YES Pattern st_nowyallgonnapay.pt_allgood"
-                }
-
-                pt_allgood
-                {
-                    SetAttr "veryverypissedoff NO"
-                }
-            }
-        }
-        events
-        {
-            OnDeath "ExecutePattern st_OnDeath.pt_default"
-            OnTimer_tUnstun "Pattern pt_end"
-            OnUnconscious "Pattern pt_unconscious"
-            OnHostaged "Pattern pt_hostaged"
-            OnSprayStunned "Timer tUnstun,SPRAY_UNSTUN_TIMER"
-            OnTimer_tScream "ExecutePattern .xpt_SayScream"
-            OnUnstunned "Pattern pt_end"
-            OnStandUpEnd "Pattern pt_end"
-        }
-
-        // Sets on spawn
-        st_init
-        {
-            Group Neutral
-            Patterns
-            {
-                pt_default
-                {
-                    actions
-                    {
-                        Senses false
-                    }
-                }
-            }
-        }
-
-        // Called continously
-        st_start
-        {
-            Group Neutral
-            Patterns
-            {
-                pt_default
-                {
-                    actions
-                    {
-                        // tick
-                    }
-                }
-            }
-        }
-    }
-}
-</code></pre>
-
-<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p id="limitations">Postal3Script comes with limitations. Ignoring these limitations will make your script behave oddly, and unexpectedly.</p>
+                <h1 id="changelog-for-postal3script-docs">Changelog for Postal3Script Docs<a class="headerlink" href="#changelog-for-postal3script-docs" title="Permanent link"></a></h1>
+<p>This is the changelog for Postal3Script docs, because we make mistakes and some functions might not work the way we initially defined them in descriptions.</p>
+<h2 id="07102022">07.10.2022<a class="headerlink" href="#07102022" title="Permanent link"></a></h2>
 <ul>
-<li>In Postal3Script, Attributes can only be whole numbers/integers, attributes can't be floats, doubles, or strings. However, the <code>Wait</code> and <code>Repeat</code> functions are the only exception where you can freely use floats.</li>
-<br>
-<li>An Attribute must have a value initialized before checking it's value using <code>CheckAttr</code>, meaning an attribute that doesn't exist will never return a valid value. (Checking if it's zero/null doesn't work).</li>
-<br>
-<li>Extremely sensitive to spaces when using parameters for functions, this can lead to unexpected behavior.</li>
-<br>
-<li>Errors in a script file won't show up without enabling a console command first, and most of the time it's not obvious if the code is working fine.</li>
-<br>
-<li>Postal3Script function names are case-sensitive, i.e. it's not recommended to use <code>ifattr</code> instead of <code>IfAttr</code>.</li>
+<li>Description of CheckAttr corrected, it checks if an attribute exists or not (was created via SetAttr before), and not if it's 0 or 1.</li>
+<li>Added AreaEvent page, seperated it from Fire functions in Misc functions.</li>
+<li>Added Call to "CallState, CallPattern, Call" page, marking the whole page as complete.</li>
+<li>Added "SendState, SendPattern" page, it is complete.</li>
+<li>Updated "StateMatrix" page to have example code from ai_matrix.p3s.</li>
+<li>Updated "Embedded Attributes" page to be much more precise in terms of descriptions.</li>
 </ul>
-</div>
-<p><br></p>
+<h2 id="30082022">30.08.2022<a class="headerlink" href="#30082022" title="Permanent link"></a></h2>
+<ul>
+<li>Added Debugging page, which explains debugging Postal3Script.</li>
+<li>Corrected ChangeAttr description, working between 0-100 values is <b>not a bug</b>, minimum and 
+maximum values need to be set via SetAttr.</li>
+<li>Corrected Postal3Script limitation explanations.</li>
+<li>Fixed missing href for "Gesture, ResetGesture, ResetSequence" on index page.</li>
+</ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Index"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../debugging/" class="btn btn-neutral float-right" title="Debugging Postal3Script">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -509,10 +390,6 @@ behavior
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../debugging/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

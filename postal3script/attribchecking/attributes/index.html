@@ -130,18 +130,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern, Call (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern, Call</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SendState, SendPattern (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/sendstate_sendpattern/">SendState, SendPattern</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/areaevent/">AreaEvent</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, AreaEvent, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
                   </li>
@@ -462,7 +464,7 @@ st_SetAttrTutorial
 </code></pre>
 
 <h2 id="checkattr">CheckAttr<a class="headerlink" href="#checkattr" title="Permanent link"></a></h2>
-<p>Checks if an Attribute is true (equal to 1).</p>
+<p>Checks if an Attribute exists or not. Works with <code>Ammo</code> type.</p>
 <pre><code class="language-js">
 st_CheckAttrTutorial
 {
@@ -477,6 +479,18 @@ st_CheckAttrTutorial
                 CheckAttr "greet_sleazy Say SLEEZ"
                 CheckAttr "AnimalNotCat Say LIKESANIMAL"
                 CheckAttr "AnimalCat Say LIKESANIMAL,LIKESCAT"
+
+                SetAttr "exists 0"
+                CheckAttr "myattrib Block begin"
+                    SetAttr "exists 1"
+                Block end
+
+                IfAttr "exists == 1 Block begin"
+                    Pattern pt_somepattern
+                Block end
+
+                SetAttr "I_have_ammo 0"
+                CheckAttr "Ammo:self SetAttr I_have_ammo 1"
             }
         }
     }

@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/attackfuncs/push/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/statefuncs/sendstate_sendpattern/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Push - Postal3Script</title>
+    <title>SendState, SendPattern - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Push";
-        var mkdocs_page_input_path = "attackfuncs\\push.md";
-        var mkdocs_page_url = "/postal3script/attackfuncs/push/";
+        var mkdocs_page_name = "SendState, SendPattern";
+        var mkdocs_page_input_path = "statefuncs\\sendstate_sendpattern.md";
+        var mkdocs_page_url = "/postal3script/statefuncs/sendstate_sendpattern/";
       </script>
     
     <script src="../../js/jquery-3.6.0.min.js" defer></script>
@@ -111,18 +111,24 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">State Functions</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../statematrix/">StateMatrix</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern, Call</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../callstate_callpattern/">CallState, CallPattern, Call</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/sendstate_sendpattern/">SendState, SendPattern</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">SendState, SendPattern</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#sendstate">SendState</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sendpattern">SendPattern</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
@@ -218,14 +224,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Attack Functions</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../hit/">Hit</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/hit/">Hit</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Push</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/push/">Push</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attackfuncs/weapon_reload_throwgrenade/">Weapon, Reload, ThrowGrenade</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mission Functions</span></p>
@@ -339,8 +343,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Attack Functions &raquo;</li>
-      <li>Push</li>
+          <li>State Functions &raquo;</li>
+      <li>SendState, SendPattern</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -349,53 +353,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="push">Push<a class="headerlink" href="#push" title="Permanent link"></a></h1>
-<p>Makes an NPC perform a shove/push melee attack.</p>
+                <h1 id="send-statepattern-functions">Send State/Pattern Functions<a class="headerlink" href="#send-statepattern-functions" title="Permanent link"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Victim and attacker cannot be the same.</p>
+<p>SendState and SendPattern will randomize which state or pattern to send to target, if there are more than 1 defined.</p>
+<p>Only works with target.</p>
+</ul>
 </div>
 
+<h2 id="sendstate">SendState<a class="headerlink" href="#sendstate" title="Permanent link"></a></h2>
+<p>Unused Postal3Script function.</p>
 <h1>Syntax</h1>
-<p><code class="language-js">Push self,target,easy</code> -- Plays flinching animations, but no damage</p>
-<p><code class="language-js">Push self,target,medium</code> -- Deals slight damage to target</p>
-<p><code class="language-js">Push self,target,hard</code> -- Deals heavy damage to target</p>
+<p><code class="language-js">SendState [state1],[state2],[state3],...</code> -- Sends states to target</p>
 
-<h1>Example</h1>
-<pre><code class="language-js">
-// From ai_citizen.p3s
-// Plays animation and deals damage at the same time
-pt_bump
-{
-    actions
-    {
-        TargetCaller 1
-        TargetToMem msTARGET
-        IfAttr "ea_Manner == Manner:RedNeck and slot#msTARGET.ea_Manner == StreetBro Block begin"
-            Face true
-            Sequence seq.melee_push
-            Push self,target,medium
-        Block end
-        IfAttr "ea_Manner == Manner:StreetBro and slot#msTARGET.ea_Manner == StreetBro Block begin"
-            Face true
-            Sequence seq.melee_push
-            Push self,target,medium
-        Block end
-        IfAttr "ea_Manner == Manner:CuteGirl and slot#msTARGET.ea_Manner == StreetBro Block begin"
-            Face true
-            Sequence seq.melee_push
-            Push self,target,medium
-        Block end
-        State st_start
-    }
-}
-</code></pre>
+<p><br></p>
+<h2 id="sendpattern">SendPattern<a class="headerlink" href="#sendpattern" title="Permanent link"></a></h2>
+<p>Unused Postal3Script function.</p>
+<h1>Syntax</h1>
+<p><code class="language-js">SendPattern [state1].[pattern1],[state2].[pattern2],[state3].[pattern3],...</code> -- Sends patterns to target</p>
+<p><br></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../hit/" class="btn btn-neutral float-left" title="Hit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../weapon_reload_throwgrenade/" class="btn btn-neutral float-right" title="Weapon, Reload, ThrowGrenade">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../activitypattern_funcs/" class="btn btn-neutral float-left" title="StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../miscfuncs/areaevent/" class="btn btn-neutral float-right" title="AreaEvent">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -419,10 +401,10 @@ pt_bump
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../hit/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../activitypattern_funcs/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../weapon_reload_throwgrenade/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../miscfuncs/areaevent/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

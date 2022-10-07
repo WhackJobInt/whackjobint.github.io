@@ -120,18 +120,20 @@
     <ul class="current">
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../callstate_callpattern/">CallState, CallPattern, Call (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../callstate_callpattern/">CallState, CallPattern, Call</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">SendState, SendPattern (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../sendstate_sendpattern/">SendState, SendPattern</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/areaevent/">AreaEvent</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, AreaEvent, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
                   </li>
@@ -353,7 +355,7 @@
 <ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<li>To check what each matrix does, check out <code>ai_matrix.p3s</code></li>
+<li>To better understand what both matrix do, check out <code>ai_matrix.p3s</code></li>
 <li>Heavily used in <code>ai_mission_pw.p3s</code></li>
 <li>Function uses target</li>
 </div>
@@ -363,21 +365,18 @@
 <p><code class="language-js">StateMatrix faction</code> -- Goes through Faction matrix, and calls states
 <p><code class="language-js">StateMatrix social</code> -- Goes through Social matrix, and calls states
 
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Add state matrix code example!</p>
-</div>
+<h1>Faction Matrix (ai_matrix.p3s)</h1>
+<p><img alt="Faction Matrix" src="../../images/faction_matrix_ex.png" /></p>
+<br>
 
-<h1>Example</h1>
-<pre><code class="language-js">
-
-</code></pre>
+<h1>Social Matrix (ai_matrix.p3s)</h1>
+<p><img alt="Faction Matrix" src="../../images/social_matrix_ex.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../wait_waitforend_repeat/" class="btn btn-neutral float-left" title="Wait, WaitForEnd, Repeat"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../callstate_callpattern/" class="btn btn-neutral float-right" title="CallState, CallPattern, Call (WIP)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../callstate_callpattern/" class="btn btn-neutral float-right" title="CallState, CallPattern, Call">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
