@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/statefuncs/callstate_callpattern/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/miscfuncs/anchor/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>CallState, CallPattern, Call - Postal3Script</title>
+    <title>Anchor, TargetAnchor - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "CallState, CallPattern, Call";
-        var mkdocs_page_input_path = "statefuncs\\callstate_callpattern.md";
-        var mkdocs_page_url = "/postal3script/statefuncs/callstate_callpattern/";
+        var mkdocs_page_name = "Anchor, TargetAnchor";
+        var mkdocs_page_input_path = "miscfuncs\\anchor.md";
+        var mkdocs_page_url = "/postal3script/miscfuncs/anchor/";
       </script>
     
     <script src="../../js/jquery-3.6.0.min.js" defer></script>
@@ -111,41 +111,39 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">State Functions</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../statematrix/">StateMatrix</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CallState, CallPattern, Call</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#callstate">CallState</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#callpattern">CallPattern</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#call">Call</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/callstate_callpattern/">CallState, CallPattern, Call</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/activitypattern_funcs/">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../sendstate_sendpattern/">SendState, SendPattern</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/sendstate_sendpattern/">SendState, SendPattern</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc Functions</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/areaevent/">AreaEvent</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../areaevent/">AreaEvent</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../item_spawnitem/">Item, SpawnItem</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/anchor/">Anchor, TargetAnchor</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Anchor, TargetAnchor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#anchor">Anchor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#targetanchor">TargetAnchor</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -345,8 +343,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>State Functions &raquo;</li>
-      <li>CallState, CallPattern, Call</li>
+          <li>Misc Functions &raquo;</li>
+      <li>Anchor, TargetAnchor</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -355,53 +353,102 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="deprecated-state-functions">Deprecated State Functions<a class="headerlink" href="#deprecated-state-functions" title="Permanent link"></a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It's not recommended to use these functions. They are only here for documenting purposes.</p>
-<p>Use functions from <a href="../../statefuncs/func_state_pattern_executepattern">THIS</a> page instead.</p>
-</div>
-<p><br></p>
-<h2 id="callstate">CallState<a class="headerlink" href="#callstate" title="Permanent link"></a></h2>
-<p>Unused Postal3Script function.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Superseded by <a href="../../statefuncs/func_state_pattern_executepattern/#state">State</a>
-</ul>
-</div>
+                <h1 id="anchor-functions">Anchor functions<a class="headerlink" href="#anchor-functions" title="Permanent link"></a></h1>
+<h2 id="anchor">Anchor<a class="headerlink" href="#anchor" title="Permanent link"></a></h2>
+<p>Spawns an invisible entity, and sets the pointer to it.</p>
 
 <h1>Syntax</h1>
-<p><code class="language-js">CallState [state name]</code> -- Exits out from current state, and enters new state</p>
+<p><code class="language-js">Anchor true,[type]</code> -- Spawns Anchor, [type] is optional</p>
+<p><code class="language-js">Anchor false,[type]</code> -- Removes Anchor from the game, [type] is optional</p>
 
-<p><br></p>
-<h2 id="callpattern">CallPattern<a class="headerlink" href="#callpattern" title="Permanent link"></a></h2>
-<p>Unused Postal3Script function.</p>
+<p></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Superseded by <a href="../../statefuncs/func_state_pattern_executepattern/#pattern">Pattern</a>
-</ul>
+<p><code>[type]</code> is an object type, like <code>target</code>, <code>caller</code>, <code>owner</code>, ...</p>
+<p>If <code>[type]</code> is not specified, it will execute on the current entity the script being ran from.</p>
+<p>If <code>[type]</code> is specified and it's not <code>self</code>, it will save the script executioner's location to <code>[type]</code>.</p>
 </div>
 
-<h1>Syntax</h1>
-<p><code class="language-js">CallPattern [pattern name]</code> -- Exits out from current pattern, and enters a new pattern in current state</p>
+<h1>Example</h1>
+<pre><code class="language-js">
+// This example shows you how to make an NPC run to it's target, and back to it's last known location.
+st_somestate
+{
+    Group Alert
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                TargetCaller 1
+                // Save this location!
+                Anchor true
+                // Run to my current target!
+                MoveToTarget run,1
+
+                Pattern pt_loop
+            }
+        }
+
+        pt_loop
+        {
+            actions
+            {
+                IfAttr "Object:target != Object:NULL Block begin"
+                    // We pretty much reached our target
+                    IfAttr "Object:target != Object:anchor Block begin"
+                        IfAttr "DistTo:target <= 52 Pattern pt_goback"
+                    Block end
+
+                    // We are targeting our anchor!
+                    IfAttr "Object:target == Object:anchor Block begin"
+                        IfAttr "DistTo:target <= 52 Block begin"
+                            // We pretty much reached our target
+                            FreeMovement walk,reset
+                            State st_start
+                        Block end
+                    Block end
+                Block end
+
+                Repeat 0
+            }
+        }
+
+        pt_goback
+        {
+            actions
+            {
+                // Target our Anchor we saved earlier in pt_default!
+                TargetAnchor 1
+                // Run to it!
+                MoveToTarget run,1
+
+                Pattern pt_loop
+            }
+        }
+    }
+}
+</code></pre>
+
 <p><br></p>
-<h2 id="call">Call<a class="headerlink" href="#call" title="Permanent link"></a></h2>
-<p>Unused Postal3Script function.</p>
+<h2 id="targetanchor">TargetAnchor<a class="headerlink" href="#targetanchor" title="Permanent link"></a></h2>
+<p>Sets internal target to entity's saved Anchor, if there's any.</p>
+
+<h1>Syntax</h1>
+<p><code class="language-js">TargetAnchor 1</code> -- Sets internal target to Anchor</p>
+
+<p></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Superseded by <a href="../../statefuncs/func_state_pattern_executepattern/#executepattern">ExecutePattern</a>
-</ul>
+<p>To get an entity's Anchor other than the script executioner's, you will have to use <a href="../../targetingfuncs/reset_ignore_settarget/#settarget">SetTarget</a>.</p>
 </div>
-
-<h1>Syntax</h1>
-<p><code class="language-js">Call [state name].[pattern name]</code> -- Externally executes a pattern from a state</p>
-<p><br></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../statematrix/" class="btn btn-neutral float-left" title="StateMatrix"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../activitypattern_funcs/" class="btn btn-neutral float-right" title="StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../addfluid/" class="btn btn-neutral float-left" title="AddFluid"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../npcfuncs/say/" class="btn btn-neutral float-right" title="Say">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -425,10 +472,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../statematrix/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../addfluid/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../activitypattern_funcs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../npcfuncs/say/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

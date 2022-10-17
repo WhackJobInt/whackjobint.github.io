@@ -114,7 +114,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
@@ -139,7 +139,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../anchor/">Anchor, TargetAnchor</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -148,7 +148,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, Sequence, ResetSequence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
                   </li>
@@ -361,6 +361,7 @@
 <p>Filtering can be <code>Manner</code>, <code>Faction</code>, and <code>State</code> name.</p>
 <p><code>[radius]</code> is always multiplied by 32.</p>
 <p>Events will be called OnAE_<code>[eventname]</code>.</p>
+<p>Multiple filters work via ANY execution, this means the function will execute the event on entities that meet ANY of the criteria!</p>
 </div>
 
 <h1>Example</h1>

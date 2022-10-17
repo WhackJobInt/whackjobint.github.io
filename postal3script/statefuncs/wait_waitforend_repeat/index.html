@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/statefuncs/wait_waitforend_repeat/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Wait, WaitForEnd, Repeat - Postal3Script</title>
+    <title>Wait, WaitForEnd, Repeat, Return - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Wait, WaitForEnd, Repeat";
+        var mkdocs_page_name = "Wait, WaitForEnd, Repeat, Return";
         var mkdocs_page_input_path = "statefuncs\\wait_waitforend_repeat.md";
         var mkdocs_page_url = "/postal3script/statefuncs/wait_waitforend_repeat/";
       </script>
@@ -114,13 +114,15 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Wait, WaitForEnd, Repeat, Return</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#wait">Wait</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#waitforend">WaitForEnd</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#repeat">Repeat</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#return">Return</a>
     </li>
     </ul>
                   </li>
@@ -145,7 +147,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/anchor/">Anchor, TargetAnchor</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -154,7 +156,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, Sequence, ResetSequence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
                   </li>
@@ -346,7 +348,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>State Functions &raquo;</li>
-      <li>Wait, WaitForEnd, Repeat</li>
+      <li>Wait, WaitForEnd, Repeat, Return</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -446,7 +448,7 @@ st_opencage_02
 </div>
 
 <h1>Syntax</h1>
-<p><code class="language-js">Repeat [float]</code> -- Repeat every [float] seconds
+<p><code class="language-js">Repeat [float]</code> -- Repeat every [float] seconds</p>
 <h1>Example</h1>
 <pre><code class="language-js">
 // This will create a loop in pt_loop endlessly, unless we exit from out it
@@ -470,6 +472,38 @@ st_start
             actions
             {
                 Repeat 2
+            }
+        }
+    }
+}
+</code></pre>
+
+<p><br></p>
+<h2 id="return">Return<a class="headerlink" href="#return" title="Permanent link"></a></h2>
+<p>Stops lines being executed from below</p>
+<h1>Syntax</h1>
+<p><code class="language-js">Return 1</code> -- Stop execution from below
+<h1>Example</h1>
+<pre><code class="language-js">
+st_somestate
+{
+    Group Neutral
+    Patterns
+    {
+        pt_default
+        {
+            actions
+            {
+                // Return if health is more than 50!
+                IfAttr "ea_health > 50 Return 1"
+
+                // This will never execute if health is above 50!
+                SetAttr "ea_health 100"
+
+                Return 1
+
+                // And this will never, ever execute
+                SetAttr "ea_health 99999"
             }
         }
     }

@@ -120,7 +120,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
@@ -143,7 +143,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/anchor/">Anchor, TargetAnchor</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -152,7 +152,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, Sequence, ResetSequence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
                   </li>
@@ -406,6 +406,10 @@ ea_krotchydmg_absorb    -- Krotchy DMG absorption (DMG_BUCKSHOT), parallel to Bl
 ea_blast_immune         -- Blast from Explosion immunity, boltons won't fall off from the NPC
 ea_tased                -- Whether the NPC is currently tased
 ea_autokill             -- NPC will disappear if it's too far from the Player (1920 Hammer units)
+ea_gibs                 -- Only exists on ragdolls
+ 1  = Full body/Lower body/Lower body with legs
+ 3  = Single Head/Upper body with head (and arms)
+ 4  = Single Arm/Single Leg/Upper body (with arms)
 </code></pre>
 <p><br></p>
 <h2 id="embedded-attribute-example">Embedded Attribute Example<a class="headerlink" href="#embedded-attribute-example" title="Permanent link"></a></h2>

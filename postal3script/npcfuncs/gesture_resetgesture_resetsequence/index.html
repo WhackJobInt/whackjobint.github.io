@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/npcfuncs/gesture_resetgesture_resetsequence/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Gesture, ResetGesture, ResetSequence - Postal3Script</title>
+    <title>Gesture, ResetGesture, Sequence, ResetSequence - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Gesture, ResetGesture, ResetSequence";
+        var mkdocs_page_name = "Gesture, ResetGesture, Sequence, ResetSequence";
         var mkdocs_page_input_path = "npcfuncs\\gesture_resetgesture_resetsequence.md";
         var mkdocs_page_url = "/postal3script/npcfuncs/gesture_resetgesture_resetsequence/";
       </script>
@@ -114,7 +114,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
@@ -137,7 +137,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/anchor/">Anchor, TargetAnchor</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -146,11 +146,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../emitsound/">EmitSound</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Gesture, ResetGesture, ResetSequence</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Gesture, ResetGesture, Sequence, ResetSequence</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#gesture">Gesture</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#resetgesture">ResetGesture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sequence">Sequence</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#resetsequence">ResetSequence</a>
     </li>
@@ -346,7 +348,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>NPC Functions &raquo;</li>
-      <li>Gesture, ResetGesture, ResetSequence</li>
+      <li>Gesture, ResetGesture, Sequence, ResetSequence</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -379,12 +381,6 @@ Gesture g_onfire,3 // Do on fire gesture for 3 seconds
 <p><br></p>
 <h2 id="resetgesture">ResetGesture<a class="headerlink" href="#resetgesture" title="Permanent link"></a></h2>
 <p>Reset an NPC's gesture(s)</p>
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Make sure that <code>ResetGesture 1</code> actually does reset the current gesture!
-</p>
-</div>
-
 <h2>Syntax</h2>
 <p><code class="language-js">ResetGesture [gesture_name]</code> -- Reset specific gesture by name</p>
 <p><code class="language-js">ResetGesture 1</code> -- Reset current gesture</p>
@@ -399,14 +395,29 @@ ResetGesture * // Reset ALL gestures
 </code></pre>
 
 <p><br></p>
-<h2 id="resetsequence">ResetSequence<a class="headerlink" href="#resetsequence" title="Permanent link"></a></h2>
-<p>Reset an NPC's sequence</p>
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Make sure that <code>ResetGesture 1</code> actually does reset the current sequence!
+<h2 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link"></a></h2>
+<p>Sets the NPC's sequence</p>
+<h2>Syntax</h2>
+<p><code class="language-js">Sequence [sequence_name]</code> -- Set sequence by name from ai_activities.p3s</p>
+<p><code class="language-js">Sequence seq.[sequence_name]</code> -- Set sequence by name from entity model</p>
+<p><code class="language-js">Sequence [sequence_name,duration]</code> -- Set sequence with duration</p>
+<p><code class="language-js">Sequence [sequence_name,duration:bias]</code> -- Set sequence with optional duration and bias</p>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>bias</code> is the max amount of time that is randomly generated and tacked onto the gesture duration!
 </p>
 </div>
 
+<h2>Example</h2>
+<pre><code class="language-js">
+Sequence emote_yo // from ai_activities.p3s
+Sequence seq.env_crouch_inspect // from the entity's model
+</code></pre>
+
+<p><br></p>
+<h2 id="resetsequence">ResetSequence<a class="headerlink" href="#resetsequence" title="Permanent link"></a></h2>
+<p>Reset an NPC's sequence</p>
 <h2>Syntax</h2>
 <p><code class="language-js">ResetGesture 1</code> -- Reset current sequence
 <pre><code class="language-js">

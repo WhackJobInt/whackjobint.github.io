@@ -114,7 +114,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../statefuncs/statematrix/">StateMatrix</a>
                   </li>
@@ -137,7 +137,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Anchor, TargetAnchor (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/anchor/">Anchor, TargetAnchor</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -146,7 +146,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../npcfuncs/emitsound/">EmitSound</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, Sequence, ResetSequence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../npcfuncs/headblob/">Headblob</a>
                   </li>
@@ -348,6 +348,16 @@
               
                 <h1 id="changelog-for-postal3script-docs">Changelog for Postal3Script Docs<a class="headerlink" href="#changelog-for-postal3script-docs" title="Permanent link"></a></h1>
 <p>This is the changelog for Postal3Script docs, because we make mistakes and some functions might not work the way we initially defined them in descriptions.</p>
+<p>If you have any issues related to Postal3Script Docs, let us know <a href="https://github.com/WhackJobInt/Postal3ScriptDocsTracker/issues">here</a> by opening a new issue.</p>
+<h2 id="17102022">17.10.2022<a class="headerlink" href="#17102022" title="Permanent link"></a></h2>
+<ul>
+<li>Rewrote "Ignore" page, it checks if a pointer was already ignored, and not that it sets ignoring.</li>
+<li>Added "Anchor, TargetAnchor" page.</li>
+<li>Updated the Gestures page to have "Sequence" function</li>
+<li>Updated "Wait, WaitForEnd, Repeat" page to have "Return" function</li>
+<li>Added "ea_gibs" to "Embedded Attributes" page</li>
+<li>Updated "AreaEvent" note</li>
+</ul>
 <h2 id="07102022">07.10.2022<a class="headerlink" href="#07102022" title="Permanent link"></a></h2>
 <ul>
 <li>Description of CheckAttr corrected, it checks if an attribute exists or not (was created via SetAttr before), and not if it's 0 or 1.</li>

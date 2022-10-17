@@ -116,7 +116,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/func_state_pattern_executepattern/">State, Pattern, ExecutePattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/wait_waitforend_repeat/">Wait, WaitForEnd, Repeat, Return</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../statefuncs/statematrix/">StateMatrix</a>
                   </li>
@@ -139,7 +139,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/addfluid/">AddFluid</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Anchor, TargetAnchor (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/anchor/">Anchor, TargetAnchor</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">NPC Functions</span></p>
@@ -148,7 +148,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/emitsound/">EmitSound</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, ResetSequence</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/gesture_resetgesture_resetsequence/">Gesture, ResetGesture, Sequence, ResetSequence</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../npcfuncs/headblob/">Headblob</a>
                   </li>
@@ -351,19 +351,50 @@
               
                 <h1 id="ignore">Ignore<a class="headerlink" href="#ignore" title="Permanent link"></a></h1>
 <p>Unused Postal3Script Object</p>
-<p>Ignores an NPC object.</p>
+<p>Checks if an object is ignored.</p>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Can only be used with <a href="../../targetingfuncs/reset_ignore_settarget/#ignoretarget">IgnoreTarget</a> beforehand.</p>
+</div>
 
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Recommended to use <a href="../../targetingfuncs/reset_ignore_settarget/#ignoretarget">IgnoreTarget</a> and <a href="../../objects/relation">Relation</a> instead.</p>
+<p class="admonition-title">Bug</p>
+<p>Using against corpses doesn't work, even though <code>IgnoreTarget</code> has proper coding for it.</p>
 </div>
 
 <h1>Syntax</h1>
-<p><code class="language-js">Ignore:[ignore type]</code> -- Ignores the type specified</p>
-<div class="admonition note">
-<p class="admonition-title">All Ignore Types</p>
-<p><code>Ignore:neutral</code> ; <code>Ignore:enemy</code> ; <code>Ignore:fear</code></p>
-</div>
+<p><code class="language-js">Ignore:[object type]</code> -- Checks if the type is already ignored or not</p>
+
+<p></code></pre></p>
+<h1>Example</h1>
+<pre><code class="language-js">
+st_somestate
+{
+    group Neutral
+    patterns 
+    {
+        pt_default
+        {
+            actions
+            {
+                // Target was already being ignored!
+                IfAttr "Ignore:target == 1 Block begin"
+                    ResetTarget 1
+                    Pattern pt_end
+                Block end
+
+                // Not ignored!
+                IfAttr "Ignore:target == 0 Block begin"
+                    IgnoreTarget 20
+                    ResetTarget 1
+                    Pattern pt_ignored
+                Block end
+            }
+        }
+    }
+}
+</code></pre>
               
             </div>
           </div><footer>
