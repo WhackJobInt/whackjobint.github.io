@@ -41,7 +41,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script (WIP)</span></p>
+              <p class="caption"><span class="caption-text">Postal3Script</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
                   </li>
@@ -53,32 +53,40 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#external-execution-help-guide">External Execution / Help Guide</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#high-level-debugging">High Level Debugging</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#general-advice">General Advice</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Structure (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">States (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Patterns (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Hammer Functions (TBD)</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../attribchecking/embedattributes/">Embedded Attributes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../embeddedevents/">Embedded Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Embedded Behaviors (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Animation Events (TBD)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks, Conditional (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Object Categories</span></p>
@@ -345,7 +353,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Postal3Script (WIP) &raquo;</li>
+          <li>Postal3Script &raquo;</li>
       <li>Debugging Postal3Script</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -430,6 +438,11 @@ p3_fsm_execute_ex someguy SetAttr "ea_health 0"
 </code></pre>
 
 <p><br></p>
+<h2 id="high-level-debugging">High Level Debugging<a class="headerlink" href="#high-level-debugging" title="Permanent link"></a></h2>
+<p>This one is not really useful to most people, it requires <code>p3_fsm_spew</code>, <code>developer</code>, and the use of <code>npc_fsminfo</code> in combination.</p>
+<p>Enable these 3 commands, then set <code>npc_fsm_log</code> to 1, this will print out the currently under debugging NPC's P3S executions at high level onto the console.</p>
+
+<p><br></p>
 <h2 id="general-advice">General Advice<a class="headerlink" href="#general-advice" title="Permanent link"></a></h2>
 <p>If you are not sure how Postal3Script works you can always check the functions on the left, every one of them have examples on their usage and how they work.</p>
 <p>Alternatively, like we sometimes do, search through TM's Postal3Script files for a function and try to understand how they work.</p>
@@ -442,7 +455,7 @@ p3_fsm_execute_ex someguy SetAttr "ea_health 0"
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../whatispostal3script/" class="btn btn-neutral float-left" title="What is Postal3Script?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../TBD/" class="btn btn-neutral float-right" title="Structure (TBD)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../wipp3sfiles/" class="btn btn-neutral float-right" title="Development/WIP Files">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -469,7 +482,7 @@ p3_fsm_execute_ex someguy SetAttr "ea_health 0"
       <span><a href="../whatispostal3script/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../TBD/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../wipp3sfiles/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

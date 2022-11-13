@@ -41,13 +41,17 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script (WIP)</span></p>
+              <p class="caption"><span class="caption-text">Postal3Script</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href=".">Index</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#postal3script">Postal3Script</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#embeddedengine">Embedded/Engine</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#attribute-checking">Attribute Checking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#structure-tutorial">Structure (Tutorial)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#object-categories">Object Categories</a>
     </li>
@@ -83,28 +87,34 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="debugging/">Debugging Postal3Script</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Structure (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="TBD/">States (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Patterns (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Blocks (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="events/">Events</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Hammer Functions (TBD)</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="wipp3sfiles/">Development/WIP Files</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="attribchecking/embedattributes/">Embedded Attributes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="embeddedevents/">Embedded Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Embedded Behaviors (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Animation Events (TBD)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="TBD/">Blocks, Conditional (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Object Categories</span></p>
@@ -371,7 +381,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Postal3Script (WIP) &raquo;</li>
+          <li>Postal3Script &raquo;</li>
       <li>Index</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -385,26 +395,35 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This site is a Work in Progress! Many functions are still not covered yet, or those that are already covered, their documentation are subject to change!</p>
-<p><b>Last Update: <i>17.10.2022</i></b> (<a href="changelog">Changelog</a>)</p>
+<p><b>Last Update: <i>14.11.2022</i></b> (<a href="changelog">Changelog</a>)</p>
 </div>
 
 <h2 id="postal3script">Postal3Script<a class="headerlink" href="#postal3script" title="Permanent link"></a></h2>
 <ul>
 <li><a href="whatispostal3script">What is Postal3Script?</a></li>
 <li><a href="debugging">Debugging Postal3Script</a></li>
-<li>Structure</li>
-<li>States</li>
-<li>Patterns</li>
-<li>Blocks</li>
-<li>Events</li>
-<li>Hammer Functions</li>
 <li><a href="wipp3sfiles">Development/WIP Files</a></li>
+<li><a href="syntaxhighlighter">Syntax Highlighter</a></li>
+</ul>
+
+<h2 id="embeddedengine">Embedded/Engine<a class="headerlink" href="#embeddedengine" title="Permanent link"></a></h2>
+<ul>
+<li><a href="attribchecking/embedattributes">Embedded Attributes</a></li>
+<li><a href="embeddedevents">Embedded Events</a></li>
+<li>Embedded Behaviors</li>
+<li>Animation Events</li>
 </ul>
 
 <h2 id="attribute-checking">Attribute Checking<a class="headerlink" href="#attribute-checking" title="Permanent link"></a></h2>
 <ul>
 <li><a href="attribchecking/attributes">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a></li>
-<li><a href="attribchecking/embedattributes">Embedded Attributes</a></li>
+</ul>
+
+<h2 id="structure-tutorial">Structure (Tutorial)<a class="headerlink" href="#structure-tutorial" title="Permanent link"></a></h2>
+<ul>
+<li><a href="events">Events</a></li>
+<li>Blocks, Conditional</li>
+<li>States, Patterns, Execution Patterns</li>
 </ul>
 
 <h2 id="object-categories">Object Categories<a class="headerlink" href="#object-categories" title="Permanent link"></a></h2>

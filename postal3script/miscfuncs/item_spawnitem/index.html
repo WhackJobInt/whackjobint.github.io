@@ -41,7 +41,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script (WIP)</span></p>
+              <p class="caption"><span class="caption-text">Postal3Script</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Index</a>
                   </li>
@@ -49,28 +49,34 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../debugging/">Debugging Postal3Script</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Structure (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">States (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Patterns (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Blocks (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../events/">Events</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Hammer Functions (TBD)</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../wipp3sfiles/">Development/WIP Files</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/embedattributes/">Embedded Attributes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../embeddedevents/">Embedded Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Embedded Behaviors (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Animation Events (TBD)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Blocks, Conditional (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Object Categories</span></p>
@@ -365,7 +371,8 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Be aware that "Item" also refers to weapon pickups!</p>
+<p>- "Item" also refers to weapon or corpse/limb pickups</p>
+<p>- NPCs aren't able to pick up weapons off the ground, or interact them in any way in P3S, this is a bug (this is fixed in Catharsis Reborn)</p>
 </div>
 
 <div class="admonition note">
@@ -407,11 +414,6 @@ pt_default
 }
 
 </code></pre>
-
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Find out how the NPC actually knows what item to take on <code>Item take</code>! Can you even use TargetEntByName?</p>
-</div>
 
 <p><br></p>
 <h2 id="spawnitem">SpawnItem<a class="headerlink" href="#spawnitem" title="Permanent link"></a></h2>

@@ -41,7 +41,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script (WIP)</span></p>
+              <p class="caption"><span class="caption-text">Postal3Script</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
                   </li>
@@ -55,28 +55,34 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../debugging/">Debugging Postal3Script</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Structure (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">States (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Patterns (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks (TBD)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Hammer Functions (TBD)</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../attribchecking/embedattributes/">Embedded Attributes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../embeddedevents/">Embedded Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Embedded Behaviors (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Animation Events (TBD)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks, Conditional (TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Object Categories</span></p>
@@ -343,7 +349,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Postal3Script (WIP) &raquo;</li>
+          <li>Postal3Script &raquo;</li>
       <li>What is Postal3Script?</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -354,10 +360,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="what-is-postal3script">What is Postal3Script?<a class="headerlink" href="#what-is-postal3script" title="Permanent link"></a></h1>
-<p>Postal3Script, or P3S, is a scripting language developed for Postal 3, designed to handle most of the NPC AI and mission scripting.</p>
+<p>Postal3Script, or P3S, is a Finite State Machine (FSM) and a scripting language developed for Postal 3, designed to handle most of the NPC AI and mission scripting.</p>
 <p>It allows for a much easier and faster time doing missions and AI rather than messing around in C++ and doing logic entirely through map entities in Hammer.</p>
 <p>With Postal3Script, you can easily do many things that you normally would not be able to do without the source code of the game due to the many useful functions and attributes that are interfaced.</p>
-<p>P3S script files are located in <code>Postal III/p3/scripts</code> and use the <code>.p3s</code> file extension. To load and be able to use a p3s script, you must add it to a manifest, in "ai_scripts.txt", found in the previously mentioned folder.</p>
+<p>P3S script files are located in <code>Postal III/p3/scripts</code> and use the <code>.p3s</code> file extension, but it can be any extension if wanted. To load and be able to use a p3s script, you must add it to a manifest, in "ai_scripts.txt", found in the previously mentioned folder.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Changes to p3s scripts will automatically hotload when the map restarts, so you can just use the "restart" console command without ever having to exit and reload the game.</p>
