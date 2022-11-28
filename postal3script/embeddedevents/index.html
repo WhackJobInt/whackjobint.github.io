@@ -442,9 +442,9 @@ OnHearDanger
 <pre><code class="language-js">
 OnTargetReset
 OnEnemiesDead
-OnNewEnemy
-OnNewFear
-OnTargetKilled -- completely unused
+OnNewEnemy -- Note: This does not execute instantly
+OnNewFear -- Note: This does not execute instantly
+OnTargetKilled -- completely unused, Note: it is the same as 'OnDeath'
 OnTargetArrested
 OnEnemySpoted -- unused, is in test script files
 OnTargetResistArrest -- unused, is in test script files (ArrestTarget, beta cop leftover)
