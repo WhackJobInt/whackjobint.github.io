@@ -74,6 +74,8 @@
     </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inputfunctions/">Input Functions</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
               <ul>
@@ -366,99 +368,239 @@
                 <h1 id="animation-events">Animation Events<a class="headerlink" href="#animation-events" title="Permanent link"></a></h1>
 <p>Character models' animation files have embedded/scripted events in them, which call P3S events.</p>
 <p>Unlike every other engine attributes or events, these ones can be edited by decompiling animation files.</p>
-
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>- Animation Events will always be called on the host.</p>
-<p>- Animation Events are animation frame specific.</p>
-<p>- The syntax for calling a P3S event on a frame is <code>{ event AE_P3_SCRIPTED_ANIM_EVENT 33 "EVENTNAMEGOESHERE" }</code></p>
-<p>- Above syntax would be calling <code>OnAnimEVENTNAMEGOESHERE</code> P3S event on frame <code>33</code></p>
-<p>- Not all models/animations have script events</p>
+<ul>
+<li>Animation Events will always be called on the host.<br><br></li>
+<li>Animation Events are animation frame specific.<br><br></li>
+<li>
+<p>The syntax for calling a P3S event on a frame is: </p>
+<ul>
+<li><code>{ event AE_P3_SCRIPTED_ANIM_EVENT 33 "EVENTNAMEGOESHERE" }</code></li>
+<li>This would call <code>OnAnimEVENTNAMEGOESHERE</code> P3S event on frame <code>33</code><br><br></li>
+</ul>
+</li>
+<li>
+<p>Not all models/animations have script events</p>
+</li>
+</ul>
 </div>
-
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>- Human models do not share animations, they have individual animation files, if you edit one, you MUST edit the rest of them to be consistent!</p>
-<p>- Due to Postal 3 having a different MDL format, it's not possible to decompile animation files and then recompile them back again, you will have to use a custom MDL file to create new or override animations.</p>
+<ul>
+<li>Human models <strong>do not share</strong> animations, they have individual animation files, if you edit one, you <strong>MUST</strong> edit the rest of them to be consistent!<br><br></li>
+<li>Due to Postal 3 having a different MDL format, it's not possible to decompile animation files and then recompile them back again, you will have to use a custom MDL file to create new or override animations.</li>
+</ul>
 </div>
-
-<p><br></p>
 <h2 id="cat-catmdlcat_animationsmdl">Cat (cat.mdl/cat_animations.mdl)<a class="headerlink" href="#cat-catmdlcat_animationsmdl" title="Permanent link"></a></h2>
-<p><code>Sequence/Gesture name</code> -- <code>P3S event it will call</code></p>
-<pre><code class="language-js">
-idle_take   -- OnAnimTAKE
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Sequence/Gesture Name</th>
+<th>Postal3Script Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idle_take</td>
+<td>OnAnimTake</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="dog-champmdlchamp_animationsmdl">Dog (champ.mdl/champ_animations.mdl)<a class="headerlink" href="#dog-champmdlchamp_animationsmdl" title="Permanent link"></a></h2>
-<p><code>Sequence/Gesture name</code> -- <code>P3S event it will call</code></p>
-<pre><code class="language-js">
-idle_poo        -- OnAnimPOO
-idle_take       -- OnAnimTAKE
-idle_give       -- OnAnimGIVE
-idle_bark_1     -- OnAnimBARK
-idle_eat_out    -- OnAnimYUMMY
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Sequence/Gesture Name</th>
+<th>Postal3Script Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idle_poo</td>
+<td>OnAnimPOO</td>
+</tr>
+<tr>
+<td>idle_take</td>
+<td>OnAnimTAKE</td>
+</tr>
+<tr>
+<td>idle_give</td>
+<td>OnAnimGIVE</td>
+</tr>
+<tr>
+<td>idle_bark_1</td>
+<td>OnAnimBARK</td>
+</tr>
+<tr>
+<td>idle_eat_out</td>
+<td>OnAnimYUMMY</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="rhino-rhinomdl">Rhino (rhino.mdl)<a class="headerlink" href="#rhino-rhinomdl" title="Permanent link"></a></h2>
-<p><code>Sequence/Gesture name</code> -- <code>P3S event it will call</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Rhino calls multiple P3S events in one sequence!</p>
 </div>
-<pre><code class="language-js">
-Run_Gallop      -- OnAnimRhinoStompFR
-                -- OnAnimRhinoStompBR
-                -- OnAnimRhinoStompBL
-                -- OnAnimRhinoStompFL
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Sequence/Gesture Name</th>
+<th>Postal3Script Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run_Gallop</td>
+<td>OnAnimRhinoStompFR</td>
+</tr>
+<tr>
+<td>Run_Gallop</td>
+<td>OnAnimRhinoStompBR</td>
+</tr>
+<tr>
+<td>Run_Gallop</td>
+<td>OnAnimRhinoStompBL</td>
+</tr>
+<tr>
+<td>Run_Gallop</td>
+<td>OnAnimRhinoStompFL</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="all-human-models">All Human Models<a class="headerlink" href="#all-human-models" title="Permanent link"></a></h2>
-<p><code>Sequence/Gesture name</code> -- <code>P3S event it will call</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Some scripted events are missing from certain NPCs (i.e. KrotchyNPC), the events below are extracted from M_Avg and F_Avg anims (which are copy pasted onto other NPC models)!</p>
 </div>
-<pre><code class="language-js">
-dialogue_no     -- OnAnimHEY
-env_lifting     -- OnAnimTAKE
-env_discard     -- OnAnimDROP
-env_throw       -- OnAnimTHROW
-env_phone_in    -- OnAnimTAKE
-env_phone_out   -- OnAnimDROP
-melee_attack2   -- OnAnimHIT
-melee_attack3   -- OnAnimHIT
-melee_attack4   -- OnAnimPUSH_MEDIUM
-melee_attack5   -- OnAnimHIT
-melee_attack6   -- OnAnimHIT
-melee_attack7   -- OnAnimHIT
-melee_push2     -- OnAnimPUSH_HEAVY
-melee_box_01_L  -- OnAnimHIT (Male models only)
-melee_box_01_R  -- OnAnimHIT (Male models only)
-melee_box_02_L  -- OnAnimHIT (Male models only)
-melee_box_02_R  -- OnAnimHIT (Male models only)
-melee_box_03    -- OnAnimHIT (Male models only)
-melee_push      -- OnAnimPUSH_HEAVY
-melee_push_easy -- OnAnimPUSH_EASY
-melee_kick1     -- OnAnimPUSH_HEAVY
-melee_kick2     -- OnAnimKICK
-zombie_barf     -- OnAnimBARF
-g_idle_Drinking -- OnAnimYUM (Male models only)
-g_idle_Feeding  -- OnAnimYUM (Male models only)
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Sequence/Gesture Name</th>
+<th>Postal3Script Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dialogue_no</td>
+<td>OnAnimHEY</td>
+</tr>
+<tr>
+<td>env_lifting</td>
+<td>OnAnimTAKE</td>
+</tr>
+<tr>
+<td>env_discard</td>
+<td>OnAnimDROP</td>
+</tr>
+<tr>
+<td>env_throw</td>
+<td>OnAnimTHROW</td>
+</tr>
+<tr>
+<td>env_phone_in</td>
+<td>OnAnimTAKE</td>
+</tr>
+<tr>
+<td>env_phone_out</td>
+<td>OnAnimDROP</td>
+</tr>
+<tr>
+<td>melee_attack2</td>
+<td>OnAnimHIT</td>
+</tr>
+<tr>
+<td>melee_attack3</td>
+<td>OnAnimHIT</td>
+</tr>
+<tr>
+<td>melee_attack4</td>
+<td>OnAnimPUSH_MEDIUM</td>
+</tr>
+<tr>
+<td>melee_attack5</td>
+<td>OnAnimHIT</td>
+</tr>
+<tr>
+<td>melee_attack6</td>
+<td>OnAnimHIT</td>
+</tr>
+<tr>
+<td>melee_attack7</td>
+<td>OnAnimHIT</td>
+</tr>
+<tr>
+<td>melee_push2</td>
+<td>OnAnimPUSH_HEAVY</td>
+</tr>
+<tr>
+<td>melee_box_01_L</td>
+<td>OnAnimHIT <em>(Male only)</em></td>
+</tr>
+<tr>
+<td>melee_box_01_R</td>
+<td>OnAnimHIT <em>(Male only)</em></td>
+</tr>
+<tr>
+<td>melee_box_02_L</td>
+<td>OnAnimHIT <em>(Male only)</em></td>
+</tr>
+<tr>
+<td>melee_box_02_R</td>
+<td>OnAnimHIT <em>(Male only)</em></td>
+</tr>
+<tr>
+<td>melee_box_03</td>
+<td>OnAnimHIT <em>(Male only)</em></td>
+</tr>
+<tr>
+<td>melee_push</td>
+<td>OnAnimPUSH_HEAVY</td>
+</tr>
+<tr>
+<td>melee_push_easy</td>
+<td>OnAnimPUSH_EASY</td>
+</tr>
+<tr>
+<td>melee_kick1</td>
+<td>OnAnimPUSH_HEAVY</td>
+</tr>
+<tr>
+<td>melee_kick2</td>
+<td>OnAnimKICK</td>
+</tr>
+<tr>
+<td>zombie_barf</td>
+<td>OnAnimBARF</td>
+</tr>
+<tr>
+<td>g_idle_Drinking</td>
+<td>OnAnimYUM <em>(Male only)</em></td>
+</tr>
+<tr>
+<td>g_idle_Feeding</td>
+<td>OnAnimYUM <em>(Male only)</em></td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../embeddedbehaviors/" class="btn btn-neutral float-left" title="Embedded Behaviors"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../events/" class="btn btn-neutral float-right" title="Events">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../inputfunctions/" class="btn btn-neutral float-right" title="Input Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022<br>ㅤ</p>
+      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022-2023<br>ㅤ</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -478,7 +620,7 @@ g_idle_Feeding  -- OnAnimYUM (Male models only)
       <span><a href="../embeddedbehaviors/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../events/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../inputfunctions/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

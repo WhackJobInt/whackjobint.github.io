@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/wipp3sfiles/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/inputfunctions/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Development/WIP Files - Postal3Script</title>
+    <title>Input Functions - Postal3Script</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Development/WIP Files";
-        var mkdocs_page_input_path = "wipp3sfiles.md";
-        var mkdocs_page_url = "/postal3script/wipp3sfiles/";
+        var mkdocs_page_name = "Input Functions";
+        var mkdocs_page_input_path = "inputfunctions.md";
+        var mkdocs_page_url = "/postal3script/inputfunctions/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -42,22 +42,20 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Postal3Script</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../whatispostal3script/">What is Postal3Script?</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../debugging/">Debugging Postal3Script</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Development/WIP Files</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../wipp3sfiles/">Development/WIP Files</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../embeddedevents/">Embedded Events</a>
@@ -66,7 +64,9 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../animationevents/">Animation Events</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../inputfunctions/">Input Functions</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Input Functions</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
@@ -347,8 +347,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Postal3Script &raquo;</li>
-      <li>Development/WIP Files</li>
+          <li>Embedded/Engine &raquo;</li>
+      <li>Input Functions</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -357,46 +357,285 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="unused-postal3script-files">Unused Postal3Script files<a class="headerlink" href="#unused-postal3script-files" title="Permanent link"></a></h1>
-<p>These files can be found in <code>(location of P3)/p3/scripts/</code></p>
-<p>Many of them contain cut and planned features for the open world gameplay, ultimately they were never ported over properly.</p>
-<p>It's a good idea to search through these files for hunting for Beta content that never made it out alive.</p>
-<p>They were used by the scripters to test and develop scripts before eventually moving them over to mission scripts.</p>
-<p>They were also used to test many P3S functions to ensure they are working properly.</p>
-<pre><code class="language-js">
-'ai_badger_test.p3s' - Badger testing
-'ai_cashmart.p3s' - Earlier version of Cashmart (ai_cashmart_npc.p3s is not unused)
-'ai_gameplay.p3s' - Intended for Open World gameplay
-'ai_patrol1_citizen_fight.p3s' - Unknown
-'ai_st1_common.p3s' - Contains various old code
-'ai_st2_states.p3s' - Contains various old code
-'ai_st3_social.p3s' - Contains experimental old code
-'ai_st4_queuie.p3s' - Queue testing
-'ai_st5_temp.p3s' - Contains test code, scrapped features
-'ai_st6_missions.p3s' - Test code related to missions
-'ai_st7_environment.p3s' - Code related to cut environment behavior
-'ai_st8_items.p3s' - Code related to cut inventory items
-'ai_st9_animals.p3s' - Animals test
-'ai_st10_temp.p3s' - Test script, contains code related to Traffic lights
-'ai_st11_urza.p3s' - Contains scrapped features, old code
-'ai_st12_urza.p3s' - Contains scrapped features, old code
-'ai_st98_helicopter.p3s' - Code that is identical to the Helicopter AI that IS used
-'ai_st_utilities.p3s' - Various code related to NPCs
-'ai_test_babuska.p3s' - Test script
-'lean_test.p3s' - Test script
-</code></pre>
-
+                <h1 id="input-functions">Input Functions<a class="headerlink" href="#input-functions" title="Permanent link"></a></h1>
+<p>These are all the input functions implemented which can be invoked via <code>FireInput</code> or <code>EntFireInput</code>.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Don't try loading them as is, they have a very outdated Postal3Script layout, and several deleted functions!<br />
-Use <code>p3_fsm_spew 1</code> console command to check which one of them loads properly!</p>
+<p class="admonition-title">TODO</p>
+<p>Is <code>EntFireInput</code> capable of firing non-void functions?</p>
 </div>
+<table>
+<thead>
+<tr>
+<th align="left">Player</th>
+<th align="left">All Entities</th>
+<th align="left">All P3 NPCs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OnSquadMemberKilled</td>
+<td align="left">Kill</td>
+<td align="left">InteractivePowerDown</td>
+</tr>
+<tr>
+<td align="left">DisableFlashlight</td>
+<td align="left">KillHierarchy</td>
+<td align="left">HeadTurningOff</td>
+</tr>
+<tr>
+<td align="left">EnableFlashlight</td>
+<td align="left">Use</td>
+<td align="left">HeadTurningOn</td>
+</tr>
+<tr>
+<td align="left">ForceDropPhysObjects</td>
+<td align="left">ClearParent</td>
+<td align="left">SetHabitatID</td>
+</tr>
+<tr>
+<td align="left">RequestPlayerHealth</td>
+<td align="left">EnableDamageForces</td>
+<td align="left">EnableCollisionCheck</td>
+</tr>
+<tr>
+<td align="left">SetFlashlightSlowDrain</td>
+<td align="left">DisableDamageForces</td>
+<td align="left">DisableCollisionCheck</td>
+</tr>
+<tr>
+<td align="left">SetFlashlightNormalDrain</td>
+<td align="left">DisableShadow</td>
+<td align="left">StepOffVehiclePath</td>
+</tr>
+<tr>
+<td align="left">RequestAmmoState</td>
+<td align="left">EnableShadow</td>
+<td align="left">SetLeanGroup</td>
+</tr>
+<tr>
+<td align="left">LowerWeapon</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">EnableCappedPhysicsDamage</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">DisableCappedPhysicsDamage</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">SuppressCrosshair</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">CreateDouble</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">DestroyDouble</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">EnableControl</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">DisableControl</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">ShootingEnable</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">ShootingDisable</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">ClearEventList</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">HolsterWeapon</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">UnholsterWeapon</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">DisableWeaponSwitching</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">EnableWeaponSwitching</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Hugo Chavez</th>
+<th align="left">Sim Driver</th>
+<th align="left">Logic/Traffic Entity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">StartForward</td>
+<td align="left">StartForward</td>
+<td align="left">Enable</td>
+</tr>
+<tr>
+<td align="left">Stop</td>
+<td align="left">Stop</td>
+<td align="left">Disable</td>
+</tr>
+<tr>
+<td align="left">StopFiring</td>
+<td align="left">StartFiring</td>
+<td align="left">Toggle</td>
+</tr>
+<tr>
+<td align="left">Show</td>
+<td align="left">StopFiring</td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="left">Hide</td>
+<td align="left">LeaveVehicle</td>
+<td align="left">---</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Helicopter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activate</td>
+</tr>
+<tr>
+<td>GunOn</td>
+</tr>
+<tr>
+<td>GunOff</td>
+</tr>
+<tr>
+<td>MissileOn</td>
+</tr>
+<tr>
+<td>MissileOff</td>
+</tr>
+<tr>
+<td>EnableRotorWash</td>
+</tr>
+<tr>
+<td>DisableRotorWash</td>
+</tr>
+<tr>
+<td>MoveTopSpeed</td>
+</tr>
+<tr>
+<td>EnableRotorSound</td>
+</tr>
+<tr>
+<td>DisableRotorSound</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td>StartPatrol</td>
+</tr>
+<tr>
+<td>StopPatrol</td>
+</tr>
+<tr>
+<td>StartBreakableMovement</td>
+</tr>
+<tr>
+<td>StopBreakableMovement</td>
+</tr>
+<tr>
+<td>ChooseFarthestPathPoint</td>
+</tr>
+<tr>
+<td>ChooseNearestPathPoint</td>
+</tr>
+<tr>
+<td>InputStopLeading</td>
+</tr>
+<tr>
+<td>StartPatrolBreakable</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td>OmniscientOn</td>
+</tr>
+<tr>
+<td>OmniscientOff</td>
+</tr>
+<tr>
+<td>BlindfireOn</td>
+</tr>
+<tr>
+<td>BlindfireOff</td>
+</tr>
+<tr>
+<td>SelfDestruct</td>
+</tr>
+<tr>
+<td>SetDockingBBox</td>
+</tr>
+<tr>
+<td>SetNormalBBox</td>
+</tr>
+<tr>
+<td>EnableGroundAttack</td>
+</tr>
+<tr>
+<td>DisableGroundAttack</td>
+</tr>
+<tr>
+<td>StartDefault</td>
+</tr>
+<tr>
+<td>StartHunt</td>
+</tr>
+<tr>
+<td>StartCover</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../debugging/" class="btn btn-neutral float-left" title="Debugging Postal3Script"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../syntaxhighlighter/" class="btn btn-neutral float-right" title="Syntax Highlighter">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../animationevents/" class="btn btn-neutral float-left" title="Animation Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../events/" class="btn btn-neutral float-right" title="Events">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -420,10 +659,10 @@ Use <code>p3_fsm_spew 1</code> console command to check which one of them loads 
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../debugging/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../animationevents/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../syntaxhighlighter/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../events/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

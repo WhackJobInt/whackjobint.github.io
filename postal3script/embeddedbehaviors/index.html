@@ -94,6 +94,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../animationevents/">Animation Events</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inputfunctions/">Input Functions</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
               <ul>
@@ -386,213 +388,387 @@
                 <h1 id="embedded-behaviors">Embedded Behaviors<a class="headerlink" href="#embedded-behaviors" title="Permanent link"></a></h1>
 <p>Embedded Behaviors are the default hardcoded AIs which Postal 3 sets to certain entities on map load.</p>
 <p>These behaviors can be given an AI (if they are unused) providing an actual script file with the behavior name.</p>
-
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The '<strong>?</strong>' symbol in the tables mean they can be overridden by the entity's existing key values.<br />
+If there are no hardcoded default values, it'll fallback to the <strong>Default AI</strong>'s values.</p>
+</div>
+<p><br></p>
 <h2 id="default-ai-errormissing-behavior">Default AI (Error/Missing Behavior)<a class="headerlink" href="#default-ai-errormissing-behavior" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Postal 3 will fallback to this behavior if a behavior name couldn't be found, or it has too many errors in them.</p>
 </div>
-
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>- <code>default_behavior</code> won't override init and start states if they were pre-defined in some way.</p>
-<p>- <code>Shared</code> means it'll reuse the already available parameter the entity has.</p>
+<ul>
+<li><code>default_behavior</code> won't override init and start states if they were pre-defined in some way.</li>
+<li><code>Manner</code> and <code>Faction</code> will re-use parameters from the entity.</li>
+</ul>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: default_behavior
-Init State: st_def_init (Shared, otherwise st_def_init)
-Start State: st_default (Shared, otherwise st_default)
-Manner: Shared (Some entities Manner are hardcoded, they will never be empty)
-Faction: Shared (Some entities Faction are hardcoded, they will never be empty)
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_behavior</td>
+<td>st_def_init <strong>(?)</strong></td>
+<td>st_default <strong>(?)</strong></td>
+<td><strong>?</strong></td>
+<td><strong>?</strong></td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="anchor-ai">Anchor AI<a class="headerlink" href="#anchor-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>Anchor</code> function will spawn an entity with this AI. Unused.</p>
+<p><code>Anchor</code> function will spawn an entity with this AI. <strong>Unused.</strong></p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: Anchor
-Init State: st_def_init
-Start State: st_default
-Manner: Anchor
-Faction: Anchor
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor</td>
+<td>st_def_init</td>
+<td>st_default</td>
+<td>Anchor</td>
+<td>Anchor</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="weapon-ai">Weapon AI<a class="headerlink" href="#weapon-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>All weapons in the game have this AI. Unused.</p>
+<p>All weapons in the game have this AI. <strong>Unused.</strong></p>
 </div>
-
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Broken Feature</p>
 <p>Scriptable weapons are not possible, weapons will not have any working P3S scripting attached to them.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: itmWeapon
-Init State: itm_weapon
-Start State: st_default
-Manner: itmWeapon
-Faction: Items
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>itmWeapon</td>
+<td>itm_weapon</td>
+<td>st_default</td>
+<td>itmWeapon</td>
+<td>Items</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="flame-fx-ai">Flame FX AI<a class="headerlink" href="#flame-fx-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Any entity on fire will have a second entity spawned on them with this AI.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: Flame
-Init State: fx_init_flame
-Start State: fx_flame
-Manner: Flame
-Faction: Effects
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flame</td>
+<td>fx_init_flame</td>
+<td>fx_flame</td>
+<td>Flame</td>
+<td>Effects</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="catnip-mark-ai">Catnip Mark AI<a class="headerlink" href="#catnip-mark-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Spraying catnip will spawn an entity with this AI.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: bh_catnip_dot
-Init State: catnip_init
-Start State: catnip
-Manner: Catnip
-Faction: Effects
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bh_catnip_dot</td>
+<td>catnip_init</td>
+<td>catnip</td>
+<td>Catnip</td>
+<td>Effects</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="catnip-ai">Catnip AI<a class="headerlink" href="#catnip-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Catnip on the ground. Unused.</p>
+<p>Catnip on the ground. <strong>Unused.</strong></p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: default_behavior
-Init State: st_def_init
-Start State: itm_catnip
-Manner: itmCatnip
-Faction: Items
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_behavior</td>
+<td>st_def_init</td>
+<td>itm_catnip</td>
+<td>itmCatnip</td>
+<td>Items</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="laserdot-ai">Laserdot AI<a class="headerlink" href="#laserdot-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Laser's AI that comes out from the Player's laserpen.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: bh_laserdot
-Init State: st_init_laserdot
-Start State: st_laserdot
-Manner: LaserDot
-Faction: LaserDot
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bh_laserdot</td>
+<td>st_init_laserdot</td>
+<td>st_laserdot</td>
+<td>LaserDot</td>
+<td>LaserDot</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="player-ai">Player AI<a class="headerlink" href="#player-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Player's AI.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: bh_player
-Init State: st_player_init
-Start State: st_player
-Manner: Player
-Faction: Player
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bh_player</td>
+<td>st_player_init</td>
+<td>st_player</td>
+<td>Player</td>
+<td>Player</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="corpse-ai">Corpse AI<a class="headerlink" href="#corpse-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The corpse's AI. Reuses the victim's behavior, manner, and faction.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: Shared (it is always the behavior name of the victim)
-Init State: st_init_corpse
-Start State: st_corpse
-Manner: Shared (it is always the Manner of the victim)
-Faction: Shared (it is always the Faction of the victim)
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>?</strong></td>
+<td>st_init_corpse</td>
+<td>st_corpse</td>
+<td><strong>?</strong></td>
+<td><strong>?</strong></td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="motorhead-ai">Motorhead AI<a class="headerlink" href="#motorhead-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Motorhead's AI.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: bh_motorhead
-Init State: st_init
-Start State: st_start
-Manner: MonkeyApe
-Faction: Animals
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bh_motorhead</td>
+<td>st_init</td>
+<td>st_start</td>
+<td>MonkeyApe</td>
+<td>Animals</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="monkey-ai">Monkey AI<a class="headerlink" href="#monkey-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Monkey's AI (not Motorhead). Start and init states won't be overridden if they were already defined in the map.</p>
+<p>Monkey's AI (not Motorhead). Start and init states won't be overridden if they were already defined in the map.<br />
+If there's no pre-defined behavior name then it'll fallback to <strong>default_behavior</strong>.</p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: Predefined (uses predefined behavior name from the map if there is any)
-Init State: p3_wild_monkey_init (if there is no predefined init state)
-Start State: p3_wild_monkey (if there is no predefined start state)
-Manner: MonkeyApe
-Faction: Animals
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>?</strong></td>
+<td>p3_wild_monkey_init <strong>(?)</strong></td>
+<td>p3_wild_monkey <strong>(?)</strong></td>
+<td>MonkeyApe</td>
+<td>Animals</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="krotchy-grenade-ai">Krotchy Grenade AI<a class="headerlink" href="#krotchy-grenade-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Krotchy Grenade's AI. Unused.</p>
+<p>Krotchy Grenade's AI. <strong>Unused.</strong></p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: default_behavior
-Init State: st_def_init
-Start State: itm_toy
-Manner: itmKrotchyToy
-Faction: Items
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_behavior</td>
+<td>st_def_init</td>
+<td>itm_toy</td>
+<td>itmKrotchyToy</td>
+<td>Items</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="seed-ai">Seed AI<a class="headerlink" href="#seed-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Leftover from unfinished Seed weapon. The projectile's AI. Unused.</p>
+<p>Leftover from unfinished Seed weapon. The projectile's AI. <strong>Unused.</strong></p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: default_behavior
-Init State: st_def_init
-Start State: itm_seed
-Manner: itmSeed
-Faction: Items
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_behavior</td>
+<td>st_def_init</td>
+<td>itm_seed</td>
+<td>itmSeed</td>
+<td>Items</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="taser-fx-ai">Taser FX AI<a class="headerlink" href="#taser-fx-ai" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Taser's beam AI. Unused.</p>
+<p>Taser's beam AI. <strong>Unused.</strong></p>
 </div>
-
-<pre><code class="language-js">
-Behavior Name: default_behavior
-Init State: st_def_init
-Start State: fx_taserbeam
-Manner: fxTaserBeam
-Faction: Effects
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Behavior Name</th>
+<th>Init State</th>
+<th>Start State</th>
+<th>Manner</th>
+<th>Faction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_behavior</td>
+<td>st_def_init</td>
+<td>fx_taserbeam</td>
+<td>fxTaserBeam</td>
+<td>Effects</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
               
             </div>
@@ -606,7 +782,7 @@ Faction: Effects
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022<br>ㅤ</p>
+      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022-2023<br>ㅤ</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
