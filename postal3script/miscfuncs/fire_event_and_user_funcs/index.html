@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/postal3script/miscfuncs/fire_event_and_user_funcs/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP) - Postal3Script</title>
+    <title>FireEvent, FireEventEX, FireUser, EntFireUser, FireInput, EntFireInput, OnUser - Postal3Script</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)";
+        var mkdocs_page_name = "FireEvent, FireEventEX, FireUser, EntFireUser, FireInput, EntFireInput, OnUser";
         var mkdocs_page_input_path = "miscfuncs\\fire_event_and_user_funcs.md";
         var mkdocs_page_url = "/postal3script/miscfuncs/fire_event_and_user_funcs/";
       </script>
@@ -41,7 +41,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script</span></p>
+              <p class="caption"><span class="caption-text">🔒 Postal3Script</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Index</a>
                   </li>
@@ -54,7 +54,7 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <p class="caption"><span class="caption-text">🛡 Embedded/Engine</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
@@ -67,16 +67,18 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../inputfunctions/">Input Functions</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <p class="caption"><span class="caption-text">📖 Tutorials</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../events/">Events</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Blocks, Conditional (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blocksconditional/">Blocks, Conditional</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statespatterns/">States, Patterns, Execution Patterns</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../randomization/">Randomization</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Attribute Checking</span></p>
+              <p class="caption"><span class="caption-text">🔎 Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
                   </li>
@@ -139,15 +141,37 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">FireEvent, FireEventEX, FireUser, EntFireUser, FireInput, EntFireInput, OnUser</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#fireevent">FireEvent</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#fireeventex">FireEventEx</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#onuser">OnUser</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#fireuser">FireUser</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entfireuser">EntFireUser</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_1">Syntax</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fireinput">FireInput</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_2">Syntax</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entfireinput">EntFireInput</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_3">Syntax</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onuser-events">OnUser (Events)</a>
     </li>
     </ul>
                   </li>
@@ -356,7 +380,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Misc Functions &raquo;</li>
-      <li>FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</li>
+      <li>FireEvent, FireEventEX, FireUser, EntFireUser, FireInput, EntFireInput, OnUser</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -476,66 +500,57 @@ pt_default
 </code></pre>
 
 <p><br></p>
-<h2 id="onuser">OnUser<a class="headerlink" href="#onuser" title="Permanent link"></a></h2>
-<p>Fire user entity outputs set through hammer on a specific entity.</p>
-
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Finish OnUser!</p>
-</div>
-
+<h2 id="fireuser">FireUser<a class="headerlink" href="#fireuser" title="Permanent link"></a></h2>
+<p>Fire user entity inputs set through Hammer on the entity.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Only up to four slots are usable!</p>
+<p>Activator and the Caller will be the entity itself.</p>
 </div>
-
-<h2>Syntax</h2>
-<p><code class="language-js">OnUser1"</code> -- Fire the slot 1 output</p>
-<p><code class="language-js">OnUser2"</code> -- Fire the slot 2 output</p>
-<p><code class="language-js">OnUser3"</code> -- Fire the slot 3 output</p>
-<p><code class="language-js">OnUser4"</code> -- Fire the slot 4 output</p>
-
-<h2>Example</h2>
-<pre><code class="language-js">
-pt_default
-{
-    actions
-    {
-
-    }
-}
-</code></pre>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link"></a></h3>
+<p><code class="language-js">FireUser 1</code> -- Fire the slot 1 input</p>
+<p><code class="language-js">FireUser 2</code> -- Fire the slot 2 input</p>
+<p><code class="language-js">FireUser 3</code> -- Fire the slot 3 input</p>
+<p><code class="language-js">FireUser 4</code> -- Fire the slot 4 input</p>
 
 <p><br></p>
-<h2 id="fireuser">FireUser<a class="headerlink" href="#fireuser" title="Permanent link"></a></h2>
-<p>Fire user entity inputs set through hammer on a specific entity.</p>
-
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Finish FireUser!</p>
-</div>
-
+<h2 id="entfireuser">EntFireUser<a class="headerlink" href="#entfireuser" title="Permanent link"></a></h2>
+<p>Fire user entity inputs set through Hammer on a named entity.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Only up to four slots are usable!</p>
+<p>Activator and the Caller will be the entity itself (the one that called the function).</p>
 </div>
+<h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link"></a></h3>
+<p><code class="language-js">EntFireUser [ent_name],1</code> -- Fire the slot 1 input on the entity</p>
+<p><code class="language-js">EntFireUser [ent_name],2</code> -- Fire the slot 2 input on the entity</p>
+<p><code class="language-js">EntFireUser [ent_name],3</code> -- Fire the slot 3 input on the entity</p>
+<p><code class="language-js">EntFireUser [ent_name],4</code> -- Fire the slot 4 input on the entity</p>
 
-<h2>Syntax</h2>
-<p><code class="language-js">FireUser1"</code> -- Fire the slot 1 input</p>
-<p><code class="language-js">FireUser2"</code> -- Fire the slot 2 input</p>
-<p><code class="language-js">FireUser3"</code> -- Fire the slot 3 input</p>
-<p><code class="language-js">FireUser4"</code> -- Fire the slot 4 input</p>
-
-<h2>Example</h2>
-<pre><code class="language-js">
-pt_default
-{
-    actions
-    {
-
-    }
-}
-</code></pre>
+<p><br></p>
+<h2 id="fireinput">FireInput<a class="headerlink" href="#fireinput" title="Permanent link"></a></h2>
+<p>Fire entity inputs on an entity.<br />
+You can see <a href="../../inputfunctions/">here</a> the list of all available inputs.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only <code>self</code> and <code>target</code> are supported.</p>
+</div>
+<h3 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link"></a></h3>
+<p><code>FireInput target,[input]</code> -- Fires input on the entity's target.</p>
+<p><code>FireInput self,[input]</code> -- Fires input on the entity.</p>
+<p><br></p>
+<h2 id="entfireinput">EntFireInput<a class="headerlink" href="#entfireinput" title="Permanent link"></a></h2>
+<p>Fire entity inputs on a named entity.<br />
+You can see <a href="../../inputfunctions/">here</a> the list of all available inputs.<br />
+Radius is always checked from the executed entity.</p>
+<h3 id="syntax_3">Syntax<a class="headerlink" href="#syntax_3" title="Permanent link"></a></h3>
+<p><code>EntFireInput [name],[input]</code> -- Fires input on the named entity.</p>
+<p><code>EntFireInput [name],[input]:[param]</code> -- Fires input with param (if supported) on the named entity.</p>
+<p><code>EntFireInput [name],[input],[radius]</code> -- Fires input on the named entity if it's around the radius.</p>
+<p><code>EntFireInput [name],[input]:[param],[radius]</code> -- Fires input with param (if supported) on the named entity if it's around the radius.</p>
+<p><br></p>
+<h2 id="onuser-events">OnUser (Events)<a class="headerlink" href="#onuser-events" title="Permanent link"></a></h2>
+<p>Fire user entity outputs set through Hammer on a specific entity.<br />
+When they are invoked, they can call a Postal3Script event.</p>
+<p>Only up to 4 are supported. <code>OnUser1</code> -&gt; <code>OnUser4</code></p>
               
             </div>
           </div><footer>

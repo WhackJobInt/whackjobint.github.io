@@ -41,7 +41,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script</span></p>
+              <p class="caption"><span class="caption-text">🔒 Postal3Script</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
                   </li>
@@ -54,7 +54,7 @@
                   <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <p class="caption"><span class="caption-text">🛡 Embedded/Engine</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
@@ -69,16 +69,18 @@
     </ul>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <p class="caption"><span class="caption-text">📖 Tutorials</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">Blocks, Conditional (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../blocksconditional/">Blocks, Conditional</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../statespatterns/">States, Patterns, Execution Patterns</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../randomization/">Randomization</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Attribute Checking</span></p>
+              <p class="caption"><span class="caption-text">🔎 Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
                   </li>
@@ -141,7 +143,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, EntFireUser, FireInput, EntFireInput, OnUser</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
                   </li>
@@ -347,7 +349,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Embedded/Engine &raquo;</li>
+          <li>🛡 Embedded/Engine &raquo;</li>
       <li>Input Functions</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -358,170 +360,249 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="input-functions">Input Functions<a class="headerlink" href="#input-functions" title="Permanent link"></a></h1>
-<p>These are all the input functions implemented which can be invoked via <code>FireInput</code> or <code>EntFireInput</code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-<p>Is <code>EntFireInput</code> capable of firing non-void functions?</p>
-</div>
+<p>These are all the input functions implemented which can be invoked via<br />
+<code>FireInput</code> (only void functions) or <code>EntFireInput</code>.</p>
 <table>
 <thead>
 <tr>
-<th align="left">Player</th>
-<th align="left">All Entities</th>
-<th align="left">All P3 NPCs</th>
+<th>Player</th>
+<th>All Entities</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">OnSquadMemberKilled</td>
-<td align="left">Kill</td>
-<td align="left">InteractivePowerDown</td>
+<td>IgnoreFallDamage                     <em>(float)</em></td>
+<td>SetTeam                              <em>(int)</em></td>
 </tr>
 <tr>
-<td align="left">DisableFlashlight</td>
-<td align="left">KillHierarchy</td>
-<td align="left">HeadTurningOff</td>
+<td>IgnoreFallDamageWithoutReset         <em>(float)</em></td>
+<td>Kill                                 <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">EnableFlashlight</td>
-<td align="left">Use</td>
-<td align="left">HeadTurningOn</td>
+<td>OnSquadMemberKilled                  <em>(void)</em></td>
+<td>KillHierarchy                        <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">ForceDropPhysObjects</td>
-<td align="left">ClearParent</td>
-<td align="left">SetHabitatID</td>
+<td>DisableFlashlight                    <em>(void)</em></td>
+<td>Use                                  <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">RequestPlayerHealth</td>
-<td align="left">EnableDamageForces</td>
-<td align="left">EnableCollisionCheck</td>
+<td>EnableFlashlight                     <em>(void)</em></td>
+<td>Alpha                                <em>(int)</em></td>
 </tr>
 <tr>
-<td align="left">SetFlashlightSlowDrain</td>
-<td align="left">DisableDamageForces</td>
-<td align="left">DisableCollisionCheck</td>
+<td>ForceDropPhysObjects                 <em>(void)</em></td>
+<td>AlternativeSorting                   <em>(bool)</em></td>
 </tr>
 <tr>
-<td align="left">SetFlashlightNormalDrain</td>
-<td align="left">DisableShadow</td>
-<td align="left">StepOffVehiclePath</td>
+<td>RequestPlayerHealth                  <em>(void)</em></td>
+<td>Color                                <em>(RGBA)</em></td>
 </tr>
 <tr>
-<td align="left">RequestAmmoState</td>
-<td align="left">EnableShadow</td>
-<td align="left">SetLeanGroup</td>
+<td>SetFlashlightSlowDrain               <em>(void)</em></td>
+<td>SetParent                            <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">LowerWeapon</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>SetFlashlightNormalDrain             <em>(void)</em></td>
+<td>SetParentAttachment                  <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">EnableCappedPhysicsDamage</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>SetPlayerHealth                      <em>(int)</em></td>
+<td>SetParentAttachmentMaintainOffset    <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">DisableCappedPhysicsDamage</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>RequestAmmoState                     <em>(void)</em></td>
+<td>ClearParent                          <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">SuppressCrosshair</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>LowerWeapon                          <em>(void)</em></td>
+<td>SetDamageFilter                      <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">CreateDouble</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>EnableCappedPhysicsDamage            <em>(void)</em></td>
+<td>EnableDamageForces                   <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">DestroyDouble</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>DisableCappedPhysicsDamage           <em>(void)</em></td>
+<td>DisableDamageForces                  <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">EnableControl</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>SetLocatorTargetEntity               <em>(string)</em></td>
+<td>DispatchEffect                       <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">DisableControl</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>SuppressCrosshair                    <em>(void)</em></td>
+<td>DispatchResponse                     <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">ShootingEnable</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>CreateDouble                         <em>(void)</em></td>
+<td>AddContext                           <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">ShootingDisable</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>DestroyDouble                        <em>(void)</em></td>
+<td>RemoveContext                        <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">ClearEventList</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>EnableControl                        <em>(void)</em></td>
+<td>ClearContext                         <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">HolsterWeapon</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>DisableControl                       <em>(void)</em></td>
+<td>DisableShadow                        <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">UnholsterWeapon</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>GiveItemToPlayer                     <em>(string)</em></td>
+<td>EnableShadow                         <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">DisableWeaponSwitching</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>GiveItemToDouble                     <em>(string)</em></td>
+<td>AddOutput                            <em>(string)</em></td>
 </tr>
 <tr>
-<td align="left">EnableWeaponSwitching</td>
-<td align="left">---</td>
-<td align="left">---</td>
+<td>SwitchWeapon                         <em>(string)</em></td>
+<td>FireUser1                            <em>(string)</em></td>
+</tr>
+<tr>
+<td>DamagePlayer                         <em>(int)</em></td>
+<td>FireUser2                            <em>(string)</em></td>
+</tr>
+<tr>
+<td>GiveWeapon                           <em>(string)</em></td>
+<td>FireUser3                            <em>(string)</em></td>
+</tr>
+<tr>
+<td>RemoveWeapon                         <em>(string)</em></td>
+<td>FireUser4                            <em>(string)</em></td>
+</tr>
+<tr>
+<td>RemoveAllWeapon                      <em>(string)</em></td>
+<td>FireFSMScriptEvent                   <em>(string)</em></td>
+</tr>
+<tr>
+<td>WeaponFire                           <em>(float)</em></td>
+<td>SetState <em>(string)</em></td>
+</tr>
+<tr>
+<td>WeaponAltFire                        <em>(float)</em></td>
+<td>SetAttribute <em>(string)</em></td>
+</tr>
+<tr>
+<td>ShootingEnable                       <em>(void)</em></td>
+<td>ChangeAttribute <em>(string)</em></td>
+</tr>
+<tr>
+<td>ShootingDisable                      <em>(void)</em></td>
+<td>SetFSMTarget <em>(string)</em></td>
+</tr>
+<tr>
+<td>ClearEventList                       <em>(void)</em></td>
+<td>---</td>
+</tr>
+<tr>
+<td>HolsterWeapon                        <em>(void)</em></td>
+<td>---</td>
+</tr>
+<tr>
+<td>UnholsterWeapon                      <em>(void)</em></td>
+<td>---</td>
+</tr>
+<tr>
+<td>DisableWeaponSwitching               <em>(void)</em></td>
+<td>---</td>
+</tr>
+<tr>
+<td>EnableWeaponSwitching                <em>(void)</em></td>
+<td>---</td>
+</tr>
+<tr>
+<td>Say                                  <em>(string)</em></td>
+<td>---</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th align="left">Hugo Chavez</th>
-<th align="left">Sim Driver</th>
-<th align="left">Logic/Traffic Entity</th>
+<th align="left">All P3 NPCs</th>
+<th>Hugo Chavez</th>
+<th>Sim Driver</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">StartForward</td>
-<td align="left">StartForward</td>
-<td align="left">Enable</td>
+<td align="left">InteractivePowerDown <em>(void</em>)</td>
+<td>SetDriversMaxSpeed                   <em>(float)</em></td>
+<td>SetDriversMaxSpeed     <em>(float)</em></td>
 </tr>
 <tr>
-<td align="left">Stop</td>
-<td align="left">Stop</td>
-<td align="left">Disable</td>
+<td align="left">HeadTurningOff <em>(void)</em></td>
+<td>SetDriversMinSpeed                   <em>(float)</em></td>
+<td>SetDriversMinSpeed     <em>(float)</em></td>
 </tr>
 <tr>
-<td align="left">StopFiring</td>
-<td align="left">StartFiring</td>
-<td align="left">Toggle</td>
+<td align="left">HeadTurningOn <em>(void)</em></td>
+<td>StartForward                         <em>(void)</em></td>
+<td>StartForward           <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">Show</td>
-<td align="left">StopFiring</td>
+<td align="left">SetHabitatID <em>(int)</em></td>
+<td>Stop                                 <em>(void)</em></td>
+<td>Stop                   <em>(void)</em></td>
+</tr>
+<tr>
+<td align="left">EnableCollisionCheck <em>(void)</em></td>
+<td>StartFiring                          <em>(string)</em></td>
+<td>StartFiring            <em>(void)</em></td>
+</tr>
+<tr>
+<td align="left">DisableCollisionCheck <em>(void)</em></td>
+<td>StopFiring                           <em>(void)</em></td>
+<td>StopFiring             <em>(void)</em></td>
+</tr>
+<tr>
+<td align="left">StepOffVehiclePath <em>(void)</em></td>
+<td>Show                                 <em>(void)</em></td>
+<td>GotoPathCorner         <em>(string)</em></td>
+</tr>
+<tr>
+<td align="left">SetLeanGroup <em>(string)</em></td>
+<td>Hide                                 <em>(void)</em></td>
+<td>EnterVehicle           <em>(string)</em></td>
+</tr>
+<tr>
 <td align="left">---</td>
+<td>GotoPathCorner                       <em>(string)</em></td>
+<td>LeaveVehicle           <em>(void)</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Logic Entity</th>
+<th align="left">Traffic Entity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Enable <em>(void)</em></td>
+<td align="left">Enable <em>(void)</em></td>
 </tr>
 <tr>
-<td align="left">Hide</td>
-<td align="left">LeaveVehicle</td>
+<td align="left">Disable <em>(void)</em></td>
+<td align="left">Disable <em>(void)</em></td>
+</tr>
+<tr>
+<td align="left">Toggle <em>(void)</em></td>
+<td align="left">Toggle <em>(void)</em></td>
+</tr>
+<tr>
+<td align="left">SetUpdateTime <em>(float)</em></td>
+<td align="left">SetPeriod <em>(float)</em></td>
+</tr>
+<tr>
 <td align="left">---</td>
+<td align="left">SetCooldown <em>(float)</em></td>
 </tr>
 </tbody>
 </table>
@@ -533,100 +614,133 @@
 </thead>
 <tbody>
 <tr>
-<td>Activate</td>
+<td>SetTrack                            <em>(string)</em></td>
 </tr>
 <tr>
-<td>GunOn</td>
+<td>FlyToSpecificTrackViaPath           <em>(string)</em></td>
 </tr>
 <tr>
-<td>GunOff</td>
+<td>StartPatrol                         <em>(void)</em></td>
 </tr>
 <tr>
-<td>MissileOn</td>
+<td>StopPatrol                          <em>(void)</em></td>
 </tr>
 <tr>
-<td>MissileOff</td>
+<td>StartBreakableMovement              <em>(void)</em></td>
 </tr>
 <tr>
-<td>EnableRotorWash</td>
+<td>StopBreakableMovement               <em>(void)</em></td>
 </tr>
 <tr>
-<td>DisableRotorWash</td>
+<td>ChooseFarthestPathPoint             <em>(void)</em></td>
 </tr>
 <tr>
-<td>MoveTopSpeed</td>
+<td>ChooseNearestPathPoint              <em>(void)</em></td>
 </tr>
 <tr>
-<td>EnableRotorSound</td>
+<td>InputStartLeading                   <em>(int)</em></td>
 </tr>
 <tr>
-<td>DisableRotorSound</td>
+<td>InputStopLeading                    <em>(void)</em></td>
 </tr>
 <tr>
-<td></td>
+<td>StartPatrolBreakable                <em>(void)</em></td>
 </tr>
 <tr>
-<td>StartPatrol</td>
-</tr>
-<tr>
-<td>StopPatrol</td>
-</tr>
-<tr>
-<td>StartBreakableMovement</td>
-</tr>
-<tr>
-<td>StopBreakableMovement</td>
-</tr>
-<tr>
-<td>ChooseFarthestPathPoint</td>
-</tr>
-<tr>
-<td>ChooseNearestPathPoint</td>
-</tr>
-<tr>
-<td>InputStopLeading</td>
-</tr>
-<tr>
-<td>StartPatrolBreakable</td>
+<td>FlyToPathTrack                      <em>(string)</em></td>
 </tr>
 <tr>
 <td></td>
 </tr>
 <tr>
-<td>OmniscientOn</td>
+<td>Activate                            <em>(void)</em></td>
 </tr>
 <tr>
-<td>OmniscientOff</td>
+<td>GunOn                               <em>(void)</em></td>
 </tr>
 <tr>
-<td>BlindfireOn</td>
+<td>GunOff                              <em>(void)</em></td>
 </tr>
 <tr>
-<td>BlindfireOff</td>
+<td>MissileOn                           <em>(void)</em></td>
 </tr>
 <tr>
-<td>SelfDestruct</td>
+<td>MissileOff                          <em>(void)</em></td>
 </tr>
 <tr>
-<td>SetDockingBBox</td>
+<td>EnableRotorWash                     <em>(void)</em></td>
 </tr>
 <tr>
-<td>SetNormalBBox</td>
+<td>DisableRotorWash                    <em>(void)</em></td>
 </tr>
 <tr>
-<td>EnableGroundAttack</td>
+<td>MoveTopSpeed                        <em>(void)</em></td>
 </tr>
 <tr>
-<td>DisableGroundAttack</td>
+<td>MoveSpecifiedSpeed                  <em>(float)</em></td>
 </tr>
 <tr>
-<td>StartDefault</td>
+<td>SetAngles                           <em>(string)</em></td>
 </tr>
 <tr>
-<td>StartHunt</td>
+<td>EnableRotorSound                    <em>(void)</em></td>
 </tr>
 <tr>
-<td>StartCover</td>
+<td>DisableRotorSound                   <em>(void)</em></td>
+</tr>
+<tr>
+<td>Kill                                <em>(void)</em></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td>Enable                              <em>(void)</em></td>
+</tr>
+<tr>
+<td>Disable                             <em>(void)</em></td>
+</tr>
+<tr>
+<td>OmniscientOn                        <em>(void)</em></td>
+</tr>
+<tr>
+<td>OmniscientOff                       <em>(void)</em></td>
+</tr>
+<tr>
+<td>SetPenetrationDepth                 <em>(float)</em></td>
+</tr>
+<tr>
+<td>BlindfireOn                         <em>(void)</em></td>
+</tr>
+<tr>
+<td>BlindfireOff                        <em>(void)</em></td>
+</tr>
+<tr>
+<td>SelfDestruct                        <em>(void)</em></td>
+</tr>
+<tr>
+<td>SetDockingBBox                      <em>(void)</em></td>
+</tr>
+<tr>
+<td>SetNormalBBox                       <em>(void)</em></td>
+</tr>
+<tr>
+<td>EnableGroundAttack                  <em>(void)</em></td>
+</tr>
+<tr>
+<td>DisableGroundAttack                 <em>(void)</em></td>
+</tr>
+<tr>
+<td>DoGroundAttack                      <em>(string)</em></td>
+</tr>
+<tr>
+<td>StartDefault                        <em>(void)</em></td>
+</tr>
+<tr>
+<td>StartHunt                           <em>(void)</em></td>
+</tr>
+<tr>
+<td>StartCover                          <em>(void)</em></td>
 </tr>
 </tbody>
 </table>

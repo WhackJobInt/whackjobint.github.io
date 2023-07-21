@@ -41,7 +41,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Postal3Script</span></p>
+              <p class="caption"><span class="caption-text">🔒 Postal3Script</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Index</a>
                   </li>
@@ -54,7 +54,7 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Embedded/Engine</span></p>
+              <p class="caption"><span class="caption-text">🛡 Embedded/Engine</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/embedattributes/">Embedded Attributes</a>
                   </li>
@@ -67,16 +67,18 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../inputfunctions/">Input Functions</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Structure (Tutorial)</span></p>
+              <p class="caption"><span class="caption-text">📖 Tutorials</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../events/">Events</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">Blocks, Conditional (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blocksconditional/">Blocks, Conditional</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../TBD/">States, Patterns, Execution Patterns (TBD)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../statespatterns/">States, Patterns, Execution Patterns</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../randomization/">Randomization</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Attribute Checking</span></p>
+              <p class="caption"><span class="caption-text">🔎 Attribute Checking</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../attribchecking/attributes/">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a>
                   </li>
@@ -139,7 +141,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/effect/">Effect</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, OnUser, FireInput, EntFireUser, EntFireInput (WIP)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/fire_event_and_user_funcs/">FireEvent, FireEventEX, FireUser, EntFireUser, FireInput, EntFireInput, OnUser</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../miscfuncs/item_spawnitem/">Item, SpawnItem</a>
                   </li>
@@ -364,6 +366,11 @@
                 <h1 id="follow-and-playerfriendly">Follow and PlayerFriendly<a class="headerlink" href="#follow-and-playerfriendly" title="Permanent link"></a></h1>
 <h2 id="follow">Follow<a class="headerlink" href="#follow" title="Permanent link"></a></h2>
 <p>Forces NPC to follow it's target object</p>
+<div class="admonition warning">
+<p class="admonition-title">Broken Feature</p>
+<p>This function can only be enabled or disabled, <code>walk</code> or <code>run</code> will <strong>not do anything</strong>.<br />
+If you want to make an NPC follow something by walking, <a href="../../movementfuncs/setactpack/">set it's act pack</a> instead.</p>
+</div>
 <h2>Syntax</h2>
 <p><code class="language-js">Follow [true/false]</code></p>
 <p><code class="language-js">Follow [walk/run],[distance]</code></p>
