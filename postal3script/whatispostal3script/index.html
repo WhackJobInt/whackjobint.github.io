@@ -365,9 +365,9 @@
               
                 <h1 id="what-is-postal3script">What is Postal3Script?<a class="headerlink" href="#what-is-postal3script" title="Permanent link"></a></h1>
 <p>Postal3Script, or P3S, is a Finite State Machine (FSM) and a scripting language developed for Postal 3, designed to handle most of the NPC AI and mission scripting.</p>
-<p>It allows for a much easier and faster time doing missions and AI rather than messing around in C++ and doing logic entirely through map entities in Hammer.</p>
+<p>It allows for a much easier and faster way of doing missions and AI rather than messing around in C++ and doing logic entirely through map entities in Hammer.</p>
 <p>With Postal3Script, you can easily do many things that you normally would not be able to do without the source code of the game due to the many useful functions and attributes that are interfaced.</p>
-<p>While Postal3Script is a scripting language, it is not as powerful as say, Garry's Mod's LUA, it is heavily limited by the amount of functions available, it's also unfortunately not as fast as LUA in execution speed.</p>
+<p>While Postal3Script is a scripting language, it is not as powerful as say, <code>Garry's Mod</code>'s LUA, it is heavily limited by the amount of functions available, it's also not as fast as LUA in execution speed unfortunately.</p>
 <p>P3S script files are located in <code>Postal III/p3/scripts</code> and use the <code>.p3s</code> file extension, but it can be any extension if wanted. To load and be able to use a p3s script, you must add it to a manifest, in "ai_scripts.txt", found in the previously mentioned folder.</p>
 <p><a href="../zips/scripts.zip">HERE</a> you can download the contents of Postal 3's scripts folder, if you need it for researching purposes, or just out of curiosity.</p>
 <div class="admonition tip">
@@ -493,7 +493,12 @@ However, the <code>Wait</code> and <code>Repeat</code> functions are the only ex
 <br><br></li>
 <li>Postal3Script function names are case-sensitive, i.e. it's not recommended to use <code>ifattr</code> instead of <code>IfAttr</code>.
 <br><br></li>
-<li>Very long code can (sometimes) result in the game freezing, this can be avoided by splitting up the patterns.</li>
+<li>Very long code can (sometimes) result in the game freezing, this can be avoided by splitting up the patterns.
+<br><br></li>
+<li>Possibly due to a programming oversight, the language when it can't find anything sometimes will happily pass checks even though they should be invalid (false),
+this can be observed with functions like <code>IfAttr</code>, <code>CheckAttr</code>, <code>ChangeAttr</code>, <code>Manner</code> and <code>Faction</code>..
+<br><br></li>
+<li>There is no <code>else</code>, there are no arrays, only integers can be saved.</li>
 </ul>
 </div>
               
@@ -508,7 +513,7 @@ However, the <code>Wait</code> and <code>Repeat</code> functions are the only ex
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022-2023<br>ㅤ</p>
+      <p>Written by Kizoky, Pseudonym_Tim and contributors <br>© WhackJob Interactive 2022-2024<br>ㅤ</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

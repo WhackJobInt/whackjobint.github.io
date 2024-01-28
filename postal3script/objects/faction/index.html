@@ -360,17 +360,21 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="faction">Faction<a class="headerlink" href="#faction" title="Permanent link"></a></h1>
-<p>Each NPC, and even some generic entities, are set to belong to a specific faction. This is used for various things, such as checking for how NPC's should act 
-towards whole groups of specific NPC's, and what dispositions they should have against them.
-
+<p>Each NPC, and even some generic entities, are set to belong to a specific <code>Faction</code>.<br />
+This is used for various things, such as checking for how NPC's should act towards whole groups of specific NPC's, and what dispositions they should have against them.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Here's a list of all the faction types:
-<code>Police</code>, <code>Zealots</code>, <code>Citizens</code>, <code>Hobos</code>, <code>Animals</code>, <code>Player</code>, <code>LaserDot</code>, <code>Effects</code>, <code>Items</code>, <code>Venezuela</code>, <code>ZombieBoss</code></p>
-<p>The <code>ZombieBoss</code> faction is used for all boss NPC's, this is a quick hack so they won't invalidate the PERSONAL JESUS achievement
-since zombies don't invalidate it</p>
+<p>Here's a list of all the faction types:<br />
+<code>Police</code>, <code>Zealots</code>, <code>Citizens</code>, <code>Hobos</code>, <code>Animals</code>, <code>Player</code>, <code>LaserDot</code>, <code>Effects</code>, <code>Items</code>, <code>Venezuela</code>, <code>ZombieBoss</code>  </p>
+<p>The <code>ZombieBoss</code> faction is used for all boss NPC's, this is a quick hack so they won't invalidate the <code>PERSONAL JESUS</code> achievement since zombies don't invalidate it</p>
 </div>
-
+<div class="admonition error">
+<p class="admonition-title">Bug</p>
+<ul>
+<li>There is an identification mismatch between source code and the Faction list, a dummy Faction should be added at the very top (first on the list) to avoid issues.  </li>
+<li>When checking for Faction, the Faction <strong>MUST</strong> exist in the list of Factions, otherwise Postal3Script will pass checks for that entity unknowingly.</li>
+</ul>
+</div>
 <pre><code class="language-js">
 st_FactionTutorial
 {
@@ -400,7 +404,7 @@ st_FactionTutorial
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022-2023<br>ㅤ</p>
+      <p>Written by Kizoky, Pseudonym_Tim and contributors <br>© WhackJob Interactive 2022-2024<br>ㅤ</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

@@ -47,11 +47,11 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#postal3script">Postal3Script</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#embeddedengine">Embedded/Engine</a>
+    <li class="toctree-l2"><a class="reference internal" href="#embedded-hardcodedengine">Embedded (Hardcoded)/Engine</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tutorials">Tutorials</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#attribute-checking">Attribute Checking</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#structure-tutorial">Structure (Tutorial)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#object-categories">Object Categories</a>
     </li>
@@ -399,7 +399,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This site is a Work in Progress! Many functions are still not covered yet, or those that are already covered, their documentation are subject to change!</p>
-<p><b>Last Update: <i>21.07.2023</i></b> (<a href="changelog">Changelog</a>)</p>
+<p><b>Last Update: <i>28.01.2024</i></b> (<a href="changelog">Changelog</a>)</p>
 </div>
 
 <div class="admonition tip">
@@ -416,24 +416,25 @@
 <li><a href="syntaxhighlighter">Syntax Highlighter</a></li>
 </ul>
 
-<h2 id="embeddedengine">Embedded/Engine<a class="headerlink" href="#embeddedengine" title="Permanent link"></a></h2>
+<h2 id="embedded-hardcodedengine">Embedded (Hardcoded)/Engine<a class="headerlink" href="#embedded-hardcodedengine" title="Permanent link"></a></h2>
 <ul>
 <li><a href="attribchecking/embedattributes">Embedded Attributes</a></li>
 <li><a href="embeddedevents">Embedded Events</a></li>
 <li><a href="embeddedbehaviors">Embedded Behaviors</a></li>
 <li><a href="animationsevents">Animation Events</a></li>
+<li><a href="inputfunctions">Input Functions</a></li>
 </ul>
 
+<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link"></a></h2>
+<ul>
+<li><a href="events">Events</a></li>
+<li><a href="blocksconditional">Blocks, Conditional</a></li>
+<li><a href="statespatterns">States, Patterns, Execution Patterns</a></li>
+<li><a href="randomization">Randomization</a></li>
+</ul>
 <h2 id="attribute-checking">Attribute Checking<a class="headerlink" href="#attribute-checking" title="Permanent link"></a></h2>
 <ul>
 <li><a href="attribchecking/attributes">IfAttr, SetAttr, CheckAttr, ChangeAttr, RemoveAttr</a></li>
-</ul>
-
-<h2 id="structure-tutorial">Structure (Tutorial)<a class="headerlink" href="#structure-tutorial" title="Permanent link"></a></h2>
-<ul>
-<li><a href="events">Events</a></li>
-<li>Blocks, Conditional</li>
-<li>States, Patterns, Execution Patterns</li>
 </ul>
 
 <h2 id="object-categories">Object Categories<a class="headerlink" href="#object-categories" title="Permanent link"></a></h2>
@@ -464,8 +465,8 @@
 <li><a href="statefuncs/statematrix">StateMatrix</a></li>
 <li><a href="statefuncs/callstate_callpattern">CallState, CallPattern</a></li>
 <li><a href="statefuncs/activitypattern_funcs">StoreActivityPattern, ExecuteActivityPattern, ClearActivityPattern</a></li>
+<li><a href="statefuncs/sendstate_sendpattern">SendState, SendPattern</a></li>
 </ul>
-
 <h2 id="misc-functions">Misc Functions<a class="headerlink" href="#misc-functions" title="Permanent link"></a></h2>
 <ul>
 <li><a href="miscfuncs/areaevent">AreaEvent</li></li>
@@ -555,21 +556,23 @@
 </ul>
 
 <h2 id="mission-script-files-pre-path">Mission Script Files (Pre-Path)<a class="headerlink" href="#mission-script-files-pre-path" title="Permanent link"></a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Work in Progress, please scroll down on left side for the time being!</p>
-</div>
-
+<ol>
+<li><a href="missions/pdb">Paradise Bridge <code>PDB</code></a></li>
+<li><a href="missions/pw">Porn World <code>PW</code></a></li>
+<li><a href="missions/dcr">Diseased Cat Roundup <code>DCR</code></a></li>
+<li><a href="missions/jwb">Jen Walcotts Bodyguard <code>JWB</code></a></li>
+<li><a href="missions/cm">Cash Mart Robbery <code>CM</code></a></li>
+</ol>
 <h2 id="mission-script-files-good-path">Mission Script Files (Good Path)<a class="headerlink" href="#mission-script-files-good-path" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Work in Progress, please scroll down on left side for the time being!</p>
+<p>Work in Progress</p>
 </div>
 
 <h2 id="mission-script-files-evil-path">Mission Script Files (Evil Path)<a class="headerlink" href="#mission-script-files-evil-path" title="Permanent link"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Work in Progress, please scroll down on left side for the time being!</p>
+<p>Work in Progress</p>
 </div>
               
             </div>
@@ -582,7 +585,7 @@
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>Written by Kizoky and Pseudonym_Tim <br>© WhackJob Interactive 2022-2023<br>ㅤ</p>
+      <p>Written by Kizoky, Pseudonym_Tim and contributors <br>© WhackJob Interactive 2022-2024<br>ㅤ</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
