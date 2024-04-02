@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/angelscript/datatypes/array/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>array (native) - AngelScript Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "array (native)";
+        var mkdocs_page_input_path = "datatypes\\array.md";
+        var mkdocs_page_url = "/angelscript/datatypes/array/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> AngelScript Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">AngelScript</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../usage/">Using AngelScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flags/">Flags/Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../serialization/">Serialization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../casting/">Casting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../syntaxhighlight/">Syntax Highlighter</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/delaying/">Delaying</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/contextcreation/">Creating Contexts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/repeating/">Repeating</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/asinp3s/">Calling AngelScript in Postal3Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/cache/">Cache</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/scriptclass/">Getting Script Classes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Code Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../example/areaevent/">Ported AreaEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../example/mapchecking/">Map Checking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../example/stimuli/">Stimuli</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../example/database/">Database</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Enums</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../enums/hintignorefacing_t/">HintIgnoreFacing_t</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../enums/npc_state/">NPC_STATE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Datatypes</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../vector/">Vector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qangle/">QAngle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../angularimpulse/">AngularImpulse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string/">string (native)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string_t/">string_t</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">array (native)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#methods-wj">Methods (WJ)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods-native">Methods (native)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#declaration">Declaration</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Objects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/ammo_t/">Ammo_t@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cammodef/">CAmmoDef@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cbaseentity/">CBaseEntity@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cgameevent/">CGameEvent@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/convar/">ConVar@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cp3sobj/">CP3SObj@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cp3weapon/">CP3Weapon@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cparticlesystem/">CParticleSystem@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cphysobj/">CPhysObj@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/csoundpatch/">CSoundPatch@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/ctakedamageinfo/">CTakeDamageInfo@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/cwpndata/">CWPNData@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/ehandle/">EHANDLE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/hintnodedata/">HintNodeData@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../objects/keyvalues/">KeyValues@</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Global Variables</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalvars/engine/">CAngelScriptVM engine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalvars/gameeventmanager/">IGameEventManager gameeventmanager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalvars/gpglobals/">CGlobalVars gpGlobals</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../dontclick">const Vector vec3_origin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../dontclick">const QAngle vec3_angle</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interfaces/ipostal3script/">IPostal3Script</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Global Functions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Wait/">void Wait(double flTime, int iHandle = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetContextOwner/">CP3SObj@ GetContextOwner()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetContextCaller/">CP3SObj@ GetContextCaller()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateContext/">void CreateContext(string&in func, ?&in var = null, ?&in var2 = null, ?&in var3 = null, ?&in var4 = null, ?&in var5 = null, ?&in var6 = null, ?&in var7 = null, ?&in var8 = null, ?&in var9 = null, ?&in var10 = null, ?&in var11 = null, ?&in var12 = null, ?&in var13 = null, ?&in var14 = null, ?&in var15 = null)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateContextClass/">void CreateContextClass(string&in sclass, string&in func, ?&in var2 = null, ?&in var3 = null, ?&in var4 = null, ?&in var5 = null, ?&in var6 = null, ?&in var7 = null, ?&in var8 = null, ?&in var9 = null, ?&in var10 = null, ?&in var11 = null, ?&in var12 = null, ?&in var13 = null, ?&in var14 = null, ?&in var15 = null)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetPlayer/">CP3SObj@ GetPlayer()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/formatInt/">string formatInt(int64 val, const string&in options = "", uint width = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/formatFloat/">string formatFloat(double val, const string&in options = "", uint width = 0, uint precision = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/formatUInt/">string formatUInt(uint64 val, const string&in options = "", uint width = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/parseInt/">int64 parseInt(const string&in, uint base = 10, uint&out byteCount = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/parseUInt/">uint64 parseUInt(const string&in, uint base = 10, uint&out byteCount = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/parseFloat/">double parseFloat(const string&in, uint&out byteCount = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/FindEntByName/">CBaseEntity@ FindEntByName(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/FindEntsByName/">CBaseEntity@[]& FindEntsByName(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetEntById/">CP3SObj@ GetEntById(int id)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetAmmoDef/">CAmmoDef@ GetAmmoDef()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetCrosshair/">CP3SObj@ GetCrosshair(CP3SObj@ pPlayer, Vector&inout endpos)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetAmmoIndex/">int GetAmmoIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetScriptObj/">IPostal3Script@ GetScriptObj(string&in className, CP3SObj@ pOwner)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetAmmoMaxCarry/">int GetAmmoMaxCarry(int ammoIndex)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateEnt/">CBaseEntity@ CreateEnt(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Spawn/">void Spawn(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateTakeDamageInfo/">CTakeDamageInfo@ CreateTakeDamageInfo()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/RandomInt/">int RandomInt(int min, int max)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/RandomFloat/">double RandomFloat(double min, double max)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateSound/">CSoundPatch@ CreateSound(CBaseEntity@ owner, string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/DestroySound/">void DestroySound(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PlaySound/">void PlaySound(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/FadeOutSound/">void FadeOutSound(CSoundPatch@ sound, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/StopSound/">void StopSound(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/FadeInSound/">void FadeInSound(CSoundPatch@ sound, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/IsSoundPlaying/">bool IsSoundPlaying(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ChangeSoundVolume/">void ChangeSoundVolume(CSoundPatch@ sound, double flVolume, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/SetSoundVolume/">void SetSoundVolume(CSoundPatch@ sound, double flVolume)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateEffectAttachment/">CParticleSystem@ CreateEffectAttachment(CBaseEntity@ owner, string&in effect, int attachment, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateEffect/">CParticleSystem@ CreateEffect(CBaseEntity@ owner, string&in effect, Vector&inout pos, QAngle&inout ang, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheModel/">void PrecacheModel(string&in model)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheSound/">void PrecacheSound(string&in sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheScriptSound/">void PrecacheScriptSound(string&in scriptsound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheClass/">void PrecacheClass(string&in sclass)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ListenForGameEvent/">void ListenForGameEvent(const string&in event)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheMaterial/">void PrecacheMaterial(string&in material)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/StopListeningForGameEvents/">void StopListeningForGameEvents()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheParticleSystem/">void PrecacheParticleSystem(string&in particle)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheDecal/">void PrecacheDecal(string&in decal)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateCVar/">ConVar@ CreateCVar(const string&in name, const string&in defValue = "", int flags = 0, const string&in help = "", bool callback = false, bool reset = false)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/PrecacheClassModel/">void PrecacheClassModel(string&in sclass, string&in model)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/FindCVar/">ConVar@ FindCVar(const string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/AddToSensible/">void AddToSensible(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetCVarInt/">int GetCVarInt(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Remove/">void Remove(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetCVarFloat/">double GetCVarFloat(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/RemoveEnt/">void RemoveEnt(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetCVarBool/">bool GetCVarBool(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CanSeeSpot/">bool CanSeeSpot(CP3SObj@ ent, Vector pos, bool bViewCone = false)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetCVarString/">string GetCVarString(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Teleport/">void Teleport(CBaseEntity@ ent, Vector pos)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/InstallCVarCallback/">void InstallCVarCallback(const string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateHint/">CBaseEntity@ CreateHint()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/AddHintToList/">void AddHintToList(CAI_Hint@ hint, bool bDebug = false)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ValidateHints/">void ValidateHints()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/StringToInt/">int StringToInt(string&in str)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/StringToVector/">void StringToVector(Vector&inout vec, string&in str)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ToCBaseEntity/">CBaseEntity@ ToCBaseEntity(?&in var)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetTemplateData/">string[]& GetTemplateData(string&in iszTemplateName)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetTemplateDataRandom/">string GetTemplateDataRandom(string&in iszTemplateName)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ParseEntity/">CBaseEntity@ ParseEntity(string&in pEntData)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/AngleVectors/">void AngleVectors(QAngle ang, Vector&inout forward, Vector&inout right, Vector&inout up)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/VectorNormalize/">double VectorNormalize(Vector&inout vec)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/DotProduct/">double DotProduct(Vector vec1, Vector vec2)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetP3SMannerIndex/">int GetP3SMannerIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetP3SVar/">double GetP3SVar(string&in conststr)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetP3SItemTypeIndex/">int GetP3SItemTypeIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/HasP3SVar/">bool HasP3SVar(string&in conststr)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetLocalTime/">int GetLocalTime(int flag)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/GetP3SFactionIndex/">int GetP3SFactionIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ShowMessage/">void ShowMessage(string&in msg, string&in channel)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/FadeScreen/">void FadeScreen(int r, int g, int b, int alpha, double fadeTime, double holdTime, int flags)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/SetState/">int SetState(CP3SObj@ ent, string&in state, string&in pattern)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/UnicodeToANSI/">string UnicodeToANSI(string&in unicode, bool bCleanup = true)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/DropToFloor/">int DropToFloor(CBaseEntity@ pEntity, uint mask, CBaseEntity@ pIgnore = null)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/CreateKeyValues/">KeyValues@ CreateKeyValues(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/InitString/">string InitString(string&in str = "")</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Bitwise_AND/">bool Bitwise_AND(int org, int check)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Printf/">void Printf(string&in msg, ?&in var = 0, ?&in var2 = 0, ?&in var3 = 0, ?&in var4 = 0, ?&in var5 = 0, ?&in var6 = 0, ?&in var7 = 0, ?&in var8 = 0, ?&in var9 = 0, ?&in var10 = 0, ?&in var11 = 0, ?&in var12 = 0, ?&in var13 = 0, ?&in var14 = 0, ?&in var15 = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/Warning/">void Warning(string&in msg, ?&in var = 0, ?&in var2 = 0, ?&in var3 = 0, ?&in var4 = 0, ?&in var5 = 0, ?&in var6 = 0, ?&in var7 = 0, ?&in var8 = 0, ?&in var9 = 0, ?&in var10 = 0, ?&in var11 = 0, ?&in var12 = 0, ?&in var13 = 0, ?&in var14 = 0, ?&in var15 = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/DebugOverlay_Box/">void DebugOverlay_Box(const Vector&in origin, const Vector&in mins, const Vector&in maxs, int r, int g, int b, int a, double flDuration)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/DebugOverlay_BoxAngles/">void DebugOverlay_BoxAngles(const Vector&in origin, const Vector&in mins, const Vector&in maxs, const QAngle&in angles, int r, int g, int b, int a, double flDuration)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalfuncs/ToggleFSMOverlay/">void ToggleFSMOverlay(CBaseEntity@ ent)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">AngelScript Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Datatypes</li>
+      <li class="breadcrumb-item active">array (native)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="array-native">array (native)<a class="headerlink" href="#array-native" title="Permanent link"></a></h1>
+<hr />
+<h2 id="methods-wj">Methods (WJ)<a class="headerlink" href="#methods-wj" title="Permanent link"></a></h2>
+<ul>
+<li><code>T random()</code> -- Gets a random element from the array.</li>
+</ul>
+<h2 id="methods-native">Methods (native)<a class="headerlink" href="#methods-native" title="Permanent link"></a></h2>
+<ul>
+<li><code>uint length() const</code> -- Returns the length of the array.</li>
+<li><code>void resize(uint)</code> -- Sets the new length of the array.</li>
+<li><code>void reverse()</code> -- Reverses the order of the elements in the array.</li>
+<li><code>void insertAt(uint index, const T&amp; in value)</code></li>
+<li><code>void insertAt(uint index, const array&lt;T&gt;&amp; arr)</code> -- Inserts a new element, or another array of elements, into the array at the specified index.</li>
+<li><code>void insertLast(const T&amp; in)</code> -- Appends an element at the end of the array.</li>
+<li><code>void removeAt(uint index)</code> -- Removes the element at the specified index.</li>
+<li><code>void removeLast()</code> -- Removes the last element of the array.</li>
+<li><code>void removeRange(uint start, uint count)</code> -- Removes count elements starting from start.</li>
+<li><code>void sortAsc()</code></li>
+<li><code>void sortAsc(uint startAt, uint count)</code> -- Sorts the elements in the array in ascending order. For object types, this will use the type's opCmp method.<br />
+The second variant will sort only the elements starting at index startAt and the following count elements.</li>
+<li><code>void sortDesc()</code></li>
+<li><code>void sortDesc(uint startAt, uint count)</code> -- These does the same thing as sortAsc except sorts the elements in descending order.</li>
+<li><code>void sort(const less &amp;in compareFunc, uint startAt = 0, uint count = uint(-1))</code> -- This method takes as input a callback function to use for comparing two elements when sorting the array.</li>
+<li><code>int find(const T&amp; in)</code></li>
+<li><code>int find(uint startAt, const T&amp; in)</code> -- These will return the index of the first element that has the same value as the wanted value.</li>
+<li><code>int findByRef(const T&amp; in)</code></li>
+<li><code>int findByRef(uint startAt, const T&amp; in)</code> -- These will search for a matching address. These are especially useful for arrays of handles where specific instances of objects are desired, and not just objects that happen to have equal value. If no match is found the methods will return a negative value.</li>
+<li><code>uint size() const</code></li>
+<li><code>bool empty() const</code></li>
+<li><code>void push_back(const T&amp;in)</code></li>
+<li><code>void pop_back()</code></li>
+<li><code>void insert(uint index, const T&amp;in value)</code></li>
+<li><code>void insert(uint index, const array&lt;T&gt;&amp; arr)</code></li>
+<li><code>void erase(uint)</code></li>
+<li><code>void reserve(uint length)</code></li>
+</ul>
+<hr />
+<h2 id="declaration">Declaration<a class="headerlink" href="#declaration" title="Permanent link"></a></h2>
+<pre><code class="language-c">array&lt;int&gt; a;
+array&lt;string&gt; s;
+array&lt;CBaseEntity@&gt; ents;
+array&lt;MyClassName@&gt; cn;
+array&lt;int&gt; a, b, c;
+array&lt;Foo@&gt; d;
+array&lt;int&gt; a;                               // A zero-length array of integers
+array&lt;int&gt; b(3);                            // An array of integers with 3 elements
+array&lt;int&gt; c(3, 1);                         // An array of integers with 3 elements, all set to 1 by default
+array&lt;int&gt; d = {5,6,7};                     // An array of integers with 3 elements with specific values
+array&lt;array&lt;int&gt;&gt; a;                        // An empty array of arrays of integers
+array&lt;array&lt;int&gt;&gt; b = {{1,2},{3,4}}         // A 2 by 2 array with initialized values
+array&lt;array&lt;int&gt;&gt; c(10, array&lt;int&gt;(10));    // A 10 by 10 array of integers with uninitialized values
+</code></pre>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../string_t/" class="btn btn-neutral float-left" title="string_t"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../objects/ammo_t/" class="btn btn-neutral float-right" title="Ammo_t@">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Written by Kizoky <br>© WhackJob Interactive 2023-2024<br>ㅤ</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../string_t/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../objects/ammo_t/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/angelscript/flags/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Flags/Enums - AngelScript Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Flags/Enums";
+        var mkdocs_page_input_path = "flags.md";
+        var mkdocs_page_url = "/angelscript/flags/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AngelScript Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">AngelScript</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../usage/">Using AngelScript</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Flags/Enums</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getcurloadtype">GetCurLoadType</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wait">Wait</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#relationship">Relationship</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#weapon-id">Weapon ID</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#weapon-type">Weapon Type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#say">Say</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sequence">Sequence</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inventory">Inventory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#movement-type">Movement Type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#face-type">Face Type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#move-to-target">Move To Target</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#local-time">Local Time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fade-flags">Fade Flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sub-flags">Sub Flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#collision-groups">Collision Groups</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#solid-flags">Solid Flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#solid-types">Solid types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entity-effects">Entity Effects</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cvar-flags">Cvar flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#take-damage-flags">Take damage flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entity-flags">Entity Flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bsp-flags">BSP Flags</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spawn-flags">Spawn flags</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../serialization/">Serialization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../casting/">Casting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlight/">Syntax Highlighter</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials/delaying/">Delaying</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials/contextcreation/">Creating Contexts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials/repeating/">Repeating</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials/asinp3s/">Calling AngelScript in Postal3Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials/cache/">Cache</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials/scriptclass/">Getting Script Classes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Code Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/areaevent/">Ported AreaEvent</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/mapchecking/">Map Checking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/stimuli/">Stimuli</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/database/">Database</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Enums</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../enums/hintignorefacing_t/">HintIgnoreFacing_t</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../enums/npc_state/">NPC_STATE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Datatypes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../datatypes/vector/">Vector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datatypes/qangle/">QAngle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datatypes/angularimpulse/">AngularImpulse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datatypes/string/">string (native)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datatypes/string_t/">string_t</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datatypes/array/">array (native)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Objects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/ammo_t/">Ammo_t@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cammodef/">CAmmoDef@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cbaseentity/">CBaseEntity@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cgameevent/">CGameEvent@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/convar/">ConVar@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cp3sobj/">CP3SObj@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cp3weapon/">CP3Weapon@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cparticlesystem/">CParticleSystem@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cphysobj/">CPhysObj@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/csoundpatch/">CSoundPatch@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/ctakedamageinfo/">CTakeDamageInfo@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/cwpndata/">CWPNData@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/ehandle/">EHANDLE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/hintnodedata/">HintNodeData@</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../objects/keyvalues/">KeyValues@</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Global Variables</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalvars/engine/">CAngelScriptVM engine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalvars/gameeventmanager/">IGameEventManager gameeventmanager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalvars/gpglobals/">CGlobalVars gpGlobals</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../dontclick">const Vector vec3_origin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../dontclick">const QAngle vec3_angle</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../interfaces/ipostal3script/">IPostal3Script</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Global Functions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Wait/">void Wait(double flTime, int iHandle = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetContextOwner/">CP3SObj@ GetContextOwner()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetContextCaller/">CP3SObj@ GetContextCaller()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateContext/">void CreateContext(string&in func, ?&in var = null, ?&in var2 = null, ?&in var3 = null, ?&in var4 = null, ?&in var5 = null, ?&in var6 = null, ?&in var7 = null, ?&in var8 = null, ?&in var9 = null, ?&in var10 = null, ?&in var11 = null, ?&in var12 = null, ?&in var13 = null, ?&in var14 = null, ?&in var15 = null)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateContextClass/">void CreateContextClass(string&in sclass, string&in func, ?&in var2 = null, ?&in var3 = null, ?&in var4 = null, ?&in var5 = null, ?&in var6 = null, ?&in var7 = null, ?&in var8 = null, ?&in var9 = null, ?&in var10 = null, ?&in var11 = null, ?&in var12 = null, ?&in var13 = null, ?&in var14 = null, ?&in var15 = null)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetPlayer/">CP3SObj@ GetPlayer()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/formatInt/">string formatInt(int64 val, const string&in options = "", uint width = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/formatFloat/">string formatFloat(double val, const string&in options = "", uint width = 0, uint precision = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/formatUInt/">string formatUInt(uint64 val, const string&in options = "", uint width = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/parseInt/">int64 parseInt(const string&in, uint base = 10, uint&out byteCount = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/parseUInt/">uint64 parseUInt(const string&in, uint base = 10, uint&out byteCount = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/parseFloat/">double parseFloat(const string&in, uint&out byteCount = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/FindEntByName/">CBaseEntity@ FindEntByName(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/FindEntsByName/">CBaseEntity@[]& FindEntsByName(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetEntById/">CP3SObj@ GetEntById(int id)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetAmmoDef/">CAmmoDef@ GetAmmoDef()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetCrosshair/">CP3SObj@ GetCrosshair(CP3SObj@ pPlayer, Vector&inout endpos)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetAmmoIndex/">int GetAmmoIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetScriptObj/">IPostal3Script@ GetScriptObj(string&in className, CP3SObj@ pOwner)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetAmmoMaxCarry/">int GetAmmoMaxCarry(int ammoIndex)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateEnt/">CBaseEntity@ CreateEnt(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Spawn/">void Spawn(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateTakeDamageInfo/">CTakeDamageInfo@ CreateTakeDamageInfo()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/RandomInt/">int RandomInt(int min, int max)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/RandomFloat/">double RandomFloat(double min, double max)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateSound/">CSoundPatch@ CreateSound(CBaseEntity@ owner, string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/DestroySound/">void DestroySound(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PlaySound/">void PlaySound(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/FadeOutSound/">void FadeOutSound(CSoundPatch@ sound, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/StopSound/">void StopSound(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/FadeInSound/">void FadeInSound(CSoundPatch@ sound, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/IsSoundPlaying/">bool IsSoundPlaying(CSoundPatch@ sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ChangeSoundVolume/">void ChangeSoundVolume(CSoundPatch@ sound, double flVolume, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/SetSoundVolume/">void SetSoundVolume(CSoundPatch@ sound, double flVolume)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateEffectAttachment/">CParticleSystem@ CreateEffectAttachment(CBaseEntity@ owner, string&in effect, int attachment, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateEffect/">CParticleSystem@ CreateEffect(CBaseEntity@ owner, string&in effect, Vector&inout pos, QAngle&inout ang, double flTime)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheModel/">void PrecacheModel(string&in model)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheSound/">void PrecacheSound(string&in sound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheScriptSound/">void PrecacheScriptSound(string&in scriptsound)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheClass/">void PrecacheClass(string&in sclass)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ListenForGameEvent/">void ListenForGameEvent(const string&in event)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheMaterial/">void PrecacheMaterial(string&in material)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/StopListeningForGameEvents/">void StopListeningForGameEvents()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheParticleSystem/">void PrecacheParticleSystem(string&in particle)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheDecal/">void PrecacheDecal(string&in decal)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateCVar/">ConVar@ CreateCVar(const string&in name, const string&in defValue = "", int flags = 0, const string&in help = "", bool callback = false, bool reset = false)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/PrecacheClassModel/">void PrecacheClassModel(string&in sclass, string&in model)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/FindCVar/">ConVar@ FindCVar(const string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/AddToSensible/">void AddToSensible(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetCVarInt/">int GetCVarInt(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Remove/">void Remove(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetCVarFloat/">double GetCVarFloat(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/RemoveEnt/">void RemoveEnt(CBaseEntity@ ent)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetCVarBool/">bool GetCVarBool(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CanSeeSpot/">bool CanSeeSpot(CP3SObj@ ent, Vector pos, bool bViewCone = false)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetCVarString/">string GetCVarString(const string&in cvar)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Teleport/">void Teleport(CBaseEntity@ ent, Vector pos)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/InstallCVarCallback/">void InstallCVarCallback(const string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateHint/">CBaseEntity@ CreateHint()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/AddHintToList/">void AddHintToList(CAI_Hint@ hint, bool bDebug = false)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ValidateHints/">void ValidateHints()</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/StringToInt/">int StringToInt(string&in str)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/StringToVector/">void StringToVector(Vector&inout vec, string&in str)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ToCBaseEntity/">CBaseEntity@ ToCBaseEntity(?&in var)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetTemplateData/">string[]& GetTemplateData(string&in iszTemplateName)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetTemplateDataRandom/">string GetTemplateDataRandom(string&in iszTemplateName)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ParseEntity/">CBaseEntity@ ParseEntity(string&in pEntData)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/AngleVectors/">void AngleVectors(QAngle ang, Vector&inout forward, Vector&inout right, Vector&inout up)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/VectorNormalize/">double VectorNormalize(Vector&inout vec)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/DotProduct/">double DotProduct(Vector vec1, Vector vec2)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetP3SMannerIndex/">int GetP3SMannerIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetP3SVar/">double GetP3SVar(string&in conststr)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetP3SItemTypeIndex/">int GetP3SItemTypeIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/HasP3SVar/">bool HasP3SVar(string&in conststr)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetLocalTime/">int GetLocalTime(int flag)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/GetP3SFactionIndex/">int GetP3SFactionIndex(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ShowMessage/">void ShowMessage(string&in msg, string&in channel)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/FadeScreen/">void FadeScreen(int r, int g, int b, int alpha, double fadeTime, double holdTime, int flags)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/SetState/">int SetState(CP3SObj@ ent, string&in state, string&in pattern)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/UnicodeToANSI/">string UnicodeToANSI(string&in unicode, bool bCleanup = true)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/DropToFloor/">int DropToFloor(CBaseEntity@ pEntity, uint mask, CBaseEntity@ pIgnore = null)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/CreateKeyValues/">KeyValues@ CreateKeyValues(string&in name)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/InitString/">string InitString(string&in str = "")</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Bitwise_AND/">bool Bitwise_AND(int org, int check)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Printf/">void Printf(string&in msg, ?&in var = 0, ?&in var2 = 0, ?&in var3 = 0, ?&in var4 = 0, ?&in var5 = 0, ?&in var6 = 0, ?&in var7 = 0, ?&in var8 = 0, ?&in var9 = 0, ?&in var10 = 0, ?&in var11 = 0, ?&in var12 = 0, ?&in var13 = 0, ?&in var14 = 0, ?&in var15 = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/Warning/">void Warning(string&in msg, ?&in var = 0, ?&in var2 = 0, ?&in var3 = 0, ?&in var4 = 0, ?&in var5 = 0, ?&in var6 = 0, ?&in var7 = 0, ?&in var8 = 0, ?&in var9 = 0, ?&in var10 = 0, ?&in var11 = 0, ?&in var12 = 0, ?&in var13 = 0, ?&in var14 = 0, ?&in var15 = 0)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/DebugOverlay_Box/">void DebugOverlay_Box(const Vector&in origin, const Vector&in mins, const Vector&in maxs, int r, int g, int b, int a, double flDuration)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/DebugOverlay_BoxAngles/">void DebugOverlay_BoxAngles(const Vector&in origin, const Vector&in mins, const Vector&in maxs, const QAngle&in angles, int r, int g, int b, int a, double flDuration)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../globalfuncs/ToggleFSMOverlay/">void ToggleFSMOverlay(CBaseEntity@ ent)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AngelScript Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">AngelScript</li>
+      <li class="breadcrumb-item active">Flags/Enums</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="flagsenums">Flags/Enums<a class="headerlink" href="#flagsenums" title="Permanent link"></a></h1>
+<p>Flags/Enums to use with functions.</p>
+<div class="admonition note note">
+<p class="admonition-title">Note</p>
+<p>Some of these enums will be hardcoded onto AngelScript in the future</p>
+</div>
+<hr />
+<h2 id="getcurloadtype">GetCurLoadType<a class="headerlink" href="#getcurloadtype" title="Permanent link"></a></h2>
+<pre><code>shared enum MapLoadType_t
+{
+    MapLoad_NewGame = 0,
+    MapLoad_LoadGame,
+    MapLoad_Transition,
+    MapLoad_Background
+}
+</code></pre>
+<h2 id="wait">Wait<a class="headerlink" href="#wait" title="Permanent link"></a></h2>
+<pre><code>shared enum WaitHandle_t
+{
+    WH_NOTHING              = 0,    // Nothing, context executes like normal (AngelScript defaults to this)
+    WH_ABORT_MAPNAME        = 1,    // Context will abort if map name doesn't match before execution
+    WH_ABORT_LEVELCHANGE    = 2,    // Context will immediately abort if a level change was detected
+    WH_ABORT_SAVEGAME       = 4,    // Context will immediately abort if game was loaded via a save file
+    WH_ABORT_INVALIDOWNER   = 8,    // Context will abort if Owner is invalid/garbage before execution
+    WH_FREEZE_MAPNAME       = 16    // Context will be forever frozen until Player reenters the same level
+}
+</code></pre>
+<h2 id="relationship">Relationship<a class="headerlink" href="#relationship" title="Permanent link"></a></h2>
+<pre><code>shared enum Disposition_t
+{
+    D_ER,       // Undefined - error
+    D_HT,       // Hate
+    D_FR,       // Fear
+    D_LI,       // Like
+    D_NU        // Neutral
+}
+</code></pre>
+<h2 id="weapon-id">Weapon ID<a class="headerlink" href="#weapon-id" title="Permanent link"></a></h2>
+<pre><code>shared enum WeaponID_t
+{
+    P3_WEAPON_WRONG = -1,
+    P3_WEAPON_DISABLED = 0,
+
+    P3_WEAPON_EMPTYHANDS        = 1,
+    P3_WEAPON_WOLVERINE         = 2,
+    P3_WEAPON_NAILBAT           = 3,
+    P3_WEAPON_GRENADE           = 4,
+    P3_WEAPON_DESERT_EAGLE      = 5,
+    P3_WEAPON_TASER             = 6,
+    P3_WEAPON_SHOTGUN           = 7, // auto shotgun
+    P3_WEAPON_M60               = 8,
+    P3_WEAPON_M16               = 9,
+    P3_WEAPON_CAT               = 10,
+    P3_WEAPON_MACHETE           = 11,
+    P3_WEAPON_SHOVEL            = 12,
+    P3_WEAPON_MOLOTOV           = 13,
+    P3_WEAPON_GASOLINE          = 14,
+    P3_WEAPON_CATNIP            = 15,
+    P3_WEAPON_BANNER            = 16,
+    P3_WEAPON_BEENEST           = 17,
+    P3_WEAPON_COP_BATON         = 18,
+    P3_WEAPON_KROTCHY_GRENADE   = 19,
+    P3_WEAPON_HAMMER            = 20,
+    P3_WEAPON_LASERPEN          = 21,
+    P3_WEAPON_MATCH             = 22,
+    P3_WEAPON_MAXEL_SNIPER      = 23, // doesn't exist
+    P3_WEAPON_METABULKY         = 24, // unused
+    P3_WEAPON_METAONEHANDLED    = 25,
+    P3_WEAPON_METATWOHANDLED    = 26, // unused
+    P3_WEAPON_MONKEY            = 27,
+    P3_WEAPON_PHOTOCAM          = 28,
+    P3_WEAPON_SEED              = 29, // unused
+    P3_WEAPON_SHOPVAC           = 30,
+    P3_WEAPON_SPRAY             = 31,
+    P3_WEAPON_TVCAM             = 32,
+    P3_WEAPON_WEEMOTE           = 33,
+    P3_WEAPON_M136              = 34,
+    P3_WEAPON_FIREAXE           = 35,
+    P3_WEAPON_GAMAMET           = 36,
+
+    P3_WEAPON_COUNT
+};
+</code></pre>
+<h2 id="weapon-type">Weapon Type<a class="headerlink" href="#weapon-type" title="Permanent link"></a></h2>
+<pre><code>shared enum WeaponType_t
+{
+    WPN_TYPE_FLESH = -1,
+    WPN_TYPE_NONE = 0,
+    WPN_TYPE_ANIMAL,
+    WPN_TYPE_GADGET,
+    WPN_TYPE_NONLETHAL_MELEE,
+    WPN_TYPE_NONLETHAL_RANGED,
+    WPN_TYPE_MELEE,
+    WPN_TYPE_RANGED,
+    WPN_TYPE_BIGGUN,
+
+    WPN_TYPE_SIZE
+};
+</code></pre>
+<h2 id="say">Say<a class="headerlink" href="#say" title="Permanent link"></a></h2>
+<pre><code>shared enum SentencePriority_t
+{
+    SENTENCE_PRIORITY_INVALID = -1,
+    SENTENCE_PRIORITY_NORMAL = 0,
+    SENTENCE_PRIORITY_MEDIUM = 1,
+    SENTENCE_PRIORITY_HIGH = 2
+};
+</code></pre>
+<h2 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link"></a></h2>
+<pre><code>shared enum Sequence_t
+{
+    SEQUENCE_NONE = 0,
+    SEQUENCE_AIM = 1,
+    SEQUENCE_NO_ACTION_CHECK = 2
+};
+</code></pre>
+<h2 id="inventory">Inventory<a class="headerlink" href="#inventory" title="Permanent link"></a></h2>
+<pre><code>shared enum Inventory_t
+{
+    INV_SELECT = 0,
+    INV_EQUIP = 1,
+    INV_ADD = 2,
+    INV_REMOVE = 3
+};
+</code></pre>
+<h2 id="movement-type">Movement Type<a class="headerlink" href="#movement-type" title="Permanent link"></a></h2>
+<pre><code>shared enum P3AI_MovementType_t
+{
+    AIMT_CURRENT,
+    AIMT_WALK,
+    AIMT_RUN,
+    AIMT_MIX,
+    AIMT_FLY,
+    AIMT_RANDOM,
+    AIMT_OFF,
+    AIMT_TELEPORT
+};
+</code></pre>
+<h2 id="face-type">Face Type<a class="headerlink" href="#face-type" title="Permanent link"></a></h2>
+<pre><code>shared enum P3AI_FaceType_t
+{
+    AIFT_FACE_NONE,
+    AIFT_FACE_TO_TARGET,
+    AIFT_FACE_FROM_TARGET,
+    AIFT_FACE_AS_TARGET
+};
+</code></pre>
+<h2 id="move-to-target">Move To Target<a class="headerlink" href="#move-to-target" title="Permanent link"></a></h2>
+<pre><code>shared enum P3AI_MoveToTarget_Flags
+{
+    AIMTF_NONE                  = 0x0000,
+    AIMTF_ACCURATE_POSITIONING  = 0x0001
+};
+</code></pre>
+<h2 id="local-time">Local Time<a class="headerlink" href="#local-time" title="Permanent link"></a></h2>
+<pre><code>shared enum LocalTime_t
+{
+    LT_YEAR = 0,        // Local year
+    LT_MONTH,           // Local month
+    LT_DAY,             // Local day
+    LT_HOURS,           // Local hours
+    LT_MINUTES,         // Local minutes
+    LT_SECONDS,         // Local seconds
+    LT_DAYS_JANUARY,    // Days since January (0,365)
+    LT_DAYS,SUNDAY,     // Days since Sunday (0,6)
+    LT_FLAG             // daylight savings time flag
+};
+</code></pre>
+<h2 id="fade-flags">Fade Flags<a class="headerlink" href="#fade-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum FadeFlags_t
+{
+    FFADE_IN = 0x0001,
+    FFADE_OUT = 0x0002,
+    FFADE_MODULATE = 0x0004,
+    FFADE_STAYOUT = 0x0008,
+    FFADE_PURGE = 0x0010
+};
+</code></pre>
+<h2 id="sub-flags">Sub Flags<a class="headerlink" href="#sub-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum SubFlags_t
+{
+    SUB_Remove = 0,
+    SUB_DoNothing,
+    SUB_StartFadeOut,
+    SUB_FadeOut,
+    SUB_Vanish,
+    SUB_CallUseToggle,
+    SUB_PerformFadeOut
+};
+</code></pre>
+<h2 id="collision-groups">Collision Groups<a class="headerlink" href="#collision-groups" title="Permanent link"></a></h2>
+<pre><code>shared enum Collision_Group_t
+{
+    COLLISION_GROUP_NONE  = 0,
+    COLLISION_GROUP_DEBRIS,             // Collides with nothing but world and static stuff
+    COLLISION_GROUP_DEBRIS_TRIGGER,     // Same as debris, but hits triggers
+    COLLISION_GROUP_INTERACTIVE_DEBRIS, // Collides with everything except other interactive debris or debris
+    COLLISION_GROUP_INTERACTIVE,        // Collides with everything except interactive debris or debris
+    COLLISION_GROUP_PLAYER,
+    COLLISION_GROUP_BREAKABLE_GLASS,
+    COLLISION_GROUP_VEHICLE,
+    COLLISION_GROUP_PLAYER_MOVEMENT,    // For HL2, same as Collision_Group_Player, for
+                                        // TF2, this filters out other players and CBaseObjects
+    COLLISION_GROUP_NPC,                // Generic NPC group
+    COLLISION_GROUP_IN_VEHICLE,         // for any entity inside a vehicle
+    COLLISION_GROUP_WEAPON,             // for any weapons that need collision detection
+    COLLISION_GROUP_VEHICLE_CLIP,       // vehicle clip brush to restrict vehicle movement
+    COLLISION_GROUP_PROJECTILE,         // Projectiles!
+    COLLISION_GROUP_DOOR_BLOCKER,       // Blocks entities not permitted to get near moving doors
+    COLLISION_GROUP_PASSABLE_DOOR,      // Doors that the player shouldn't collide with
+    COLLISION_GROUP_DISSOLVING,         // Things that are dissolving are in this group
+    COLLISION_GROUP_PUSHAWAY,           // Nonsolid on client and server, pushaway in player code
+
+    COLLISION_GROUP_NPC_ACTOR,          // Used so NPCs in scripts ignore the player.
+    COLLISION_GROUP_NPC_SCRIPTED,       // USed for NPCs in scripts that should not collide with each other
+
+    COLLISION_GROUP_AREAGROUP_VOLUME,
+
+    COLLISION_GROUP_RAGDOLL,            // Collides with everything except NPC, player and vehicle
+    COLLISION_GROUP_BREAKABLE_BY_VEHICLE,
+    COLLISION_GROUP_NOTHING,
+
+    LAST_SHARED_COLLISION_GROUP
+};
+</code></pre>
+<h2 id="solid-flags">Solid Flags<a class="headerlink" href="#solid-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum SolidFlags_t
+{
+    FSOLID_CUSTOMRAYTEST        = 0x0001,   // Ignore solid type + always call into the entity for ray tests
+    FSOLID_CUSTOMBOXTEST        = 0x0002,   // Ignore solid type + always call into the entity for swept box tests
+    FSOLID_NOT_SOLID            = 0x0004,   // Are we currently not solid?
+    FSOLID_TRIGGER              = 0x0008,   // This is something may be collideable but fires touch functions
+                                            // even when it's not collideable (when the FSOLID_NOT_SOLID flag is set)
+    FSOLID_NOT_STANDABLE        = 0x0010,   // You can't stand on this
+    FSOLID_VOLUME_CONTENTS      = 0x0020,   // Contains volumetric contents (like water)
+    FSOLID_FORCE_WORLD_ALIGNED  = 0x0040,   // Forces the collision rep to be world-aligned even if it's SOLID_BSP or SOLID_VPHYSICS
+    FSOLID_USE_TRIGGER_BOUNDS   = 0x0080,   // Uses a special trigger bounds separate from the normal OBB
+    FSOLID_ROOT_PARENT_ALIGNED  = 0x0100,   // Collisions are defined in root parent's local coordinate space
+    FSOLID_TRIGGER_TOUCH_DEBRIS = 0x0200,   // This trigger will touch debris objects
+    FSOLID_PROHIBITED_AREA      = 0x0400,   // Prohibited areas
+
+    FSOLID_MAX_BITS = 11
+};
+</code></pre>
+<h2 id="solid-types">Solid types<a class="headerlink" href="#solid-types" title="Permanent link"></a></h2>
+<pre><code>shared enum SolidType_t
+{
+    SOLID_NONE          = 0,    // no solid model
+    SOLID_BSP           = 1,    // a BSP tree
+    SOLID_BBOX          = 2,    // an AABB
+    SOLID_OBB           = 3,    // an OBB (not implemented yet)
+    SOLID_OBB_YAW       = 4,    // an OBB, constrained so that it can only yaw
+    SOLID_CUSTOM        = 5,    // Always call into the entity for tests
+    SOLID_VPHYSICS      = 6,    // solid vphysics object, get vcollide from the model and collide with that
+    SOLID_SPHERE        = 7,    // an sphere
+    SOLID_LAST,
+};
+</code></pre>
+<h2 id="entity-effects">Entity Effects<a class="headerlink" href="#entity-effects" title="Permanent link"></a></h2>
+<pre><code>shared enum EntityEffect_t
+{
+    EF_BONEMERGE            = 0x001,    // Performs bone merge on client side
+    EF_BRIGHTLIGHT          = 0x002,    // DLIGHT centered at entity origin
+    EF_DIMLIGHT             = 0x004,    // player flashlight
+    EF_NOINTERP             = 0x008,    // don't interpolate the next frame
+    EF_NOSHADOW             = 0x010,    // Don't cast no shadow
+    EF_NODRAW               = 0x020,    // don't draw entity
+    EF_NORECEIVESHADOW      = 0x040,    // Don't receive no shadow
+    EF_BONEMERGE_FASTCULL   = 0x080,    // For use with EF_BONEMERGE. If this is set, then it places this ent's origin at its
+                                        // parent and uses the parent's bbox + the max extents of the aiment.
+                                        // Otherwise, it sets up the parent's bones every frame to figure out where to place
+                                        // the aiment, which is inefficient because it'll setup the parent's bones even if
+                                        // the parent is not in the PVS.
+    EF_ITEM_BLINK           = 0x100,    // blink an item so that the user notices it.
+    EF_PARENT_ANIMATES      = 0x200,    // always assume that the parent entity is animating
+    EF_MIRROR_WEAPON        = 0x400,    
+    EF_MAX_BITS = 11
+};
+</code></pre>
+<h2 id="cvar-flags">Cvar flags<a class="headerlink" href="#cvar-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum FCVAR_t
+{
+    FCVAR_NONE = 0,
+    FCVAR_UNREGISTERED = (1&lt;&lt;0),
+    FCVAR_DEVELOPMENTONLY = (1&lt;&lt;1),
+    FCVAR_GAMEDLL = (1&lt;&lt;2),
+    FCVAR_CLIENTDLL = (1&lt;&lt;3),
+    FCVAR_HIDDEN = (1&lt;&lt;4),
+    FCVAR_PROTECTED = (1&lt;&lt;5),
+    FCVAR_SPONLY = (1&lt;&lt;6),
+    FCVAR_ARCHIVE = (1&lt;&lt;7),
+    FCVAR_NOTIFY = (1&lt;&lt;8),
+    FCVAR_USERINFO = (1&lt;&lt;9),
+    FCVAR_CHEAT = (1&lt;&lt;14),
+    FCVAR_PRINTABLEONLY = (1&lt;&lt;10),
+    FCVAR_UNLOGGED = (1&lt;&lt;11),
+    FCVAR_NEVER_AS_STRING = (1&lt;&lt;12),
+    FCVAR_REPLICATED = (1&lt;&lt;13),
+    FCVAR_DEMO = (1&lt;&lt;16),
+    FCVAR_DONTRECORD = (1&lt;&lt;17),
+    FCVAR_RELOAD_MATERIALS = (1&lt;&lt;20),
+    FCVAR_RELOAD_TEXTURES = (1&lt;&lt;21),
+    FCVAR_NOT_CONNECTED = (1&lt;&lt;22),
+    FCVAR_MATERIAL_SYSTEM_THREAD = (1&lt;&lt;23),
+    FCVAR_ARCHIVE_XBOX = (1&lt;&lt;24),
+    FCVAR_ACCESSIBLE_FROM_THREADS = (1&lt;&lt;25),
+    FCVAR_SERVER_CAN_EXECUTE = (1&lt;&lt;28),
+    FCVAR_SERVER_CANNOT_QUERY = (1&lt;&lt;29),
+    FCVAR_CLIENTCMD_CAN_EXECUTE = (1&lt;&lt;30),
+    FCVAR_MATERIAL_THREAD_MASK = ( FCVAR_RELOAD_MATERIALS | FCVAR_RELOAD_TEXTURES | FCVAR_MATERIAL_SYSTEM_THREAD )
+};
+</code></pre>
+<h2 id="take-damage-flags">Take damage flags<a class="headerlink" href="#take-damage-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum Damage_t
+{
+    DMG_GENERIC = 0,                            // generic damage -- do not use if you want players to flinch and bleed!
+    DMG_CRUSH = (1 &lt;&lt; 0),                       // crushed by falling or moving object. 
+                                                // NOTE: It's assumed crush damage is occurring as a result of physics collision, so no extra physics force is generated by crush damage.
+                                                // DON'T use DMG_CRUSH when damaging entities unless it's the result of a physics collision. You probably want DMG_CLUB instead.
+    DMG_BULLET = (1 &lt;&lt; 1),                  // shot
+    DMG_SLASH = (1 &lt;&lt; 2),                       // cut, clawed, stabbed
+    DMG_BURN = (1 &lt;&lt; 3),                        // heat burned
+    DMG_VEHICLE = (1 &lt;&lt; 4),                 // hit by a vehicle
+    DMG_FALL = (1 &lt;&lt; 5),                        // fell too far
+    DMG_BLAST = (1 &lt;&lt; 6),                       // explosive blast damage
+    DMG_CLUB = (1 &lt;&lt; 7),                        // crowbar, punch, headbutt
+    DMG_SHOCK = (1 &lt;&lt; 8),                       // electric shock
+    DMG_SONIC = (1 &lt;&lt; 9),                       // sound pulse shockwave
+    DMG_ENERGYBEAM = (1 &lt;&lt; 10),             // laser or other high energy beam 
+    DMG_PREVENT_PHYSICS_FORCE = (1 &lt;&lt; 11),  // Prevent a physics force 
+    DMG_NEVERGIB = (1 &lt;&lt; 12),               // with this bit OR'd in, no damage type will be able to gib victims upon death
+    DMG_ALWAYSGIB = (1 &lt;&lt; 13),              // with this bit OR'd in, any damage type can be made to gib victims upon death.
+    DMG_DROWN = (1 &lt;&lt; 14),                  // Drowning
+
+
+    DMG_PARALYZE = (1 &lt;&lt; 15),               // slows affected creature down
+    DMG_NERVEGAS = (1 &lt;&lt; 16),               // nerve toxins, very bad
+    DMG_POISON   = (1 &lt;&lt; 17),                   // blood poisoning - heals over time like drowning damage
+    DMG_RADIATION = (1 &lt;&lt; 18),              // radiation exposure
+    DMG_DROWNRECOVER = (1 &lt;&lt; 19),           // drowning recovery
+    DMG_ACID = (1 &lt;&lt; 20),                       // toxic chemicals or acid burns
+    DMG_SLOWBURN = (1 &lt;&lt; 21),               // in an oven
+
+    DMG_REMOVENORAGDOLL = (1&lt;&lt;22),          // with this bit OR'd in, no ragdoll will be created, and the target will be quietly removed.
+                                                // use this to kill an entity that you've already got a server-side ragdoll for
+
+    DMG_PHYSGUN = (1&lt;&lt;23),                  // Hit by manipulator. Usually doesn't do any damage.
+    DMG_PLASMA   = (1&lt;&lt;24),                 // Shot by Cremator
+    DMG_AIRBOAT = (1&lt;&lt;25),                  // Hit by the airboat's gun
+
+    DMG_DISSOLVE = (1&lt;&lt;26),                 // Dissolving!
+    DMG_BLAST_SURFACE = (1&lt;&lt;27),            // A blast on the surface of water that cannot harm things underwater
+    DMG_DIRECT = (1&lt;&lt;28),
+    DMG_BUCKSHOT = (1&lt;&lt;29),                 // not quite a bullet. Little, rounder, different.
+
+    DMG_KNUCKLE =           (DMG_DIRECT | DMG_CLUB | DMG_NEVERGIB),
+    DMG_KICK =              (DMG_KNUCKLE | DMG_REMOVENORAGDOLL),
+    DMG_BATON =         (DMG_DIRECT | DMG_FALL | DMG_CLUB),
+    DMG_SHOVEL =                (DMG_DIRECT | DMG_SLASH),
+    DMG_SHOVEL2 =           (DMG_DIRECT | DMG_SLASH | DMG_CLUB),
+    DMG_HAMMER   =          (DMG_DIRECT | DMG_VEHICLE | DMG_CLUB),
+    DMG_NAILBAT =           (DMG_DIRECT | DMG_VEHICLE | DMG_CLUB | DMG_BULLET)
+}
+</code></pre>
+<h2 id="entity-flags">Entity Flags<a class="headerlink" href="#entity-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum EntFlags_t
+{
+    FL_ONGROUND             = (1&lt;&lt;0),   // At rest / on the ground
+    FL_DUCKING                  = (1&lt;&lt;1),   // Player flag -- Player is fully crouched
+    FL_WATERJUMP                = (1&lt;&lt;2),   // player jumping out of water
+    FL_ONTRAIN                  = (1&lt;&lt;3), // Player is _controlling_ a train, so movement commands should be ignored on client during prediction.
+    FL_INRAIN                   = (1&lt;&lt;4),   // Indicates the entity is standing in rain
+    FL_FROZEN                   = (1&lt;&lt;5), // Player is frozen for 3rd person camera
+    FL_ATCONTROLS               = (1&lt;&lt;6), // Player can't move, but keeps key inputs for controlling another entity
+    FL_CLIENT                   = (1&lt;&lt;7),   // Is a player
+    FL_FAKECLIENT               = (1&lt;&lt;8),   // Fake client, simulated server side; don't send network messages to them
+    // NON-PLAYER SPECIFIC = (i.e., not used by GameMovement or the client .dll ), -- Can still be applied to players, though
+    FL_INWATER                  = (1&lt;&lt;9),   // In water
+    FL_FLY                      = (1&lt;&lt;10),  // Changes the SV_Movestep= (), behavior to not need to be on ground
+    FL_SWIM                 = (1&lt;&lt;11),  // Changes the SV_Movestep= (), behavior to not need to be on ground = (but stay in water),
+    FL_CONVEYOR             = (1&lt;&lt;12),
+    FL_NPC                      = (1&lt;&lt;13),
+    FL_GODMODE                  = (1&lt;&lt;14),
+    FL_NOTARGET             = (1&lt;&lt;15),
+    FL_AIMTARGET                = (1&lt;&lt;16),  // set if the crosshair needs to aim onto the entity
+    FL_PARTIALGROUND            = (1&lt;&lt;17),  // not all corners are valid
+    FL_STATICPROP               = (1&lt;&lt;18),  // Eetsa static prop!       
+    FL_GRAPHED                  = (1&lt;&lt;19), // worldgraph has this ent listed as something that blocks a connection
+    FL_GRENADE                  = (1&lt;&lt;20),
+    FL_STEPMOVEMENT         = (1&lt;&lt;21),  // Changes the SV_Movestep= (), behavior to not do any processing
+    FL_DONTTOUCH                = (1&lt;&lt;22),  // Doesn't generate touch functions, generates Untouch= (), for anything it was touching when this flag was set
+    FL_BASEVELOCITY         = (1&lt;&lt;23),  // Base velocity has been applied this frame = (used to convert base velocity into momentum),
+    FL_WORLDBRUSH               = (1&lt;&lt;24),  // Not moveable/removeable brush entity = (really part of the world, but represented as an entity for transparency or something),
+    FL_OBJECT                   = (1&lt;&lt;25), // Terrible name. This is an object that NPCs should see. Missiles, for example.
+    FL_KILLME                   = (1&lt;&lt;26),  // This entity is marked for death -- will be freed by game DLL
+    FL_ONFIRE                   = (1&lt;&lt;27),  // You know...
+    FL_DISSOLVING               = (1&lt;&lt;28), // We're dissolving!
+    FL_TRANSRAGDOLL         = (1&lt;&lt;29), // In the process of turning into a client side ragdoll.
+    FL_UNBLOCKABLE_BY_PLAYER = (1&lt;&lt;30), // pusher that can't be blocked by the player
+    FL_JUMPING                  = (1&lt;&lt;31)   // player jumping
+}
+</code></pre>
+<h2 id="bsp-flags">BSP Flags<a class="headerlink" href="#bsp-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum BSPFlags_t
+{
+    // lower bits are stronger, and will eat weaker brushes completely
+    CONTENTS_EMPTY                  = 0,                // No contents
+
+    CONTENTS_SOLID                  = 0x1,              // an eye is never valid in a solid
+    CONTENTS_WINDOW                 = 0x2,              // translucent, but not watery (glass)
+    CONTENTS_AUX                        = 0x4,
+    CONTENTS_GRATE                  = 0x8,              // alpha-tested &quot;grate&quot; textures.  Bullets/sight pass through, but solids don't
+    CONTENTS_SLIME                  = 0x10,
+    CONTENTS_WATER                  = 0x20,
+    CONTENTS_BLOCKLOS                   = 0x40,         // block AI line of sight
+    CONTENTS_OPAQUE                 = 0x80,         // things that cannot be seen through (may be non-solid though)
+    LAST_VISIBLE_CONTENTS           = 0x80,
+
+    ALL_VISIBLE_CONTENTS                = (LAST_VISIBLE_CONTENTS | (LAST_VISIBLE_CONTENTS-1)),
+
+    CONTENTS_TESTFOGVOLUME          = 0x100,
+    CONTENTS_UNUSED                 = 0x200,
+
+    // unused 
+    // NOTE: If it's visible, grab from the top + update LAST_VISIBLE_CONTENTS
+    // if not visible, then grab from the bottom.
+    CONTENTS_UNUSED6                    = 0x400,
+
+    CONTENTS_TEAM1                  = 0x800,            // per team contents used to differentiate collisions
+    CONTENTS_TEAM2                  = 0x1000,           // between players and objects on different teams
+
+    CONTENTS_IGNORE_NODRAW_OPAQUE   = 0x2000,           // ignore CONTENTS_OPAQUE on surfaces that have SURF_NODRAW
+
+    CONTENTS_MOVEABLE                   = 0x4000,           // hits entities which are MOVETYPE_PUSH (doors, plats, etc.)
+
+    CONTENTS_AREAPORTAL             = 0x8000,
+
+    CONTENTS_PLAYERCLIP             = 0x10000,
+    CONTENTS_MONSTERCLIP                = 0x20000,
+
+    CONTENTS_CURRENT_0              = 0x40000,
+    CONTENTS_CURRENT_90             = 0x80000,
+    CONTENTS_CURRENT_180                = 0x100000,
+    CONTENTS_CURRENT_270                = 0x200000,
+    CONTENTS_CURRENT_UP             = 0x400000,
+    CONTENTS_CURRENT_DOWN           = 0x800000,
+
+    CONTENTS_ORIGIN                 = 0x1000000,
+
+    CONTENTS_MONSTER                    = 0x2000000,
+    CONTENTS_DEBRIS                 = 0x4000000,
+    CONTENTS_DETAIL                 = 0x8000000,
+    CONTENTS_TRANSLUCENT                = 0x10000000,
+    CONTENTS_LADDER                 = 0x20000000,
+    CONTENTS_HITBOX                 = 0x40000000,
+
+    SURF_LIGHT                      = 0x0001,
+    SURF_SKY2D                      = 0x0002,
+    SURF_SKY                        = 0x0004,
+    SURF_WARP                       = 0x0008,
+    SURF_TRANS                      = 0x0010,
+    SURF_NOPORTAL                   = 0x0020,
+    SURF_TRIGGER                    = 0x0040,
+    SURF_NODRAW                 = 0x0080,
+
+    SURF_HINT                       = 0x0100,
+
+    SURF_SKIP                       = 0x0200,
+    SURF_NOLIGHT                    = 0x0400,
+    SURF_BUMPLIGHT              = 0x0800,
+    SURF_NOSHADOWS              = 0x1000,
+    SURF_NODECALS                   = 0x2000,
+    SURF_NOCHOP                 = 0x4000,
+    SURF_HITBOX                 = 0x8000,
+
+    // -----------------------------------------------------
+    // spatial content masks - used for spatial queries (traceline,etc.)
+    // -----------------------------------------------------
+    MASK_ALL                        = (0xFFFFFFFF),
+    MASK_SOLID                      = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_WINDOW|CONTENTS_MONSTER|CONTENTS_GRATE),
+    // everything that blocks player movement
+    MASK_PLAYERSOLID                = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_PLAYERCLIP|CONTENTS_WINDOW|CONTENTS_MONSTER|CONTENTS_GRATE),
+    // blocks npc movement
+    MASK_NPCSOLID                   = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_MONSTERCLIP|CONTENTS_WINDOW|CONTENTS_MONSTER|CONTENTS_GRATE),
+    // water physics in these contents
+    MASK_WATER                      = (CONTENTS_WATER|CONTENTS_MOVEABLE|CONTENTS_SLIME),
+    // everything that blocks lighting
+    MASK_OPAQUE                 = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_OPAQUE),
+    // everything that blocks lighting, but with monsters added.
+    MASK_OPAQUE_AND_NPCS            = (MASK_OPAQUE|CONTENTS_MONSTER),
+    // everything that blocks line of sight for AI
+    MASK_BLOCKLOS                   = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_BLOCKLOS),
+    // everything that blocks line of sight for AI plus NPCs
+    MASK_BLOCKLOS_AND_NPCS      = (MASK_BLOCKLOS|CONTENTS_MONSTER),
+    // everything that blocks line of sight for players
+    MASK_VISIBLE                    = (MASK_OPAQUE|CONTENTS_IGNORE_NODRAW_OPAQUE),
+    // everything that blocks line of sight for players, but with monsters added.
+    MASK_VISIBLE_AND_NPCS       = (MASK_OPAQUE_AND_NPCS|CONTENTS_IGNORE_NODRAW_OPAQUE),
+    // bullets see these as solid
+    MASK_SHOT                       = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_MONSTER|CONTENTS_WINDOW|CONTENTS_DEBRIS|CONTENTS_HITBOX),
+    // non-raycasted weapons see this as solid = (includes grates),
+    MASK_SHOT_HULL              = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_MONSTER|CONTENTS_WINDOW|CONTENTS_DEBRIS|CONTENTS_GRATE),
+    // hits solids = (not grates), and passes through everything else
+    MASK_SHOT_PORTAL                = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_WINDOW|CONTENTS_MONSTER),
+    // everything normally solid, except monsters = (world+brush only),
+    MASK_SOLID_BRUSHONLY            = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_WINDOW|CONTENTS_GRATE),
+    // everything normally solid for player movement, except monsters = (world+brush only),
+    MASK_PLAYERSOLID_BRUSHONLY  = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_WINDOW|CONTENTS_PLAYERCLIP|CONTENTS_GRATE),
+    // everything normally solid for npc movement, except monsters = (world+brush only),
+    MASK_NPCSOLID_BRUSHONLY     = (CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_WINDOW|CONTENTS_MONSTERCLIP|CONTENTS_GRATE),
+    // just the world, used for route rebuilding
+    MASK_NPCWORLDSTATIC         = (CONTENTS_SOLID|CONTENTS_WINDOW|CONTENTS_MONSTERCLIP|CONTENTS_GRATE),
+    // These are things that can split areaportals
+    MASK_SPLITAREAPORTAL            = (CONTENTS_WATER|CONTENTS_SLIME),
+
+    // UNDONE: This is untested, any moving water
+    MASK_CURRENT                    = (CONTENTS_CURRENT_0|CONTENTS_CURRENT_90|CONTENTS_CURRENT_180|CONTENTS_CURRENT_270|CONTENTS_CURRENT_UP|CONTENTS_CURRENT_DOWN),
+
+    // everything that blocks corpse movement
+    // UNDONE: Not used yet / may be deleted
+    MASK_DEADSOLID              = (CONTENTS_SOLID|CONTENTS_PLAYERCLIP|CONTENTS_WINDOW|CONTENTS_GRATE),
+}
+</code></pre>
+<h2 id="spawn-flags">Spawn flags<a class="headerlink" href="#spawn-flags" title="Permanent link"></a></h2>
+<pre><code>shared enum SpawnFlags_t
+{
+    SF_NPC_WAIT_TILL_SEEN       = ( 1 &lt;&lt; 0  ),  // spawnflag that makes npcs wait until player can see them before attacking.
+    SF_NPC_GAG                      = ( 1 &lt;&lt; 1  ),  // no idle noises from this npc
+    SF_NPC_FALL_TO_GROUND       = ( 1 &lt;&lt; 2  ),  // used my NPC_Maker
+    SF_NPC_DROP_HEALTHKIT       = ( 1 &lt;&lt; 3  ),  // Drop a healthkit upon death
+    SF_NPC_START_EFFICIENT      = ( 1 &lt;&lt; 4  ), // Set into efficiency mode from spawn
+    //                              = ( 1 &lt;&lt; 5  ),
+    //                              = ( 1 &lt;&lt; 6  ),
+    SF_NPC_WAIT_FOR_SCRIPT      = ( 1 &lt;&lt; 7  ),  // spawnflag that makes npcs wait to check for attacking until the script is done or they've been attacked
+    SF_NPC_LONG_RANGE               = ( 1 &lt;&lt; 8  ),  // makes npcs look far and relaxes weapon range limit 
+    SF_NPC_FADE_CORPSE          = ( 1 &lt;&lt; 9  ),  // Fade out corpse after death
+    SF_NPC_ALWAYSTHINK          = ( 1 &lt;&lt; 10 ),  // Simulate even when player isn't in PVS.
+    SF_NPC_TEMPLATE             = ( 1 &lt;&lt; 11 ),  // This NPC will be used as a template by an npc_maker -- do not spawn.
+    SF_NPC_ALTCOLLISION         = ( 1 &lt;&lt; 12 ),
+    SF_NPC_NO_WEAPON_DROP       = ( 1 &lt;&lt; 13 ),  // This NPC will not actually drop a weapon that can be picked up
+    SF_NPC_NO_PLAYER_PUSHAWAY   = ( 1 &lt;&lt; 14 ),  
+    //                              = ( 1 &lt;&lt; 15 ),  
+    // !! Flags above = ( 1 &lt;&lt; 15 ),     are reserved for NPC sub-classes
+    SF_NPC_INTERACTABLE         = (1&lt;&lt;30),
+}
+</code></pre>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../usage/" class="btn btn-neutral float-left" title="Using AngelScript"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../serialization/" class="btn btn-neutral float-right" title="Serialization">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Written by Kizoky <br>© WhackJob Interactive 2023-2024<br>ㅤ</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../usage/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../serialization/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
