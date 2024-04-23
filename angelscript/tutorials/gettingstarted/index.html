@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/angelscript/globalvars/engine/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="WhackJob Interactive" /><link rel="canonical" href="https://whackjobint.github.io/angelscript/tutorials/gettingstarted/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>CAngelScriptVM engine - AngelScript Docs</title>
+    <title>Getting Started - AngelScript Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "CAngelScriptVM engine";
-        var mkdocs_page_input_path = "globalvars\\engine.md";
-        var mkdocs_page_url = "/angelscript/globalvars/engine/";
+        var mkdocs_page_name = "Getting Started";
+        var mkdocs_page_input_path = "tutorials\\gettingstarted.md";
+        var mkdocs_page_url = "/angelscript/tutorials/gettingstarted/";
       </script>
     
     <!--[if lt IE 9]>
@@ -58,20 +58,38 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Tutorials</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/gettingstarted/">Getting Started</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Getting Started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-script-files-to-load">Getting script files to load</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#start-the-game-load-into-a-map-then-alt-tab-out">Start the game, load into a map, then alt TAB out</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-working-example-from-scratch">Creating a working example from scratch</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#open-exampleas">open "example.as"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#debugging">Debugging</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#postal3script">Postal3Script</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/delaying/">Delaying</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../delaying/">Delaying</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/contextcreation/">Creating Contexts</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../contextcreation/">Creating Contexts</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/repeating/">Repeating</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../repeating/">Repeating</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/asinp3s/">Calling AngelScript in Postal3Script</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../asinp3s/">Calling AngelScript in Postal3Script</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/cache/">Cache</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../cache/">Cache</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/scriptclass/">Getting Script Classes</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../scriptclass/">Getting Script Classes</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Code Examples</span></p>
@@ -141,16 +159,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Global Variables</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CAngelScriptVM engine</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalvars/engine/">CAngelScriptVM engine</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../gameeventmanager/">IGameEventManager gameeventmanager</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalvars/gameeventmanager/">IGameEventManager gameeventmanager</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../gpglobals/">CGlobalVars gpGlobals</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../globalvars/gpglobals/">CGlobalVars gpGlobals</a>
                   </li>
                   <li class="toctree-l1"><a class="" href="../../dontclick">const Vector vec3_origin</a>
                   </li>
@@ -357,8 +371,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Global Variables</li>
-      <li class="breadcrumb-item active">CAngelScriptVM engine</li>
+          <li class="breadcrumb-item">Tutorials</li>
+      <li class="breadcrumb-item active">Getting Started</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -367,41 +381,147 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="engine">engine<a class="headerlink" href="#engine" title="Permanent link"></a></h1>
-<div class="admonition note">
+                <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link"></a></h1>
+<div class="admonition note note">
 <p class="admonition-title">Note</p>
-<p>The methods here might be converted into global functions in the future.</p>
-</div>
-<hr />
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link"></a></h2>
 <ul>
-<li><code>float GetCurTime()</code> -- Gets the current time.</li>
-<li><code>string GetCurMapName()</code> -- Gets the current map name.</li>
-<li><code>int GetCurLoadType()</code> -- Gets the <a href="../../flags/#getcurloadtype">current load type.</a></li>
-<li><code>void ClientCommand(string &amp;in)</code> -- Executes client commands in place of the player.</li>
-<li><code>float CalcDistance(CP3SObj@, CP3SObj@)</code> -- Calculates distance between 2 objects.</li>
-<li><code>float CalcDistanceZ(CP3SObj@, CP3SObj@)</code> -- Calculates Z distance between 2 objects.</li>
-<li><code>array&lt;CP3SObj@&gt;&amp; GetArrayOfNPCs()</code> -- Gets all the NPCs on the level, and puts them into an array.</li>
-<li><code>array&lt;CP3SObj@&gt;&amp; GetArrayOfPlayers()</code> -- Gets all the connected and spawned Players.</li>
-<li><code>array&lt;CP3SObj@&gt;&amp; GetArrayOfEntitiesRadius(CP3SObj@, float)</code> -- Gets all the NPCs in a specified radius around an object.</li>
-<li><strong>CR</strong> <code>array&lt;CP3SObj@&gt;&amp; GetArrayOfSavedFSMEntities(CP3SObj@)</code> -- Gets all the saved FSM entities of an object.</li>
-<li><strong>CR</strong> <code>array&lt;CP3SObj@&gt;&amp; GetArrayOfInventory(CP3SObj@)</code> -- Gets the array of an object's inventory.</li>
-<li><code>array&lt;CP3SObj@&gt;&amp; GetArrayOfWeapons(CP3SObj@ owner)</code> -- Gets the array of an object's weapons. If the game is not <strong>CR</strong> then it only gets the Player's weapons.</li>
-<li><code>array&lt;CP3SObj@&gt;&amp; GetArrayOfP3SObjs()</code> -- Gets all the P3S Objects in the map.</li>
-<li><code>void DelayedExecution(float, string &amp;in, string &amp;in, CP3SObj@)</code> -- Executes a function with delay.</li>
-<li><code>bool IsMultiplayer()</code> -- Returns true if game is Multiplayer.</li>
-<li><code>void AddGlobalBool(bool bSet, int iNum)</code> -- Adds a global boolean which never resets.</li>
-<li><code>int GetGlobalBool(int iNum)</code> -- Gets the global boolean. Returns -1 if it doesn't exist.</li>
-<li><code>void AddStaticBool(bool bSet, int iNum)</code> -- Adds a static boolean which will reset after a new game.</li>
-<li><code>int GetStaticBool(int iNum)</code> -- Gets the static boolean. Returns -1 if it doesn't exist.</li>
+<li>This tutorial also applies to Catharsis Reborn</li>
+<li>Postal 3 (pre-ZOOM/ZOOM version) does not have AngelScript! (get Angel mod from here: <a href="https://www.moddb.com/mods/postal-3-angel">ModDB</a>)</li>
 </ul>
-<hr />
+</div>
+<h2 id="getting-script-files-to-load">Getting script files to load<a class="headerlink" href="#getting-script-files-to-load" title="Permanent link"></a></h2>
+<p>Head over to <code>../p3/scripts/AngelScript/</code> and open <code>!as_scripts.txt</code><br />
+You'll see a bunch of files have already been included:</p>
+<pre><code class="language-as">// This number is looked for when loading save file, you can up this number everytime you make heavy changes to the codebase
+// If before and after numbers don't match, the Serializer will automatically abort when attempting to restore values
+// NOTE: This absolutely must be an integer!
+const int AS_MOD_VERSION = 0;
+
+#include &quot;engine.as&quot;
+#include &quot;npc.as&quot;
+#include &quot;player.as&quot;
+</code></pre>
+<p>Typically here we <em>only want</em> to <strong>use</strong> <code>#include</code> and no other code here, but there's nothing stopping you from actually putting code in there, it just won't look nice!</p>
+<h3 id="start-the-game-load-into-a-map-then-alt-tab-out">Start the game, load into a map, then alt TAB out<a class="headerlink" href="#start-the-game-load-into-a-map-then-alt-tab-out" title="Permanent link"></a></h3>
+<p>AngelScript can be recompiled while the game is running, you don't need to reload the game itself! (normally AngelScript will only compile once per game)</p>
+<h2 id="creating-a-working-example-from-scratch">Creating a working example from scratch<a class="headerlink" href="#creating-a-working-example-from-scratch" title="Permanent link"></a></h2>
+<p>In the <code>AngelScript</code> folder where <code>!as_scripts.txt</code> is located create a file called <code>example.as</code><br />
+Then open <code>!as_scripts.txt</code> and include it like so:</p>
+<pre><code>#include &quot;example.as&quot;
+</code></pre>
+<p>If you want to put this file into a folder, you can also do that like so:</p>
+<pre><code>#include &quot;myfolder/example.as&quot;
+</code></pre>
+<p>Just remember if you want to include other files (inside <code>example.as</code>) you will need to navigate back like so:</p>
+<pre><code>// This would be &quot;../p3/scripts/AngelScript/utils.as&quot;
+#include &quot;../utils.as&quot;
+// This would be &quot;../p3/scripts/AngelScript/myfolder/tools.as&quot;
+#include &quot;tools.as&quot;
+</code></pre>
+<h3 id="open-exampleas">open "example.as"<a class="headerlink" href="#open-exampleas" title="Permanent link"></a></h3>
+<p>Now we'll add a very simple class that will only print console messages, the comments will explain everything:</p>
+<pre><code>// If you want to take advantage of cache and script object functions, you need to
+// inherit from IPostal3Script, otherwise it won't work!
+class MyCustomClass : IPostal3Script
+{
+    // A simple variable, this is what we'll refer to the entity 
+    // (from their viewpoint they are &quot;self&quot;)
+    CP3SObj@ self;
+
+    // This can store numbers, crazy right?
+    int num;
+
+    // The constructor, this is where you can set up variables
+    // This function is always the class name, don't also forget about the CP3SObj@ param!
+    // Note: if the class will be both global and non-global then make sure to check obj is not null!
+    MyCustomClass(CP3SObj@ obj)
+    {
+        //if (@obj != null)
+        @self = obj;
+
+        // Start at 0, better safe than sorry
+        num = 0;
+    }
+
+    // We'll call this in Postal3Script, you can add parameters but P3S does not support this
+    // you can still call this function in other functions if you wanted to!
+    void VerySimpleFunction()
+    {
+        // This is the same as &quot;num = num + 1&quot;
+        num++;
+
+        // Note: If you aren't too familiar with Printf, here's this cheat sheet
+        //  int : %d
+        //  string : %s
+        //  float : %f
+        //  Break line : \n
+        // Using the wrong character might result in corrupted text or crash, always double check :)
+
+        // Now we'll print this variable's value to the console
+        Printf(&quot;VerySimpleFunction: %d\n&quot;, num);
+    }
+}
+</code></pre>
+<p>Now head back into the game and enter <code>wj_angelscript_recompile</code><br />
+If everything went smoothly then you should not see any ERROR messages.</p>
+<h3 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link"></a></h3>
+<p>Now that we have compiled the code we want to make sure it really works.<br />
+Head back into the game and enter the following:<br />
+<code>wj_angelscript_exec MyCustomClass VerySimpleFunction</code></p>
+<p>This should have printed<br />
+<code>VerySimpleFunction: 1</code><br />
+to the console if everything went smoothly.<br />
+Now if you spam this command the number should go higher and higher, that means it works just fine!</p>
+<div class="admonition note note">
+<p class="admonition-title">Note</p>
+<p><code>wj_angelscript_exec</code> will execute functions GLOBALLY</p>
+</div>
+<h3 id="postal3script">Postal3Script<a class="headerlink" href="#postal3script" title="Permanent link"></a></h3>
+<p>Now that we know we didn't mess up anything with copy and pasting, we'll modify the Player's AI to execute <code>VerySimpleFunction()</code> from AS every second.</p>
+<p>Head into the scripts folder and find <code>ai_player.p3s</code></p>
+<p>Scroll down and look for <code>xpt_OnPrimaryAttack</code></p>
+<p>Put this before <code>IfAttr "Timer:tPrimaryAttack &gt; 0 Return 1"</code>:</p>
+<pre><code>            // target   &lt;class&gt;     &lt;function&gt;
+AngelScript &quot;Object:self MyCustomClass VerySimpleFunction&quot;
+</code></pre>
+<p>It should look something like this:</p>
+<pre><code>xpt_OnPrimaryAttack
+{
+    actions
+    {
+        AngelScript &quot;Object:self MyCustomClass VerySimpleFunction&quot;
+        IfAttr &quot;Timer:tPrimaryAttack &gt; 0 Return 1&quot;
+        Timer tPrimaryAttack,3
+        //IfAttr &quot;ea_ActiveWeapon &gt;= 5 Block begin&quot;
+            //ExecutePattern .xpt_SaveStatus
+            //SetAttr &quot;ea_status sKILLER&quot;
+            //Timer tKiller,20
+        //Block end
+
+        //Brutal primary attacks
+        IfAttr &quot;ea_armed == WPN_GRENADE     ExecutePattern .xpt_OnBrutalAct&quot;
+        IfAttr &quot;ea_armed == WPN_MOLOTOV     ExecutePattern .xpt_OnBrutalAct&quot;
+        IfAttr &quot;ea_armed == WPN_BEES        ExecutePattern .xpt_OnBrutalAct&quot;
+
+        //Wrong primary attacks
+        IfAttr &quot;ea_armed == WPN_GAS         ExecutePattern .xpt_OnWrongAct&quot;
+        IfAttr &quot;ea_armed == WPN_SPRAY       ExecutePattern .xpt_OnWrongAct&quot;
+        IfAttr &quot;ea_armed == WPN_CATS        ExecutePattern .xpt_OnWrongAct&quot;
+        IfAttr &quot;ea_armed == WPN_CATNIP      ExecutePattern .xpt_OnWrongAct&quot;
+        IfAttr &quot;ea_armed == WPN_TASER       ExecutePattern .xpt_OnWrongAct&quot;
+    }
+}
+</code></pre>
+<p>Recompile AngelScript with <code>wj_angelscript_recompile</code> and reload the level by entering <code>reload</code><br />
+Now everytime you shoot, the number should increase everytime.</p>
+<p><code>Object:self</code> can always be replaced with <code>GLOBAL</code>, but then that class would be shared with other NPCs or Players, everytime they would shoot, the number would go up, they would not have their "own" number.</p>
+<p>You can tinker with this by doing similar experiments BUT with NPCs instead.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../objects/keyvalues/" class="btn btn-neutral float-left" title="KeyValues@"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../gameeventmanager/" class="btn btn-neutral float-right" title="IGameEventManager gameeventmanager">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../syntaxhighlight/" class="btn btn-neutral float-left" title="Syntax Highlighter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../delaying/" class="btn btn-neutral float-right" title="Delaying">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -425,10 +545,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../objects/keyvalues/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../syntaxhighlight/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../gameeventmanager/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../delaying/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
