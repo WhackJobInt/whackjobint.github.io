@@ -55,20 +55,37 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">🪽 Postal 3 Angel</span></p>
+              <p class="caption"><span class="caption-text">💀 Postal III Beta</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../p3angel/whatispostal3angel/">What is Postal 3 Angel?</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../2009/">2009 P3S Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../p3angel/f_angelscript/">AngelScript</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../2010/">2010 "GamesCom" P3S Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../p3angel/f_unlockhintnode/">UnlockHintNode</a>
+              </ul>
+              <p class="caption"><span class="caption-text">🆙 Postal III Ultrapatch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ultrapatch/what_is_ultrapatch/">🆙 What is Postal III Ultrapatch?</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">🪽 Postal III Ultrapatch Angel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../angel/what_is_angel/">🪽 What is Postal III Ultrapatch Angel?</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">🪽 Angel Functions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../angel/f_angelscript/">AngelScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../angel/f_unlockhintnode/">UnlockHintNode</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">🛡 Embedded/Engine</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Embedded Attributes</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#postal-3-angel-embedded-attributes">🪽 Postal 3 Angel Embedded Attributes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#ultrapatch-embedded-attributes">🆙🪽 Ultrapatch Embedded Attributes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#angel-embedded-attributes">🪽 Angel Embedded Attributes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#all-embedded-attributes">All Embedded Attributes</a>
     </li>
@@ -385,10 +402,10 @@
 </ul>
 </div>
 
-<h2 id="postal-3-angel-embedded-attributes">🪽 Postal 3 Angel Embedded Attributes<a class="headerlink" href="#postal-3-angel-embedded-attributes" title="Permanent link"></a></h2>
+<h2 id="ultrapatch-embedded-attributes">🆙🪽 Ultrapatch Embedded Attributes<a class="headerlink" href="#ultrapatch-embedded-attributes" title="Permanent link"></a></h2>
 <div class="admonition warning">
-<p class="admonition-title">🪽 Postal 3 Angel-only feature</p>
-<p>These embedded attributes below will only work with the Postal 3 Angel mod.</p>
+<p class="admonition-title">🆙🪽 Postal III Ultrapatch-only feature</p>
+<p>These embedded attributes below will only work with Postal III Ultrapatch.</p>
 </div>
 <pre><code>ImAnAnimal              -- Entity is an animal NPC, if it exist
 ImAHuman                -- Entity is a Human NPC, if it exist
@@ -408,9 +425,27 @@ ImHugoChavez            -- Entity is Hugo Chavez Sim Driver NPC, if it exist
 ea_glow                 -- Entity will glow if Player looks at it, if it exist
 active                  -- (Weapon) If it's 1 they can be seen, not holstered
 dropped                 -- (Weapon) By default (on spawn) is 0
+
+flag_boss               -- NPC is a boss, used for missions and achievements, if it exist
+</code></pre>
+<h2 id="angel-embedded-attributes">🪽 Angel Embedded Attributes<a class="headerlink" href="#angel-embedded-attributes" title="Permanent link"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">🪽 Postal III Ultrapatch Angel-only feature</p>
+<p>These embedded attributes below will only work with Postal III Ultrapatch Angel.</p>
+</div>
+<pre><code>ea_allowpickup          -- (Interactable prop) Pick up is allowed, if it exist
+ea_propMotion           -- (Interactable prop) Motion is enabled on hurt, if it exist
+ea_touch                -- (Interactable prop) Entity is able to feel, if it exist
+
+as_restore              -- Fires OnASRestore on save game load on the entity, if it exist
+as_transition           -- Fires OnASTransition on transition load on the entity, if it exist
 </code></pre>
 <h2 id="all-embedded-attributes">All Embedded Attributes<a class="headerlink" href="#all-embedded-attributes" title="Permanent link"></a></h2>
 <pre><code>
+flag_zombie             -- NPC is a boss, used for missions and achievements, if it exist
+flag_bystander          -- NPC is a bystander, used for missions and achievements, if it exist
+SnatchBiteDamage        -- Used for overriding snatch bite damage for animals
+
 ea_lean                 -- Whether NPC or Player is currently covering
 ea_consciousness        -- Gets or sets the consciousness of an NPC, setting it to zero does nothing
 ea_health               -- Health
@@ -524,7 +559,7 @@ st_EmbeddedAttrTutorial
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../p3angel/f_unlockhintnode/" class="btn btn-neutral float-left" title="UnlockHintNode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../angel/f_unlockhintnode/" class="btn btn-neutral float-left" title="UnlockHintNode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../../embeddedevents/" class="btn btn-neutral float-right" title="Embedded Events">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -549,7 +584,7 @@ st_EmbeddedAttrTutorial
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../p3angel/f_unlockhintnode/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../angel/f_unlockhintnode/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../../embeddedevents/" style="color: #fcfcfc">Next &raquo;</a></span>

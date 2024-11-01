@@ -55,13 +55,28 @@
                   <li class="toctree-l1"><a class="reference internal" href="../syntaxhighlighter/">Syntax Highlighter</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">🪽 Postal 3 Angel</span></p>
+              <p class="caption"><span class="caption-text">💀 Postal III Beta</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../p3angel/whatispostal3angel/">What is Postal 3 Angel?</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2009/">2009 P3S Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../p3angel/f_angelscript/">AngelScript</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../2010/">2010 "GamesCom" P3S Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../p3angel/f_unlockhintnode/">UnlockHintNode</a>
+              </ul>
+              <p class="caption"><span class="caption-text">🆙 Postal III Ultrapatch</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ultrapatch/what_is_ultrapatch/">🆙 What is Postal III Ultrapatch?</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">🪽 Postal III Ultrapatch Angel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../angel/what_is_angel/">🪽 What is Postal III Ultrapatch Angel?</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">🪽 Angel Functions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../angel/f_angelscript/">AngelScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../angel/f_unlockhintnode/">UnlockHintNode</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">🛡 Embedded/Engine</span></p>
@@ -70,7 +85,9 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Embedded Events</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#postal-3-angel-embedded-events">🪽 Postal 3 Angel Embedded Events</a>
+    <li class="toctree-l2"><a class="reference internal" href="#ultrapatch-embedded-events">🆙🪽 Ultrapatch Embedded Events</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#angel-embedded-events">🪽 Angel Embedded Events</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#act-busy-unused">Act Busy (unused)</a>
     </li>
@@ -411,17 +428,35 @@
 <p>If you see a typo, <b>it's not a typo</b>, it's how they were programmed into the game.</p>
 </div>
 
-<h2 id="postal-3-angel-embedded-events">🪽 Postal 3 Angel Embedded Events<a class="headerlink" href="#postal-3-angel-embedded-events" title="Permanent link"></a></h2>
+<h2 id="ultrapatch-embedded-events">🆙🪽 Ultrapatch Embedded Events<a class="headerlink" href="#ultrapatch-embedded-events" title="Permanent link"></a></h2>
 <div class="admonition warning">
-<p class="admonition-title">🪽 Postal 3 Angel-only feature</p>
-<p>These embedded events below will only work with the Postal 3 Angel mod.</p>
+<p class="admonition-title">🆙🪽 Postal III Ultrapatch-only feature</p>
+<p>These embedded events below will only work with Postal III Ultrapatch.</p>
 </div>
-<pre><code>OnPissed -- Called on P3 Item props when they were pissed on
+<pre><code>OnHit                   -- Helicopter
+OnDeath                 -- Helicopter
 
-OnPlayerCrosshairFocus -- (inside entity) Called when Player is focusing on this entity
-OnPlayerCrosshairLeft -- (inside entity) Called when Player is no longer focusing the entity
+OnTargetKilled          -- Fixed buggy event
 
-OnApplyCatnipHead -- Called when Human NPC's head is catnip sprayed
+OnApplyCatnip           -- Applied for all NPCs when using catnip weapon
+OnBlinded               -- Applied for all NPCs when using Laserpen
+
+OnPlayerCrosshairFocus  -- (inside entity) Called when Player is focusing on this entity
+OnPlayerCrosshairLeft   -- (inside entity) Called when Player is no longer focusing the entity
+</code></pre>
+<h2 id="angel-embedded-events">🪽 Angel Embedded Events<a class="headerlink" href="#angel-embedded-events" title="Permanent link"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">🪽 Postal III Ultrapatch Angel-only feature</p>
+<p>These embedded events below will only work with Postal III Ultrapatch Angel.</p>
+</div>
+<pre><code>OnUseCommand        -- Interactable prop
+OnHurt              -- Interactable prop
+OnTouch             -- Interactable prop, touch must be setup
+OnStartTriggerTouch -- Interactable prop, touch must be setup
+OnEndTriggerTouch   -- Interactable prop, touch must be setup
+
+OnASRestore         -- Fired on save game load for restorable entities
+OnASTransition      -- Fired on transition for restorable entities
 </code></pre>
 <h2 id="act-busy-unused">Act Busy (unused)<a class="headerlink" href="#act-busy-unused" title="Permanent link"></a></h2>
 <pre><code class="language-js">
@@ -472,7 +507,7 @@ OnTargetReset
 OnEnemiesDead
 OnNewEnemy -- Note: This does not execute instantly
 OnNewFear -- Note: This does not execute instantly
-OnTargetKilled -- completely unused, Note: it is the same as 'OnDeath'
+OnTargetKilled -- completely unused, Note: buggy, acts like 'OnDeath'
 OnTargetArrested
 OnEnemySpoted -- unused, is in test script files
 OnTargetResistArrest -- unused, is in test script files (ArrestTarget, beta cop leftover)
@@ -525,6 +560,8 @@ OnTasingFinish
 OnUse -- unused, is in test script files
 OnDrop -- unused, is in test script files
 OnTake -- unused, is in test script files
+OnIgnite
+OnAcid
 </code></pre>
 
 <h2 id="items-prop_p3_fsmitem-cat">Items (prop_p3_fsmitem) &amp; Cat<a class="headerlink" href="#items-prop_p3_fsmitem-cat" title="Permanent link"></a></h2>
@@ -581,7 +618,7 @@ OnUser3 -- Hammer
 OnUser4 -- Hammer
 OnDialogNo -- completely unused
 OnDialogYes -- completely unused
-OnFinaleWin
+OnFinaleWin -- Executed inside Player's behavior
 </code></pre>
               
             </div>
